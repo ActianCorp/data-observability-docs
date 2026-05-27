@@ -31,14 +31,14 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: Install Zensical
+      - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install https://github.com/zensical/zensical/releases/download/v0.0.43/zensical-0.0.43-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+          pip install mkdocs pymdown-extensions
 
       - name: Build documentation
         run: |
-          zensical build --clean
+          mkdocs build --clean
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

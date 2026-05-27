@@ -120,87 +120,24 @@ nav:
     - 25.2.0: telmai-releases/release-notes/25.2.0.md
     - 25.2.1: telmai-releases/release-notes/25.2.1.md
 
+
 # Theme Configuration
 theme:
-  name: zensical
+  name: mkdocs
   logo: assets/images/actian-logo.svg
-  language: en
-  features:
-    - navigation.tracking
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.top
-    - navigation.instant
-    - navigation.instant.prefetch
-    - navigation.instant.progress
-    - navigation.expand
-    - navigation.indexes
-    - navigation.path
-    - navigation.footer
-    - navigation.sections
-    - announce.dismiss
-    - content.action.edit
-    - content.code.annotate
-    - content.code.copy
-    - content.code.select
-    - content.footnote.tooltips
-    - content.tabs.link
-    - content.tooltips
-    - search.highlight
-    - search.share
-    - search.suggest
-    - toc.follow
-  palette:
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: lucide/sun-moon
-        name: Switch to light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: custom
-      accent: indigo
-      toggle:
-        icon: lucide/sun
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: custom
-      accent: indigo
-      toggle:
-        icon: lucide/moon-star
-        name: Switch to system preference
-  font: false
   favicon: assets/favicon.png
-  icon:
-    tag:
-      default: lucide/hash
 
 # Markdown Extensions
 markdown_extensions:
-  - abbr
   - admonition
   - attr_list
   - def_list
   - footnotes
   - md_in_html
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:zensical.extensions.emoji.to_svg
-      emoji_index: !!python/name:zensical.extensions.emoji.twemoji
   - pymdownx.highlight:
       anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -208,38 +145,13 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
-      combine_header_slug: true
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tilde
   - toc:
-      title: On this page
       permalink: true
-  - zensical.extensions.glightbox:
-      auto_themed: true
 
 # Copyright
-copyright: >-
-  Copyright &copy; 2026, Actian
-
-extra:
-  generator: false
-  homepage: https://docs.actian.com/
-  annotate:
-    json: [.s2]
-  status:
-    new: Recently added
-    deprecated: Deprecated
-  social:
-    - icon: fontawesome/solid/paper-plane
-      link: https://www.actian.com/contact/
-      name: Contact Actian Support
-  tags:
-    default: default
-
-
-
-
+copyright: Copyright &copy; 2026, Actian
 
 # Support
 repo_url: https://www.actian.com/contact/
@@ -247,27 +159,3 @@ repo_name: Support
 
 plugins:
   - search
-  - tags
-
-# Customization
-extra_css:
-  - assets/stylesheets/style.css
-  - stylesheets/dx_style.css
-  - assets/stylesheets/actian-landing.css
-  - stylesheets/extra.css
-  - stylesheets/toast-override.css
- 
-extra_javascript:
-  - https://cdn.jsdelivr.net/npm/marked/marked.min.js
-  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
-  - javascripts/mermaid-init.js
-  - javascripts/extra.js
-  - path: javascripts/current.js
-    defer: true
-  # - path: javascripts/MiniChatJavaScript.js
-  #     defer: true
-  - javascripts/toast-fix.js        # ← MOVE THIS — must be last
- 
-
-
-
