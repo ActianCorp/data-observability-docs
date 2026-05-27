@@ -1,0 +1,20 @@
+/* ============================================================
+   toast-override.css
+   
+   THE ACTUAL FIX:
+   Material's clipboard notification is .md-dialog / .md-dialog__inner
+   NOT .md-toast (that class doesn't exist in Material 9.x).
+   
+   The inner div also carries .md-typeset, and your extra.css sets
+   color on .md-typeset to a dark value — overriding Material's own
+   .md-dialog__inner { color: var(--md-default-bg-color) } rule.
+   
+   This single rule fixes it by restoring the correct light color.
+   ============================================================ */
+
+.md-dialog__inner,
+.md-dialog__inner.md-typeset,
+.md-dialog .md-typeset {
+  color: var(--md-default-bg-color) !important;
+  -webkit-text-fill-color: var(--md-default-bg-color) !important;
+}

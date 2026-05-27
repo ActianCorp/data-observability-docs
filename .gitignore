@@ -1,0 +1,17 @@
+# Build output
+site/
+
+# Python virtual environments
+.venv/
+.venv311/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+
+# Zensical / MkDocs cache
+.cache/

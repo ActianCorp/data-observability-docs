@@ -1,0 +1,86 @@
+# Table of contents
+
+* [Getting Started](README.md)
+* [Connect to Data](connect-to-data/README.md)
+  * [Projects](connect-to-data/projects.md)
+  * [Data Connectors](connect-to-data/data-connectors/README.md)
+    * [Google BigQuery](connect-to-data/data-connectors/google-bigquery.md)
+    * [Google Cloud Storage](connect-to-data/data-connectors/google-cloud-storage.md)
+    * [Iceberg](connect-to-data/data-connectors/iceberg.md)
+    * [Snowflake](connect-to-data/data-connectors/snowflake.md)
+    * [AWS S3](connect-to-data/data-connectors/aws-s3.md)
+    * [AWS Athena](connect-to-data/data-connectors/aws-athena.md)
+    * [AWS Redshift](connect-to-data/data-connectors/aws-redshift.md)
+    * [Databricks Delta](connect-to-data/data-connectors/databricks-delta.md)
+    * [Azure Blob](connect-to-data/data-connectors/azure-blob.md)
+    * [Salesforce](connect-to-data/data-connectors/salesforce.md)
+    * [SAP Hana](connect-to-data/data-connectors/sap-hana.md)
+    * [File Path Options](connect-to-data/data-connectors/file-path-options.md)
+    * [SQL Server](connect-to-data/data-connectors/sql-server.md)
+    * [Trino](connect-to-data/data-connectors/trino.md)
+  * [Connection Modes](connect-to-data/connection-modes.md)
+  * [Triggering Scans](connect-to-data/triggering-scans.md)
+  * [Configuring a Data Source](connect-to-data/configuring-a-data-source.md)
+* [Profiling Data](profiling-data/README.md)
+  * [Data Health Metrics](profiling-data/data-health-metrics.md)
+  * [Data Health Overview Page](profiling-data/data-health-overview-page.md)
+  * [Interactive Profiling Tool: Investigator](profiling-data/interactive-profiling-tool-investigator.md)
+  * [Data Diff](profiling-data/data-diff.md)
+  * [Compound Attributes](profiling-data/compound-attributes/README.md)
+    * [List of Supported Functions](profiling-data/compound-attributes/list-of-supported-functions.md)
+* [Monitoring Data](monitoring-data/README.md)
+  * [Data Quality Metrics](monitoring-data/data-quality-metrics.md)
+  * [Alert Policies](monitoring-data/alert-policies.md)
+  * [Data Trends and Alerts](monitoring-data/data-trends-and-alerts.md)
+  * [Metrics Inspector](monitoring-data/metrics-inspector.md)
+* [Data Quality Rules](data-quality-rules/README.md)
+  * [Rules Expression Examples](data-quality-rules/rules-expression-examples.md)
+* [PII Data Detection](pii-data-detection.md)
+* [Remediation](remediation/README.md)
+  * [Data Binning](remediation/data-binning.md)
+  * [Circuit Breaker](remediation/circuit-breaker.md)
+* [Integrations](integrations/README.md)
+  * [Jira Integration](integrations/jira-integration.md)
+  * [Slack](integrations/slack.md)
+  * [Jobs Status Notification](integrations/jobs-status-notification.md)
+* [User Management](user-management/README.md)
+  * [Microsoft Entra IDP Setup](user-management/microsoft-entra-idp-setup.md)
+  * [Auth0 Setup](user-management/auth0-setup.md)
+  * [Okta SSO Setup](user-management/okta-sso-setup.md)
+  * [SSO Configuration](user-management/sso-configuration.md)
+
+## API Reference
+
+* [Authentication API](api-reference/authentication-api.md)
+* [API Keys](api-reference/api-keys.md)
+* [Actian Data Observability IP List](api-reference/telmai-ip-list.md)
+* [Get Google Service Account API](api-reference/get-google-service-account-api.md)
+* [Tenant Configuration](api-reference/tenant-configuration.md)
+
+## Source APIs
+
+* [Source APIs](source-apis/list-all-sources.md)
+
+## Upload Data APIs <a href="#upload-data" id="upload-data"></a>
+
+* [Upload data from Cloud](upload-data/upload-data-api/README.md)
+  * [RedShift Request data](upload-data/upload-data-api/redshift-request-data.md)
+  * [GCS Request data](upload-data/upload-data-api/gcs-request-data.md)
+  * [Azure Request data](upload-data/upload-data-api/azure-request-data.md)
+  * [GBQ Request data](upload-data/upload-data-api/gbq-request-data.md)
+  * [Snowflake Request data](upload-data/upload-data-api/snowflake-request-data.md)
+  * [Amazon S3 Request data](upload-data/upload-data-api/amazon-s3-request-data.md)
+  * [Delta Lake Request](upload-data/upload-data-api/delta-lake-request.md)
+  * [Trino Request data](upload-data/upload-data-api/trino-request-data.md)
+* [Track upload job](upload-data/track-job-status.md)
+* [Check for alerts](upload-data/check-for-alerts.md)
+
+## Admin APIs
+
+* [User Management](admin-apis/update-user.md)
+
+## Actian Data Observability Releases
+
+* [Release Notes](telmai-releases/release-notes/README.md)
+  * [Initial Release](telmai-releases/release-notes/initial_release.md)
+
