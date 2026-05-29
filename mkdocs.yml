@@ -127,15 +127,27 @@ theme:
   logo: assets/images/actian-logo.svg
   favicon: assets/favicon.png
   language: en
+  custom_dir: theme_overrides/
+  font: false
   palette:
     - scheme: default
       primary: custom
-      accent: custom
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
   features:
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
+    - navigation.instant
     - navigation.expand
     - navigation.indexes
     - navigation.path
@@ -145,6 +157,8 @@ theme:
     - content.code.annotate
     - content.tabs.link
     - search.highlight
+    - search.share
+    - search.focus
     - search.suggest
     - toc.follow
 
@@ -215,6 +229,7 @@ extra_css:
   - assets/stylesheets/style.css
   - stylesheets/dx_style.css
   - assets/stylesheets/actian-landing.css
+  - stylesheets/comprehensive-nav.css
   - stylesheets/extra.css
   - stylesheets/toast-override.css
 
@@ -222,7 +237,9 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/marked/marked.min.js
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - javascripts/mermaid-init.js
+  - javascripts/search_enhancement.js
   - javascripts/extra.js
+  - javascripts/comprehensive-nav-dataconnect.js
   - path: javascripts/current.js
     defer: true
   - javascripts/toast-fix.js

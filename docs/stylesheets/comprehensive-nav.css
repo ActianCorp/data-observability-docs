@@ -13,7 +13,7 @@
 }
 
 .cn-item {
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.2rem;
 }
 
 .cn-header {
@@ -31,7 +31,7 @@
 .cn-label {
   font-size: 14px;
   font-family: var(--md-text-font);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0;
   color: var(--md-default-fg-color) !important;
   line-height: 1.3;
@@ -92,14 +92,42 @@
 
 /* ── Sub-page lists ──────────────────────────────────────────── */
 
+/* OPTION A: Enhanced Indentation + Subtle Lines (FINAL) */
+
 .cn-sublist {
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .cn-subitem {
   margin: 0;
+  position: relative;
+}
+
+/* Add vertical connector line for nested items */
+.cn-sublist--depth-1::before,
+.cn-sublist--depth-2::before {
+  content: '';
+  position: absolute;
+  left: 0.6rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Horizontal connector for each item */
+.cn-sublist--depth-1 > .cn-subitem::before,
+.cn-sublist--depth-2 > .cn-subitem::before {
+  content: '';
+  position: absolute;
+  left: 0.6rem;
+  top: 50%;
+  width: 0.6rem;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 .cn-subheader {
@@ -115,32 +143,46 @@
 
 .cn-sublist--depth-1 > .cn-subitem > .cn-sublink,
 .cn-sublist--depth-1 > .cn-subitem > .cn-subheader > .cn-sublink {
-  padding: 0.28rem 0.4rem 0.28rem 0.5rem;
+  padding: 0.35rem 0.5rem 0.35rem 1.5rem;
   font-size: 14px;
   font-family: var(--md-text-font);
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.3;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
 }
 
 .cn-sublist--depth-2 > .cn-subitem > .cn-sublink,
 .cn-sublist--depth-2 > .cn-subitem > .cn-subheader > .cn-sublink {
-  padding: 0.25rem 0.4rem 0.25rem 1rem;
-  font-size: 14px;
+  padding: 0.32rem 0.5rem 0.32rem 2.3rem;
+  font-size: 13.5px;
   font-family: var(--md-text-font);
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.3;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
 }
 
 .cn-sublist--depth-3 > .cn-subitem > .cn-sublink,
 .cn-sublist--depth-3 > .cn-subitem > .cn-subheader > .cn-sublink {
-  padding: 0.22rem 0.4rem 0.22rem 1.5rem;
-  font-size: 14px;
+  padding: 0.3rem 0.5rem 0.3rem 3.1rem;
+  font-size: 13px;
   font-family: var(--md-text-font);
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.3;
+  line-height: 1.4;
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark mode adjustments for connector lines */
+[data-md-color-scheme="slate"] .cn-sublist--depth-1::before,
+[data-md-color-scheme="slate"] .cn-sublist--depth-2::before,
+[data-md-color-scheme="slate"] .cn-sublist--depth-1 > .cn-subitem::before,
+[data-md-color-scheme="slate"] .cn-sublist--depth-2 > .cn-subitem::before {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .cn-sublink {
