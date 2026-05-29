@@ -21,10 +21,9 @@ Once a source is created, it can be moved to a different project with few easy c
 
 1. Select the source you like to move, and click the 3-dot menu
 2. Click "Move to Project" option
-   * You will see list of projects you have access to
-  ![](../../assets/assets/image_7.png)
-
-1. Select the desired project, and click "Move to Project"
+   You will see list of projects you have access to
+   ![](../../assets/assets/image_7.png)
+3. Select the desired project, and click "Move to Project"
 
 !!! note
     All rules & policies will move with the project except for rules using templates.

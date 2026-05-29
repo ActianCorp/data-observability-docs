@@ -22,18 +22,18 @@ Actian Data Observability supports **key pair-based connectivity** to Snowflake,
 ###### Setting up Authentication
 
 1. **Role and User Creation**: If you have an existing user with the necessary permissions to access the database, schema, table, or view, skip to Step 2. However, the best practice is to create a separate role and user specifically for Actian Data Observability.
-   * **Role**: Actian Data Observability requires permissions for database connections, schema and table listings, metadata retrieval, and data selection in tables and views. These are managed through `SELECT`, `USAGE`, and `MONITOR` privileges in Snowflake.<br/>
+    * **Role**: Actian Data Observability requires permissions for database connections, schema and table listings, metadata retrieval, and data selection in tables and views. These are managed through `SELECT`, `USAGE`, and `MONITOR` privileges in Snowflake.<br/>
      For references on creating roles and assigning appropriate privileges, please refer to [1](https://docs.snowflake.com/en/sql-reference/sql/create-role/), [2](https://docs.snowflake.com/en/sql-reference/sql/grant-privilege/), and [3](https://docs.snowflake.com/en/user-guide/security-access-control-privileges/)
-   * **User**: Create a user account for Actian Data Observability to access Snowflake. Assign the user to the role created above. Detailed steps for creating a user can be found [here](https://docs.snowflake.com/en/user-guide/key-pair-auth/).
+    * **User**: Create a user account for Actian Data Observability to access Snowflake. Assign the user to the role created above. Detailed steps for creating a user can be found [here](https://docs.snowflake.com/en/user-guide/key-pair-auth/).
 2. Generate an unencrypted key pair and assign it to the user following the instructions [here](https://docs.snowflake.com/en/user-guide/key-pair-auth/)
 3. Assign the default role and warehouse for the user as described [here](https://docs.snowflake.com/en/sql-reference/sql/alter-user/)
 4. Once the role, user, and key pair are configured, enter the following parameters in the Actian Data Observability Connection Wizard:
-   * Snowflake Account
-   * Snowflake Warehouse
-   * Snowflake Database
-   * Snowflake Schema
-   * Snowflake Username
-   * Snowflake Private Key
+    * Snowflake Account
+    * Snowflake Warehouse
+    * Snowflake Database
+    * Snowflake Schema
+    * Snowflake Username
+    * Snowflake Private Key
 ![](../../../assets/assets/Screenshot_2024-11-28_at_9.31.24_AM.png)
 
 **Snowflake Configuration Template Script** To simplify configuration, you can use an Actian Data Observability Template Script, enter your parameters, and execute in the Snowflake console.

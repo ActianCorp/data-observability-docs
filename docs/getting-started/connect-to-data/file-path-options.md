@@ -18,10 +18,9 @@ path=’file.csv’
 * Files have an extension of csv, json or parquet.
 * Csv files should have the header line.
 
-Note:&#x20;
-
-* The JSON file should be in _Newline Delimited JSON_ format - with .json extension.
-* Column Headers in Parquet file should not contain any spaces.
+!!! note
+    * The JSON file should be in _Newline Delimited JSON_ format - with .json extension.
+    * Column Headers in Parquet file should not contain any spaces.
 
 #### Folder <a href="#folder" id="folder"></a>
 
@@ -45,6 +44,7 @@ You can use a `*` in your file path to match your file path. To enable wildcard 
 
 For example: `/<folder1>/log*.csv` will match paths like `/home/user/log_1.csv` or `/home/user/logs.csv`.
 
-👉 **Important:** Currently only **one** `*` is supported in the path.
+!!! warning "Important"
+    Currently only **one** `*` is supported in the path.
 
 <figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>

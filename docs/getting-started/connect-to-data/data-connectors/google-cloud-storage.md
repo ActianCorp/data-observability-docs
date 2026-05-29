@@ -5,10 +5,10 @@ Actian Data Observability requires read access to your Google Cloud Storage (GCS
 1. Go to **Google Cloud Storage** > **\<bucket>** > **Permissions** > **Members** > **Add**.
 2. In the **New Member** field, enter the Actian Data Observability-provided service account. To obtain this account, click the “Instructions” link in the Actian Data Observability UI and copy it from there.
  ![](../../../assets/assets/image_17.png)
-1. Add the following roles to the service account:
-   * **Storage Legacy Bucket Reader**
-   * **Storage Legacy Object Reader**
-2. Click **Save** to apply the changes.
+3. Add the following roles to the service account:
+    * **Storage Legacy Bucket Reader**
+    * **Storage Legacy Object Reader**
+4. Click **Save** to apply the changes.
 
 Once permissions are granted, complete the setup in Actian Data Observability by entering the required information in the form:
 

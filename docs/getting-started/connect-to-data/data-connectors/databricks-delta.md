@@ -4,18 +4,19 @@ To connect a Databricks Delta table to Actian Data Observability, you'll need to
 Follow the steps below:
 
 1. **Capture Connection Details**
+    
     You can find the JDBC connectivity details in the Databricks workspace console:
-    Navigate to **Compute** -!!! note
-    -> **Cluster Name** -!!! note
-    -> **Advanced Options** -> **JDBC/ODBC**.    Capture the following details:
-    * **Server Hostname**
-    * **Port**
-    * **HTTP Path**
+    Navigate to **Compute** -> **Cluster** -> **Cluster Name** -> **Configuration** -> **Advanced Options** -> **JDBC/ODBC**. Capture the following details:
+        * **Server Hostname**
+        * **Port**
+        * **HTTP Path**
+    
     For more information, refer to the : [Databricks ODBC and JDBC Drivers](https://docs.databricks.com/integrations/bi/jdbc-odbc-bi.html)
 2. **Generate a Security Token**
     A security token is required to connect to the cluster remotely. Create this token from the Databricks workspace console:
     * Go to the top right corner and click on your **User Name** -> **User Settings** -> **Access Token** -> **Generate New Token**.
     * Capture the token created.
+    
     For detailed instructions, see the [Authentication for Databricks tools and APIs](https://docs.databricks.com/dev-tools/api/latest/authentication.html#token-management)
 3. **Identify Table Details**
     From the **Data** section in the Databricks workspace, identify the database and table you want to connect.

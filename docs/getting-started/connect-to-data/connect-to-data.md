@@ -12,9 +12,7 @@ To connect to your data source:
 2.  Click the “+Add“ button next to the Project name.  
 
 
-   ![](../../assets/assets/image_13.png)
-   
-   
+   ![](../../assets/assets/image_13.png)  
 3.  Select the type of source you want to connect to.
   
    ![](../../assets/assets/image_14.png)
