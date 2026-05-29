@@ -19,7 +19,7 @@ Rules are created following SQL-like syntax that uses variables and functions to
 Creating a correctness rule requires performing the following steps:
 
 1. Define variables that will be used in the rule
-   * Variables can be assigned to static lists of values, range, entered manually or uploaded, from files; etc.
+    * Variables can be assigned to static lists of values, range, entered manually or uploaded, from files; etc.
 2. Map variables to attributes used in the expression
 3. Write rule expression
 
@@ -213,14 +213,14 @@ To use a rule template, the user only maps attributes within their table to vari
 The following flow diagram describes the steps to create a new rule or rule template:
 
 1. Define rule info:
-   * Rule name
-   * Rule description
-   * \[Optional] Template being used (this is only if creating a rule)
+    * Rule name
+    * Rule description
+    * \[Optional] Template being used (this is only if creating a rule)
 2. Set static variables:
-   * These are variables that are validated against, and are not dynamic in nature; ex: list of allowed countries
+    * These are variables that are validated against, and are not dynamic in nature; ex: list of allowed countries
 3. Set input variables:
-   * These are variables that are mapped to attributes in the table
-   * In case this is a rule, user will need to map the attributes to variables
+    * These are variables that are mapped to attributes in the table
+    * In case this is a rule, user will need to map the attributes to variables
 4. Write expression
 
 <figure><img src="../assets/create_rule.png"><figcaption>Creating a Rule</figcaption></figure>

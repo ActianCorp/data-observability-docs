@@ -7,9 +7,9 @@ When creating a user-defined monitor, you must attach it to an asset, and define
 
 * **Metric:** A quantifiable measure of data health (e.g., row count, null percentage, data freshness).
 * **Threshold:** A predefined value or range that, when exceeded, triggers an alert. Thresholds can be:
-   * **Automatic**: ML-based thresholds that analyze historical datapoints to determine dynamic boundaries
-   * **Relative**: Percentage-based boundaries that calculate moving averages from historical data
-   * **Absolute**: Constant, fixed boundaries
+    * **Automatic**: ML-based thresholds that analyze historical datapoints to determine dynamic boundaries
+    * **Relative**: Percentage-based boundaries that calculate moving averages from historical data
+    * **Absolute**: Constant, fixed boundaries
 * **Notification endpoints:** Which endpoints to notify when the monitor is alerting (Optional)
 
 ## Monitor Types

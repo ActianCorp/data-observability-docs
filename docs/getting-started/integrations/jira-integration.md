@@ -32,6 +32,6 @@ After creating Jira tickets, you can view and manage them directly from Data Obs
 2. Click the **See Issues** button.
 3. Data Observability displays a list of open tickets created through the platform.
 4. Options:
-   * Click the ticket to navigate to your Jira instance
-   * Unlink the ticket from Actian Data Observability
-   * View ticket status
+    * Click the ticket to navigate to your Jira instance
+    * Unlink the ticket from Actian Data Observability
+    * View ticket status

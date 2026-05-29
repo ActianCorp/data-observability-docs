@@ -1,0 +1,4 @@
+nav:
+    - asset-api.md
+    - assets-group-api.md
+    - monitors-api.md

@@ -9,9 +9,9 @@ Actian Data Observability offers a **Compound Attributes** feature, which allows
 2. Click the "**Add Compound Attribute"** button
   ![](../../../assets/assets/image_43.png)
 3. **Define the Attribute**:
-   * **Attribute ID**: Name the compound attribute.
-   * **Attributes to Compound**: List the attributes to be used.
-   * **Expression**: Enter an SQL-like expression that defines the transformation.
+    * **Attribute ID**: Name the compound attribute.
+    * **Attributes to Compound**: List the attributes to be used.
+    * **Expression**: Enter an SQL-like expression that defines the transformation.
 4. Enter an expression. Please see below for additional information on supported functions and examples of expressions
   ![](../../../assets/assets/image_41.png)
 
@@ -23,11 +23,13 @@ Once the attribute is created, you can add an expectation, as shown in the secti
 
 * As the user inputs an expression, an evaluation is done to ensure a valid SQL expression
 * There are some cases where the validation will pass but will fail during executions due to casting-related errors. The values should be cast appropriately to the expected type to mitigate this. The expression output must always be a string type. In case it is not, users need to cast to a string explicitly. Example:
-  *   If the expression has contains function; the output is boolean `contains( last_name , 'Smith')`
+    
+    * If the expression has contains function; the output is boolean `contains( last_name , 'Smith')`
 
       The user needs to cast the value string `cast ( contains( last_name , 'Smith') as string)`
 * All parameters are treated as strings. The user needs to cast the parameters to the corresponding function param type. Example:
-  * If the user wants to use the date\_add function, which takes in number and a date (which is a string) The user will need to cast `my_number` first like this: `date_add('2016-07-30', cast (my_number as int))`
+    
+    * If the user wants to use the date\_add function, which takes in number and a date (which is a string) The user will need to cast `my_number` first like this: `date_add('2016-07-30', cast (my_number as int))`
 
 ## Examples
 

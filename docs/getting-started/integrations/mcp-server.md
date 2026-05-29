@@ -45,12 +45,12 @@ Claude supports secure OAuth-based authentication, providing the most seamless i
 
 1. In the Connectors section, click **Add custom connector**
 2. A configuration dialog will appear with the following fields:
-   * **Name**: Enter a descriptive name (e.g., "Data Observability MCP")
-   * **URL**: Enter your Data Observability MCP server URL (e.g., `https://mcp.yourdomain.Data Observability.dev/yourorg/mcp`)
+    * **Name**: Enter a descriptive name (e.g., "Data Observability MCP")
+    * **URL**: Enter your Data Observability MCP server URL (e.g., `https://mcp.yourdomain.Data Observability.dev/yourorg/mcp`)
 3. Click **Advanced Details** to expand additional options
 4. Enter your OAuth credentials:
-   * **Client ID**: Your Data Observability OAuth application client ID
-   * **Client Secret**: Your Data Observability OAuth application client secret
+    * **Client ID**: Your Data Observability OAuth application client ID
+    * **Client Secret**: Your Data Observability OAuth application client secret
 
 **Step 3: Initiate the OAuth Flow**
 
@@ -117,8 +117,8 @@ The command will output your bearer token. Copy this token for the next step.
 3. Select **Remote Servers**
 4. Click **Add server details**
 5. Provide the following information:
-   * **Name**: `Data Observability` (or any descriptive name)
-   * **URL**: Your Data Observability MCP server URL (e.g., `https://mcp.dev.telm.ai/yourorg/mcp`)
+    * **Name**: `Data Observability` (or any descriptive name)
+    * **URL**: Your Data Observability MCP server URL (e.g., `https://mcp.dev.telm.ai/yourorg/mcp`)
 
 #### Step 3: Add Authorization Header
 

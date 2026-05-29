@@ -10,8 +10,8 @@ Actian Data Observability’s Data Diff feature runs as part of tables’ regula
 1. Define the ID Attribute
 2. From the 3 dot menu, click “Data Comparison” option
 3. You will be prompted to fill details:
-   1. Source table: Dataset you want to compare to
-   2. Result Destination: Output for parquet files (S3, Azure Blob, or GCP storage)
+    1. Source table: Dataset you want to compare to
+    2. Result Destination: Output for parquet files (S3, Azure Blob, or GCP storage)
 4. Once the details is selected, you will be prompted to fill more details on associated bucket
 5. Next scan will analyze the deltas between both datasets, and alerts will be created if deltas exist
    ![](../../assets/assets/image_31.png)

@@ -31,12 +31,12 @@ This Document provides guidance on how to create and manage dashboards with mult
 3. The "New Chart Inspector" form will appear.
    ![](../../assets/assets/Screenshot_2025-03-26_at_1.14.21_PM.png)
 4. Configure the data source and parameters:
-   * **Name**: Provide a unique name for the chart.
-   * **Source**: Select the data source for the chart.
-   * **Policy**: Select policy for the chart. Based on the policy choose Dimensions/Segment/Group-By and attributes as needed.
-     * Dimensions - Represent the value of \<Group-By> column name, while creating business metrics
-   * **Description** (optional): Add a brief description of the chart.
-   * Click **Save** to add the chart to the dashboard.
+    * **Name**: Provide a unique name for the chart.
+    * **Source**: Select the data source for the chart.
+    * **Policy**: Select policy for the chart. Based on the policy choose Dimensions/Segment/Group-By and attributes as needed.
+        * Dimensions - Represent the value of \<Group-By> column name, while creating business metrics
+    * **Description** (optional): Add a brief description of the chart.
+    * Click **Save** to add the chart to the dashboard.
 
 ### Example 1:
 
@@ -64,7 +64,7 @@ This Document provides guidance on how to create and manage dashboards with mult
 
 1. Select the dashboard from the list.
 2. Click the **Edit (Pencil Icon)** button.
-   1. Modify the name or description, and Save.
+    1. Modify the name or description, and Save.
 3. To delete a dashboard, Click the **Delete (Trash Icon)** button, and confirm the deletion.
 
 ### Editing or Deleting Charts

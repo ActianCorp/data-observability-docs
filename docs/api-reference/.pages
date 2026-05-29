@@ -1,0 +1,13 @@
+nav:
+    - data-observe-apis.md
+    - authentication-api
+    - data-observe-ip-list.md
+    - connections.md
+    - assets-api
+    - incidents-api.md
+    - upload-data-api.md
+    - track-job-status.md
+    - check-for-alerts.md
+    - ticket-integration-api.md
+    - dq-reporting-apis.md
+    - dq-score-api.md

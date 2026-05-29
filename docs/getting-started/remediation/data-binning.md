@@ -23,7 +23,7 @@ To enable this feature for a connected data source, you will need to:
 
 1. Select previously created correctness policy
 2. Pick desired bucket type (AWS-S3, GCP-Storage or Azure-Blob)
-   1. Once selected, you will need to enter the credentials
+    1. Once selected, you will need to enter the credentials
 3.  You will then need to define:
 
     1. _Valid Data Path:_ Path for good data (correct data)

@@ -45,13 +45,13 @@ Now you're ready to configure and activate data binning.
    Choose one or more correctness monitors you created in Step 2. These are the monitors/rules that defines which records are considered valid vs. invalid.
 3. Choose Storage Destination:\
    Select your cloud storage type:
-   * **AWS S3**
-   * **GCP Cloud Storage**
-   * **Azure Blob Storage**
+    * **AWS S3**
+    * **GCP Cloud Storage**
+    * **Azure Blob Storage**
 4. Enter Storage Credentials: Provide the authentication credentials for your chosen storage destination. See [Storage Permissions](configuring-data-binning.md#storage-permissions) below for required access levels.
 5. Define Storage Paths
-   1. **Valid Data Path**: The destination path for records that pass all quality rules (e.g., `s3://my-bucket/valid-data/`)
-   2. **Invalid Data Path**: The destination path for records that fail quality rules (e.g., `s3://my-bucket/invalid-data/`)
+    1. **Valid Data Path**: The destination path for records that pass all quality rules (e.g., `s3://my-bucket/valid-data/`)
+    2. **Invalid Data Path**: The destination path for records that fail quality rules (e.g., `s3://my-bucket/invalid-data/`)
 6. Click **Save** to activate data binning
 
 ### Step 4: Verify Binning Activation

@@ -28,8 +28,8 @@ After creating the application, configure its settings:
 
 * **Callback URL:** Enter the redirect URI provided by Actian Data Observability. This will likely follow the format: `https://data-observability-actian.okta.com/oauth2/v1/authorize/callback`. **Please confirm the exact redirect URL with Actian Data Observability.**
 * Under **Advanced Settings -> OAuth**:
-  * **JSON Web Token (JWT) Signature Algorithm:** Choose `RS256`.
-  * **Grant Types:** Select `Implicit`, `Authorization Code`, `Refresh Token`, and `Client Credentials`.
+    * **JSON Web Token (JWT) Signature Algorithm:** Choose `RS256`.
+    * **Grant Types:** Select `Implicit`, `Authorization Code`, `Refresh Token`, and `Client Credentials`.
 
 Click **Save Changes**.
 

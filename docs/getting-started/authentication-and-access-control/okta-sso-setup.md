@@ -13,15 +13,15 @@ There's currently no APIs exposed for enabling SSO. To setup SSO, you will need 
 
 1. Under Okta Applications, Select "Create App Integration"
 2. Select the following options
-   * Sign-in Method OIDC: OpenID Connect 
-   * Application Type: Web Application
+    * Sign-in Method OIDC: OpenID Connect 
+    * Application Type: Web Application
 3. Fill in the App Integration Details as follows:
-   * Application Name: Name of the Application. E.g Actian Data Observability Integration App
-   * Sign-in redirect URIs (provided by Actian Data Observability):  Ex: `https://data-observability-actian.okta.com/oauth2/v1/authorize/callback`
-     * Scenario 1 : If the okta tenant name is `dev123456.okta.com`, the URL would be `https://dev123456.okta.com/oauth2/v1/authorize/callback`
-     * Scenario 2 : If the okta tenant is mapped to a domain (ex: `acmecompany.okta.com`), the url would be `https://acmecompany.okta.com/oauth2/v1/authorize/callback`
-   * Assignments: Controlled access "Limit access to selected groups"
-     * Select the group created previously
+    * Application Name: Name of the Application. E.g Actian Data Observability Integration App
+    * Sign-in redirect URIs (provided by Actian Data Observability):  Ex: `https://data-observability-actian.okta.com/oauth2/v1/authorize/callback`
+        * Scenario 1 : If the okta tenant name is `dev123456.okta.com`, the URL would be `https://dev123456.okta.com/oauth2/v1/authorize/callback`
+        * Scenario 2 : If the okta tenant is mapped to a domain (ex: `acmecompany.okta.com`), the url would be `https://acmecompany.okta.com/oauth2/v1/authorize/callback`
+    * Assignments: Controlled access "Limit access to selected groups"
+        * Select the group created previously
 4. Save application
 
 ## Setup Application
