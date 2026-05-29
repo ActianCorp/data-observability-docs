@@ -82,43 +82,34 @@ nav:
       - Microsoft Entra IDP Setup: getting-started/authentication-and-access-control/microsoft-entra-idp-setup.md
       - Auth0 Setup: getting-started/authentication-and-access-control/auth0-setup.md
       - Okta SSO Setup: getting-started/authentication-and-access-control/okta-sso-setup.md
-      - User Management: getting-started/authentication-and-access-control/user-management.md
   - Deployment Models:
     - Deployment Models: deployment-models/deployment-models.md
     - Virtual Private Cloud (VPC) Deployment: deployment-models/virtual-private-cloud-vpc-deployment.md
   - API Reference:
-    - Authentication API: api-reference/authentication-api.md
-    - API Keys: api-reference/api-keys.md
-    - Monitors API: api-reference/monitors-api.md
+    - Data Observe APIs: api-reference/data-observe-apis.md
+    - Authentication API:
+      - Authentication API: api-reference/authentication-api/authentication-api.md
+      - API Keys: api-reference/authentication-api/api-keys.md
+      - Get Google Service Account API: api-reference/authentication-api/get-google-service-account-api.md
+    - Actian Data Observability IP List: api-reference/data-observe-ip-list.md
+    - Connections: api-reference/connections.md
+    - Assets API:
+      - Asset API: api-reference/assets-api/asset-api.md
+      - Assets Group API: api-reference/assets-api/assets-group-api.md
+      - Monitors API: api-reference/assets-api/monitors-api.md
+    - Incidents API: api-reference/incidents-api.md
+    - Upload Data API: api-reference/upload-data-api.md
+    - Track Job Status: api-reference/track-job-status.md
+    - Check for Alerts: api-reference/check-for-alerts.md
+    - Ticket Integration API: api-reference/ticket-integration-api.md
     - DQ Reporting APIs: api-reference/dq-reporting-apis.md
     - DQ Score API: api-reference/dq-score-api.md
-    - Get Google Service Account API: api-reference/get-google-service-account-api.md
-    - Tenant Configuration: api-reference/tenant-configuration.md
-    - Actian Data Observability IP List: api-reference/telmai-ip-list.md
-    - Source APIs: source-apis/list-all-sources.md
-    - Upload Data:
-      - Upload Data from Cloud: upload-data/upload-data-api/upload-data-from-cloud.md
-      - RedShift Request Data: upload-data/upload-data-api/redshift-request-data.md
-      - GCS Request Data: upload-data/upload-data-api/gcs-request-data.md
-      - Azure Request Data: upload-data/upload-data-api/azure-request-data.md
-      - GBQ Request Data: upload-data/upload-data-api/gbq-request-data.md
-      - Snowflake Request Data: upload-data/upload-data-api/snowflake-request-data.md
-      - Amazon S3 Request Data: upload-data/upload-data-api/amazon-s3-request-data.md
-      - Delta Lake Request: upload-data/upload-data-api/delta-lake-request.md
-      - Trino Request Data: upload-data/upload-data-api/trino-request-data.md
-      - Track Upload Job: upload-data/track-job-status.md
-      - Check for Alerts: upload-data/check-for-alerts.md
   - Admin APIs:
     - User Management: admin-apis/update-user.md
     - Troubleshooting: admin-apis/troubleshooting.md
   - Release Notes:
     - Release Notes: telmai-releases/release-notes/release-notes.md
     - Initial Release: telmai-releases/release-notes/initial_release.md
-    - 25.1.0: telmai-releases/release-notes/25.1.0.md
-    - 25.1.2: telmai-releases/release-notes/25.1.2.md
-    - 25.1.3: telmai-releases/release-notes/25.1.3.md
-    - 25.2.0: telmai-releases/release-notes/25.2.0.md
-    - 25.2.1: telmai-releases/release-notes/25.2.1.md
 
 
 # Theme Configuration
@@ -239,7 +230,13 @@ extra_javascript:
   - javascripts/mermaid-init.js
   - javascripts/search_enhancement.js
   - javascripts/extra.js
+  - javascripts/comprehensive-nav-structure.js
   - javascripts/comprehensive-nav-dataconnect.js
   - path: javascripts/current.js
     defer: true
   - javascripts/toast-fix.js
+
+hooks:
+  - hooks/section_index.py
+  - hooks/custom_lexers.py
+  - hooks/generate_nav.py

@@ -1,6 +1,6 @@
 (function () {
 
-  var SECTIONS = [
+  var SECTIONS = (window.CN_SECTIONS && window.CN_SECTIONS.length) ? window.CN_SECTIONS : [
     {
       key: '',
       label: 'Home',
