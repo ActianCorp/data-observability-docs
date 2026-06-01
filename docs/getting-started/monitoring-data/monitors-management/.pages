@@ -1,7 +1,7 @@
 nav:
-  - Monitors Management: monitors-management.md
-  - Creating a Monitor: creating-a-monitor.md
-  - Managing Existing Monitors: managing-existing-monitors.md
-  - Configuring Data-Binning: configuring-data-binning.md
-  - Configuring Notifications: configuring-notifications.md
-  - Monitors Troubleshooting: monitors-troubleshooting.md
+    - Monitors Management: monitors-management.md
+    - Creating a Monitor: creating-a-monitor.md
+    - Managing Existing Monitors: managing-existing-monitors.md
+    - Configuring Data-Binning: configuring-data-binning.md
+    - Configuring Notifications: configuring-notifications.md
+    - Monitors Troubleshooting: monitors-troubleshooting.md
