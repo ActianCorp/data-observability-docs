@@ -1,7 +1,7 @@
 Get Google Service Account API
 ==============================
 
-Tenant Id can be retrieved from the UI as listed [here](broken-reference).
+Tenant Id can be retrieved from the UI as listed [here](../../api-misc/api-reference/tenant-configuration.md#get-tenants).
 
 ## Get SA Account
 

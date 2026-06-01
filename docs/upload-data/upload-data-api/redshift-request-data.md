@@ -25,7 +25,7 @@
 | Field            | Type   | Value         |
 | ---------------- | ------ | ------------- |
 | type             | string | Required. "REDSHIFT"    |
-| id\_attribute    | string | Optional. Name of the column in data that represents the identifier of the row. Read more [here](broken-reference) |
+| id\_attribute    | string | Optional. Name of the column in data that represents the identifier of the row. Read more [here](../../api-reference/upload-data-api.md) |
 | endpoint\_prefix | string | Required. Name of the endpoint\_prefix  |
 | database         | string | Required. Name of database  |
 | schema           | string | Optional. Name of schema    |

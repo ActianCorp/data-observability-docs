@@ -12,7 +12,7 @@ When upload job is triggered via API, the response contains a section with the j
 }
 ```
 
-Note, Tenant Id can be retrieved from the UI as listed [here](broken-reference)
+Note, Tenant Id can be retrieved from the UI as listed [here](../api-misc/api-reference/tenant-configuration.md#get-tenants)
 
 ## Get job status for a specific Job Id
 

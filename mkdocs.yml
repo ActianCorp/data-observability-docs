@@ -88,10 +88,16 @@ nav:
     - Virtual Private Cloud (VPC) Deployment: deployment-models/virtual-private-cloud-vpc-deployment.md
   - API Reference:
     - Actian Data Observability Platform APIs: api-reference/data-observe-apis.md
-    - Authentication API: api-reference/authentication-api/authentication-api.md
+    - Authentication API:
+      - Authentication API: api-reference/authentication-api/authentication-api.md
+      - API Keys: api-reference/authentication-api/api-keys.md
+      - Get Google Service Account API: api-reference/authentication-api/get-google-service-account-api.md
     - Actian Data Observability IP List: api-reference/data-observe-ip-list.md
     - Connection API: api-reference/connections.md
-    - Assets API: api-reference/assets-api/asset-api.md
+    - Assets API:
+      - Asset API: api-reference/assets-api/asset-api.md
+      - Assets Group API: api-reference/assets-api/assets-group-api.md
+      - Monitors API: api-reference/assets-api/monitors-api.md
     - Incidents API: api-reference/incidents-api.md
     - Trigger Scan: api-reference/upload-data-api.md
     - Track Scan Job: api-reference/track-job-status.md

@@ -27,7 +27,7 @@
 | Field         | Type   | Value        |
 |---------------|--------|--------------|
 | type          | string | Required. "SNOWFLAKE"     |
-| id\_attribute | string | Optional. Name of the column in data that represents the identifier of the row. Read more [here](broken-reference) |
+| id\_attribute | string | Optional. Name of the column in data that represents the identifier of the row. Read more [here](../../api-reference/upload-data-api.md) |
 | account       | string | Required. Name of the account    |
 | database      | string | Required. Name of database       |
 | schema        | string | Optional. Name of schema         |

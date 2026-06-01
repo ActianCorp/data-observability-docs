@@ -24,9 +24,9 @@
 | Field         | Type   | Value        |
 |---------------|--------|--------------|
 | type          | string | Required. "S3"      |
-| id\_attribute | string | Optional. Name of the column in data that represents the identifier of the row. Read more [here](broken-reference)          |
+| id\_attribute | string | Optional. Name of the column in data that represents the identifier of the row. Read more [here](../../api-reference/upload-data-api.md)          |
 | bucket        | string | Required. Name of S3 bucket       |
-| path          | string | Required. Full path of file inside the bucket. Read more [here](broken-reference)   |
+| path          | string | Required. Full path of file inside the bucket. Read more [here](../../api-reference/upload-data-api.md)   |
 | aws\_key      | string | Required. AWS access key        |
 | aws\_secret   | string | Required. AWS secret key        |
 | region        | string | Required. AWS region            |

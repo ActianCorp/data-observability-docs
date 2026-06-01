@@ -23,9 +23,9 @@
 | Field         | Type   | Value        |
 |---------------|--------|--------------|
 | type             | string | Required. "azure"  |
-| id\_attribute    | string | Optional. Name of the column in data that represents the identifier of the row. Read more [here](broken-reference)   |
+| id\_attribute    | string | Optional. Name of the column in data that represents the identifier of the row. Read more [here](../../api-reference/upload-data-api.md)   |
 | bucket           | string | Required. Name of the bucket    |
-| path             | string | Required. Full path of file inside the bucket. Read more [here](broken-reference)   |
+| path             | string | Required. Full path of file inside the bucket. Read more [here](../../api-reference/upload-data-api.md)   |
 | read\_options    | json   | Provide this only for CSV input if there is a separator like “,” or “\t”. For parquet and json, omit read\_options and separator |
 | separator        | string | For CSV only,  <br/>‘,’ for CSV |
 | sas\_key         | string | Required. Shared Access Signature access key   |

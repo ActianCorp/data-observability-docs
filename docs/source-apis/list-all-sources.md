@@ -3,7 +3,7 @@ Source APIs
 
 APIs to manage a Actian Data Observability source.
 
-Tenant Id can be retrieved from the UI as listed [here](broken-reference).
+Tenant Id can be retrieved from the UI as listed [here](../api-misc/api-reference/tenant-configuration.md#get-tenants).
 
 ## Create a source
 

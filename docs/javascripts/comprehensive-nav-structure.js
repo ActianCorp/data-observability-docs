@@ -347,7 +347,21 @@
       },
       {
         "name": "Authentication API",
-        "href": "api-reference/authentication-api/authentication-api.html"
+        "href": "api-reference/authentication-api/authentication-api.html",
+        "pages": [
+          {
+            "name": "Authentication API",
+            "href": "api-reference/authentication-api/authentication-api.html"
+          },
+          {
+            "name": "API Keys",
+            "href": "api-reference/authentication-api/api-keys.html"
+          },
+          {
+            "name": "Get Google Service Account API",
+            "href": "api-reference/authentication-api/get-google-service-account-api.html"
+          }
+        ]
       },
       {
         "name": "Actian Data Observability IP List",
@@ -359,7 +373,21 @@
       },
       {
         "name": "Assets API",
-        "href": "api-reference/assets-api/asset-api.html"
+        "href": "api-reference/assets-api/asset-api.html",
+        "pages": [
+          {
+            "name": "Asset API",
+            "href": "api-reference/assets-api/asset-api.html"
+          },
+          {
+            "name": "Assets Group API",
+            "href": "api-reference/assets-api/assets-group-api.html"
+          },
+          {
+            "name": "Monitors API",
+            "href": "api-reference/assets-api/monitors-api.html"
+          }
+        ]
       },
       {
         "name": "Incidents API",

@@ -24,7 +24,7 @@
 | Field         | Type   | Value        |
 |---------------|--------|--------------|
 | type          | string  | Required. DELTALAKE       |
-| id\_attribute | String  | Optional. Name of the column in data that represents the identifier of the row. Read more [here](broken-reference) |
+| id\_attribute | String  | Optional. Name of the column in data that represents the identifier of the row. Read more [here](../../api-reference/upload-data-api.md) |
 | host          | string  | Required. Host name of the cluster      |
 | port          | integer | Required. Post number of the cluster    |
 | schema        | string  | Required. Name of the Schema            |

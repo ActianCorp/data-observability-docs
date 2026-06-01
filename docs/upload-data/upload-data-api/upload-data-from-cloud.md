@@ -3,9 +3,9 @@ Upload data from Cloud
 
 API to upload data from Cloud storage.
 
-If using GCS or GBQ, before executing the APIs to upload data, grant read access to the [Google Cloud Storage](broken-reference) bucket or [Google BigQuery table](broken-reference).
+If using GCS or GBQ, before executing the APIs to upload data, grant read access to the [Google Cloud Storage](../../getting-started/connect-to-data/data-connectors/google-cloud-storage.md) bucket or [Google BigQuery table](../../getting-started/connect-to-data/data-connectors/google-bigquery.md).
 
-Tenant Id can be retrieved from the UI as listed [here](broken-reference)
+Tenant Id can be retrieved from the UI as listed [here](../../api-misc/api-reference/tenant-configuration.md#get-tenants)
 
 Source Id can be retrieved from the UI or using the [APIs](../../source-apis/list-all-sources.md)
 

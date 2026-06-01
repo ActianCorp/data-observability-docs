@@ -2,7 +2,7 @@
 
 ## Request Body for Google BigQuery
 
-Currently supported values for "method" are listed [here](broken-reference)
+Currently supported values for "method" are listed [here](../../api-reference/upload-data-api.md)
 
 ```
 {
@@ -20,8 +20,8 @@ Currently supported values for "method" are listed [here](broken-reference)
 | Field         | Type   | Value        |
 |---------------|--------|--------------|
 | type          | string | Required. "BIGQUERY"    |
-| id\_attribute | string | Optional. Name of the column in data that represents the identifier of the row. Read more [here](broken-reference) |
+| id\_attribute | string | Optional. Name of the column in data that represents the identifier of the row. Read more [here](../../api-reference/upload-data-api.md) |
 | project       | string | Required. Name of GBQ project    |
 | dataset       | string | Required. Name of GBQ dataset    |
 | table         | string | Required. Name of GBQ table      |
-| method        | string | Required. Supported types are described [here](broken-reference)  |
+| method        | string | Required. Supported types are described [here](../../api-reference/upload-data-api.md)  |
