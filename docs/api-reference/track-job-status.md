@@ -11,7 +11,7 @@ When upload job is triggered via API, the response contains a section with the j
 ```
 
 !!! note
-    Tenant Id can be retrieved from the UI as listed [here](../api-reference/tenant-configuration.md)
+    Tenant Id can be retrieved from the UI as listed [here](../api-misc/api-reference/tenant-configuration.md)
 
 ## Get jobs for a specific tenant and source
 

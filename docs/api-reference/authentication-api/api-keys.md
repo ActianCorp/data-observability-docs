@@ -11,7 +11,7 @@ X-TLM-Key:{API Key}
 
 Execute Authenticate API to retrieve access token for Authorization header used below
 
-Tenant Id can be retrieved from the UI as listed [here](tenant-configuration.md#get-tenants).
+Tenant Id can be retrieved from the UI as listed [here](../../api-misc/api-reference/tenant-configuration.md#get-tenants).
 
 ## Retrieve all API Keys for specific tenant
 

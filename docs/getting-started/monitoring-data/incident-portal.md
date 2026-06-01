@@ -16,6 +16,6 @@ The main dashboard is organized into a few key sections:
 To learn more about how to setup your thresholds, please refer to the following pages:
 
 * [Data Quality Metrics](/broken/pages/sm3LpwkMBKpKsCSQaNDd)
-* [Alert Policies](alert-policies.md)
+* [Alert Policies](monitors-management/configuring-notifications.md)
 * [Data Trends and Alerts](data-trends-and-alerts.md)
 * [Metrics Inspector](metrics-inspector.md)

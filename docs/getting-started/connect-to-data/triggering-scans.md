@@ -12,7 +12,7 @@
 
 ## Trigger job using Actian Data Observability API
 
-Please refer to the documentation here: [Trigger Data Scan API](../../api-misc/upload-data-api.md)
+Please refer to the documentation here: [Trigger Data Scan API](../../api-reference/upload-data-api.md)
 
 ## Scheduling Scans
 

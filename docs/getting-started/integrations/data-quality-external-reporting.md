@@ -30,5 +30,5 @@ The external table is the central repository for all DQ scan results. It provide
 
 ## Configuring Reporting
 
-Reporting can only be configured via APIs. Please refer to [DQ Reporting APIs.](../api-reference/dq-reporting-apis.md)
+Reporting can only be configured via APIs. Please refer to [DQ Reporting APIs.](../../api-reference/dq-reporting-apis.md)
 

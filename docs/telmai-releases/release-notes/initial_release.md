@@ -7,13 +7,13 @@ Actian Data Observability
 
 ### Product Changes
 
-* [MCP server availability in VPC deployment](../../integrations/mcp-server.md)
-* [Exclude single metric from learning](../../monitoring-data/metrics-exclusions.md)
-* [Data quality score - API only](../../monitoring-data/data-quality-score.md)
+* [MCP server availability in VPC deployment](../../getting-started/integrations/mcp-server.md)
+* [Exclude single metric from learning](../../getting-started/monitoring-data/metrics-exclusions.md)
+* [Data quality score - API only](../../getting-started/monitoring-data/data-quality-score.md)
 * AI Agent now supports VPC deployments
 * AI Agent now supports Anthropic
-* [Support reading PDF files from storage (GCP Only)](../../connect-to-data/supported-file-types.md)
-* [Data Quality reporting to external storage](../../integrations/data-quality-external-reporting.md)
+* [Support reading PDF files from storage (GCP Only)](../../getting-started/connect-to-data/supported-file-types.md)
+* [Data Quality reporting to external storage](../../getting-started/integrations/data-quality-external-reporting.md)
 * [Tracking warnings through UI and API](../../admin-apis/troubleshooting.md)
 * General UX improvements
 * Support reading from Hive metastore
@@ -31,7 +31,7 @@ Below APIs have been deprecated:
 
 `/api/data/v2/{tenant}/batch_data`
 
-Please use [Trigger Data Scan API](../../api-misc/upload-data-api.md) to trigger data scan.
+Please use [Trigger Data Scan API](../../api-reference/upload-data-api.md) to trigger data scan.
 
 
 ## October 2025 Release
@@ -39,9 +39,9 @@ Please use [Trigger Data Scan API](../../api-misc/upload-data-api.md) to trigger
 
 ### Product Changes
 
-* New feature: [Incident tracking](../../monitoring-data/monitoring-data.md)
-* Updated [login flow](../../user-management/auth-access-control.md)
-* Updates to [creating policies](../../monitoring-data/alert-policies.md)
+* New feature: [Incident tracking](../../getting-started/monitoring-data/monitoring-data.md)
+* Updated [login flow](../../getting-started/authentication-and-access-control/auth-access-control.md)
+* Updates to [creating policies](../../getting-started/monitoring-data/monitors-management/configuring-notifications.md)
   * Auto ticket creation
   * User-defined `Impact` field
 * Updated spark version
@@ -70,15 +70,15 @@ You can scan every record across your pipeline to gain a holistic understanding 
 Actain Data Observability featues:
 
 Connect to any data lake or lakehouse with 250+ connectors
-  * [Data Connectors](../../connect-to-data/data-connectors/data-connectors.md)
+  * [Data Connectors](../../getting-started/connect-to-data/data-connectors/data-connectors.md)
 
 Monitor and analyze data health across your data estate.
-  * [Profiling Data](../../profiling-data//profiling-data.md)
-  * [Data Health Metrics](../../profiling-data/data-health-metrics.md)
-  * [Data Health Overview Page](../../profiling-data/data-health-overview-page.md)
+  * [Profiling Data](../../getting-started/profiling-data/profiling-data.md)
+  * [Data Health Metrics](../../getting-started/profiling-data/data-health-metrics.md)
+  * [Data Health Overview Page](../../getting-started/profiling-data/data-health-overview-page.md)
 
 Anomaly detection
-  * [Data Diff](../../profiling-data/data-diff.md)
+  * [Data Diff](../../getting-started/profiling-data/data-diff.md)
 
 
 

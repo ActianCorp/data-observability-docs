@@ -1,4 +1,4 @@
-##### Creating a Monitor
+# Creating a Monitor
 
 ## Starting Monitor Creation
 
@@ -7,7 +7,7 @@
 3. Click the **"+ New Monitor"** button in the top-right corner
 
 
-<figure><img src="../assets/monitors.png"></figure>
+<figure><img src="../../../assets/assets/monitors.png"></figure>
 
 ### Monitor Creation Panel
 
@@ -31,7 +31,7 @@ Select from three monitor types based on your monitoring needs:
 * [User-Defined Metric](../user-defined-monitors/user-defined-metrics.md)
 * [Record Validation Rule](../user-defined-monitors/record-validation-rules/)
 
-<figure><img src="../assets/image (9)a.png"></figure>
+<figure><img src="../../../assets/assets/image (9)a.png"></figure>
 
 **Important:** Monitor type cannot be changed after creation. Choose carefully based on your monitoring requirements.
 
@@ -40,7 +40,7 @@ Select from three monitor types based on your monitoring needs:
 
 After selecting your monitor type, configure the monitor details:
 
-<figure><img src="../assets/image (10)a.png"></figure>
+<figure><img src="../../../assets/assets/image (10)a.png"></figure>
 
 #### Basic Information
 
@@ -129,7 +129,7 @@ See [record violation rules ](../user-defined-monitors/record-validation-rules/)
 
 All monitor types require threshold configuration to determine when alerts are triggered.
 
-<figure><img src="../assets/image (11)a.png"></figure>
+<figure><img src="../../../assets/assets/image (11)a.png"></figure>
 
 ### Threshold Types
 

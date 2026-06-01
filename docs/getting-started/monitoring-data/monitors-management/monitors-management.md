@@ -4,7 +4,7 @@
 
 Navigate to **Alerting Monitors** from the main navigation menu to access all monitor management functionality.
 
-<figure><img src="../assets/monitors.png"></figure>
+<figure><img src="../../../assets/assets/monitors.png"></figure>
 
 The Monitors page provides:
 
@@ -40,7 +40,7 @@ The main panel displays all monitors for the selected asset with the following i
 | **Enabled** | Toggle switch to enable/disable the monitor              |
 | **Actions** | Edit (✏️) and Delete (🗑️) buttons                       |
 
-<img src="../assets/image (4).png">
+<img src="../../../assets/assets/image (4).png">
 
 ## Monitors Actions
 
@@ -51,21 +51,21 @@ The Monitors page provides several top-level actions:
 Set up data binning rules to control how Data Observability bins your data. 
 
 
-[Learn more about data binning](remediation/data-binning.md).
+[Learn more about data binning](../../remediation/data-binning.md).
 
-<img src="../assets/image (5).png">
+<img src="../../../assets/assets/image (5).png">
 
 ### Manage Alert Channels
 
 Configure notification destinations including Slack, email, webhooks, and other integrations to ensure alerts reach the right teams. [Learn more about managing notifications](configuring-notifications.md).
 
-<img src="../assets/image (6).png">
+<img src="../../../assets/assets/image (6).png">
 
 ### + New Monitor
 
 Click **+ New Monitor** to build custom monitors tailored to your specific data quality requirements. [Learn more about creating monitors](creating-a-monitor.md).
 
-<img src="../assets/image (7).png">
+<img src="../../../assets/assets/image (7).png">
 
 ## Related Documentation
 

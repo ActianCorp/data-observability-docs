@@ -7,7 +7,7 @@ Actian Data Observability's PII Data Detection feature enables seamless identifi
 
 ![](assets/assets/image_114.png)
 
-1. Navigate to the [**Alerting Policies**](monitoring-data/alert-policies.md) Page:
+1. Navigate to the [**Alerting Policies**](getting-started/monitoring-data/monitors-management/configuring-notifications.md) Page:
    1. Select the **PII Exposure Policy**.
    2. Enable the policy (disabled by default).
    3. Optionally, limit the scope to specific attributes for focused detection.
@@ -22,7 +22,7 @@ Actian Data Observability's PII Data Detection feature enables seamless identifi
 
 ## PII Data Validation Rules 
 
-Actian Data Observability's rules engine supports custom validation and remediation of PII data violations. This includes actions like segregating PII-exposing records using [Data Binning](remediation/data-binning.md).
+Actian Data Observability's rules engine supports custom validation and remediation of PII data violations. This includes actions like segregating PII-exposing records using [Data Binning](getting-started/remediation/data-binning.md).
 
 1. **Create a Rule**:
    1. Navigate to the **Correctness Rules Page**.

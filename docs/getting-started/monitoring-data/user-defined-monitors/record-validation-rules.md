@@ -223,7 +223,7 @@ The following flow diagram describes the steps to create a new rule or rule temp
     * In case this is a rule, user will need to map the attributes to variables
 4. Write expression
 
-<figure><img src="../assets/create_rule.png"><figcaption>Creating a Rule</figcaption></figure>
+<figure><img src="../../../assets/assets/create_rule.png"><figcaption>Creating a Rule</figcaption></figure>
 
 **Note:** In case user is using an existing template, only input variables need to be mapped to variables in the table
 

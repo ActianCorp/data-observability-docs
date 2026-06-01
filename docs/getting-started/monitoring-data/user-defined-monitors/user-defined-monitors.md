@@ -107,5 +107,5 @@ Each monitor has the following properties:
 * [Built-in Metrics](built-in-metrics.md)
 * [User-defined Metrics](user-defined-metrics.md)
 * [Record Validation Rules](record-validation-rules.md)
-* [Monitors Management](monitors-management.md)
-* [Incident Management](monitoring-data.md)
+* [Monitors Management](../monitors-management/monitors-management.md)
+* [Incident Management](../monitoring-data.md)

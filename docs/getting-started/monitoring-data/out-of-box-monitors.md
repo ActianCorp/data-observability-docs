@@ -108,7 +108,7 @@ This monitor is created to group Data Observability-job failures to alert you wh
 
 ## Related Documentation
 
-* [User-defined Monitors](user-defined-monitors.md)
-* [Monitors Management](monitors-management.md)
+* [User-defined Monitors](user-defined-monitors/user-defined-monitors.md)
+* [Monitors Management](monitors-management/monitors-management.md)
 * [Incident Management](monitoring-data.md)
 

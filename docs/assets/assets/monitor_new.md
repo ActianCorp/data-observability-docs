@@ -10,14 +10,14 @@ Monitors are policies that define the expected state or behaviour of your data. 
 
 Think of it this way: a single data point violating a threshold generates an Alert. When multiple alerts occur that are related to the same problem, they can be grouped into a single Incident to provide a consolidated view of the issue.
 
-Once an asset is connected to Telmai, Telmai will start monitoring the asset's health with the [out-of-box monitors](out-of-box-monitors.md). At any time, users can build and [customize their own monitors](user-defined-monitors/).
+Once an asset is connected to Telmai, Telmai will start monitoring the asset's health with the [out-of-box monitors](../../getting-started/monitoring-data/out-of-box-monitors.md). At any time, users can build and [customize their own monitors](../../getting-started/monitoring-data/user-defined-monitors/user-defined-monitors.md).
 
-If alerts and incidents are generated, user can navigate to the [Incident Portal ](./#incidents-portal)to learn more about the underlying issues.
+If alerts and incidents are generated, user can navigate to the [Incident Portal ](../../getting-started/monitoring-data/incident-portal.md)to learn more about the underlying issues.
 
 ## Related Documentation
 
-* [Out-of-box Monitors](out-of-box-monitors.md)
-* [User-defined Monitors](user-defined-monitors/)
-* [Monitors Management](monitors-management/)
-* [Incident Portal](incident-portal.md)
-* [Data Trends and Alerts](data-trends-and-alerts.md)
+* [Out-of-box Monitors](../../getting-started/monitoring-data/out-of-box-monitors.md)
+* [User-defined Monitors](../../getting-started/monitoring-data/user-defined-monitors/user-defined-monitors.md)
+* [Monitors Management](../../getting-started/monitoring-data/monitors-management/monitors-management.md)
+* [Incident Portal](../../getting-started/monitoring-data/incident-portal.md)
+* [Data Trends and Alerts](../../getting-started/monitoring-data/data-trends-and-alerts.md)

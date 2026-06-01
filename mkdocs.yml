@@ -47,18 +47,20 @@ nav:
     - Monitoring Data:
       - Monitoring Data: getting-started/monitoring-data/monitoring-data.md
       - Out-of-the-Box Monitors: getting-started/monitoring-data/out-of-box-monitors.md
-      - User-defined Monitors: getting-started/monitoring-data/user-defined-monitors.md
-      - Built-in Metrics: getting-started/monitoring-data/built-in-metrics.md
-      - User-defined Metrics: getting-started/monitoring-data/user-defined-metrics.md
-      - Record Validation Rules: getting-started/monitoring-data/record-validation-rules.md
-      - Rules Expression Examples: getting-started/monitoring-data/rules-expression-examples.md
+      - User-defined Monitors:
+        - User-defined Monitors: getting-started/monitoring-data/user-defined-monitors/user-defined-monitors.md
+        - Built-in Metrics: getting-started/monitoring-data/user-defined-monitors/built-in-metrics.md
+        - User-defined Metrics: getting-started/monitoring-data/user-defined-monitors/user-defined-metrics.md
+        - Record Validation Rules: getting-started/monitoring-data/user-defined-monitors/record-validation-rules.md
+        - Rules Expression Examples: getting-started/monitoring-data/user-defined-monitors/rules-expression-examples.md
       - PII Data Detection Monitors: getting-started/monitoring-data/pii-data-detection-monitors.md
-      - Monitors Management: getting-started/monitoring-data/monitors-management.md
-      - Creating a Monitor: getting-started/monitoring-data/creating-a-monitor.md
-      - Managing Existing Monitors: getting-started/monitoring-data/managing-existing-monitors.md
-      - Configuring Data-Binning: getting-started/monitoring-data/configuring-data-binning.md
-      - Configuring Notifications: getting-started/monitoring-data/configuring-notifications.md
-      - Monitors Troubleshooting: getting-started/monitoring-data/monitors-troubleshooting.md
+      - Monitors Management:
+        - Monitors Management: getting-started/monitoring-data/monitors-management/monitors-management.md
+        - Creating a Monitor: getting-started/monitoring-data/monitors-management/creating-a-monitor.md
+        - Managing Existing Monitors: getting-started/monitoring-data/monitors-management/managing-existing-monitors.md
+        - Configuring Data-Binning: getting-started/monitoring-data/monitors-management/configuring-data-binning.md
+        - Configuring Notifications: getting-started/monitoring-data/monitors-management/configuring-notifications.md
+        - Monitors Troubleshooting: getting-started/monitoring-data/monitors-management/monitors-troubleshooting.md
       - Incident Portal: getting-started/monitoring-data/incident-portal.md
       - Data Trends and Alerts: getting-started/monitoring-data/data-trends-and-alerts.md
       - Metrics Exclusions: getting-started/monitoring-data/metrics-exclusions.md
@@ -75,7 +77,6 @@ nav:
       - Jobs Status Notification: getting-started/integrations/jobs-status-notification.md
       - Data Quality External Reporting: getting-started/integrations/data-quality-external-reporting.md
       - Data Observability MCP Server: getting-started/integrations/mcp-server.md
-      - Alation Integration: getting-started/integrations/alation-integration.md
     - Authentication and Access Control:
       - Authentication and Access Control: getting-started/authentication-and-access-control/auth-access-control.md
       - SSO Configuration: getting-started/authentication-and-access-control/sso-configuration.md

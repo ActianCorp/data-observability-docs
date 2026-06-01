@@ -160,4 +160,4 @@ The threshold should reflect:
 | 60-74       | Fair          | Investigate dimension contributors, plan improvements |
 | 0-59        | Poor          | Immediate attention required, escalate issues         |
 
-To start using this feature, please refer to [DQ Score APIs](../api-reference/dq-score-api.md)
+To start using this feature, please refer to [DQ Score APIs](../../api-reference/dq-score-api.md)

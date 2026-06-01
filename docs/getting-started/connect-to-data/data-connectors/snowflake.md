@@ -100,7 +100,7 @@ grant SELECT on ALL TABLES in schema identifier($db_schema_name) to role identif
 
 ###### Allow listing Actian Data Observability IP’s
 
-In some cases, Snowflake's security requires allow listing the IPs from which connection to the database is allowed. For this purpose, Actian Data Observability provides a list of static IPs from which connections can be made. Please refer to [Actian Data Observability IP list](../../api-misc/data-observe-ip-list.md).
+In some cases, Snowflake's security requires allow listing the IPs from which connection to the database is allowed. For this purpose, Actian Data Observability provides a list of static IPs from which connections can be made. Please refer to [Actian Data Observability IP list](../../../api-reference/data-observe-ip-list.md).
 
 Please make sure you are allow listing those IP addresses. These IPs are for the SaaS version of the product, which is running in the US West. They will be provided separately upon request for the private cloud or deployment in other regions.
 

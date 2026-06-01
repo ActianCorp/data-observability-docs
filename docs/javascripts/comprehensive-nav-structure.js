@@ -165,23 +165,29 @@
           },
           {
             "name": "User-defined Monitors",
-            "href": "getting-started/monitoring-data/user-defined-monitors.html"
-          },
-          {
-            "name": "Built-in Metrics",
-            "href": "getting-started/monitoring-data/built-in-metrics.html"
-          },
-          {
-            "name": "User-defined Metrics",
-            "href": "getting-started/monitoring-data/user-defined-metrics.html"
-          },
-          {
-            "name": "Record Validation Rules",
-            "href": "getting-started/monitoring-data/record-validation-rules.html"
-          },
-          {
-            "name": "Rules Expression Examples",
-            "href": "getting-started/monitoring-data/rules-expression-examples.html"
+            "href": "getting-started/monitoring-data/user-defined-monitors/user-defined-monitors.html",
+            "pages": [
+              {
+                "name": "User-defined Monitors",
+                "href": "getting-started/monitoring-data/user-defined-monitors/user-defined-monitors.html"
+              },
+              {
+                "name": "Built-in Metrics",
+                "href": "getting-started/monitoring-data/user-defined-monitors/built-in-metrics.html"
+              },
+              {
+                "name": "User-defined Metrics",
+                "href": "getting-started/monitoring-data/user-defined-monitors/user-defined-metrics.html"
+              },
+              {
+                "name": "Record Validation Rules",
+                "href": "getting-started/monitoring-data/user-defined-monitors/record-validation-rules.html"
+              },
+              {
+                "name": "Rules Expression Examples",
+                "href": "getting-started/monitoring-data/user-defined-monitors/rules-expression-examples.html"
+              }
+            ]
           },
           {
             "name": "PII Data Detection Monitors",
@@ -189,27 +195,33 @@
           },
           {
             "name": "Monitors Management",
-            "href": "getting-started/monitoring-data/monitors-management.html"
-          },
-          {
-            "name": "Creating a Monitor",
-            "href": "getting-started/monitoring-data/creating-a-monitor.html"
-          },
-          {
-            "name": "Managing Existing Monitors",
-            "href": "getting-started/monitoring-data/managing-existing-monitors.html"
-          },
-          {
-            "name": "Configuring Data-Binning",
-            "href": "getting-started/monitoring-data/configuring-data-binning.html"
-          },
-          {
-            "name": "Configuring Notifications",
-            "href": "getting-started/monitoring-data/configuring-notifications.html"
-          },
-          {
-            "name": "Monitors Troubleshooting",
-            "href": "getting-started/monitoring-data/monitors-troubleshooting.html"
+            "href": "getting-started/monitoring-data/monitors-management/monitors-management.html",
+            "pages": [
+              {
+                "name": "Monitors Management",
+                "href": "getting-started/monitoring-data/monitors-management/monitors-management.html"
+              },
+              {
+                "name": "Creating a Monitor",
+                "href": "getting-started/monitoring-data/monitors-management/creating-a-monitor.html"
+              },
+              {
+                "name": "Managing Existing Monitors",
+                "href": "getting-started/monitoring-data/monitors-management/managing-existing-monitors.html"
+              },
+              {
+                "name": "Configuring Data-Binning",
+                "href": "getting-started/monitoring-data/monitors-management/configuring-data-binning.html"
+              },
+              {
+                "name": "Configuring Notifications",
+                "href": "getting-started/monitoring-data/monitors-management/configuring-notifications.html"
+              },
+              {
+                "name": "Monitors Troubleshooting",
+                "href": "getting-started/monitoring-data/monitors-management/monitors-troubleshooting.html"
+              }
+            ]
           },
           {
             "name": "Incident Portal",
@@ -278,10 +290,6 @@
           {
             "name": "Data Observability MCP Server",
             "href": "getting-started/integrations/mcp-server.html"
-          },
-          {
-            "name": "Alation Integration",
-            "href": "getting-started/integrations/alation-integration.html"
           }
         ]
       },

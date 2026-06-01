@@ -23,4 +23,4 @@ Fill in following details in the form. We use Azure SQL service as an example he
 JSON data type is not supported for SQL Server connections out of the box. Please reach out to Actian Support if it needs to be enabled
 
 !!! note
-    Please ensure that your environment has allow listed [Actian Data Observability IP list](../../api-reference/telmai-ip-list.md).
+    Please ensure that your environment has allow listed [Actian Data Observability IP list](../../../api-reference/data-observe-ip-list.md).
