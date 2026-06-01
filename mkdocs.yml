@@ -87,21 +87,15 @@ nav:
     - Deployment Models: deployment-models/deployment-models.md
     - Virtual Private Cloud (VPC) Deployment: deployment-models/virtual-private-cloud-vpc-deployment.md
   - API Reference:
-    - Data Observe APIs: api-reference/data-observe-apis.md
-    - Authentication API:
-      - Authentication API: api-reference/authentication-api/authentication-api.md
-      - API Keys: api-reference/authentication-api/api-keys.md
-      - Get Google Service Account API: api-reference/authentication-api/get-google-service-account-api.md
+    - Actian Data Observability Platform APIs: api-reference/data-observe-apis.md
+    - Authentication API: api-reference/authentication-api/authentication-api.md
     - Actian Data Observability IP List: api-reference/data-observe-ip-list.md
-    - Connections: api-reference/connections.md
-    - Assets API:
-      - Asset API: api-reference/assets-api/asset-api.md
-      - Assets Group API: api-reference/assets-api/assets-group-api.md
-      - Monitors API: api-reference/assets-api/monitors-api.md
+    - Connection API: api-reference/connections.md
+    - Assets API: api-reference/assets-api/asset-api.md
     - Incidents API: api-reference/incidents-api.md
-    - Upload Data API: api-reference/upload-data-api.md
-    - Track Job Status: api-reference/track-job-status.md
-    - Check for Alerts: api-reference/check-for-alerts.md
+    - Trigger Scan: api-reference/upload-data-api.md
+    - Track Scan Job: api-reference/track-job-status.md
+    - Check for alerts: api-reference/check-for-alerts.md
     - Ticket Integration API: api-reference/ticket-integration-api.md
     - DQ Reporting APIs: api-reference/dq-reporting-apis.md
     - DQ Score API: api-reference/dq-score-api.md

@@ -342,67 +342,39 @@
     "href": "api-reference/data-observe-apis.html",
     "pages": [
       {
-        "name": "Data Observe APIs",
+        "name": "Actian Data Observability Platform APIs",
         "href": "api-reference/data-observe-apis.html"
       },
       {
         "name": "Authentication API",
-        "href": "api-reference/authentication-api/authentication-api.html",
-        "pages": [
-          {
-            "name": "Authentication API",
-            "href": "api-reference/authentication-api/authentication-api.html"
-          },
-          {
-            "name": "API Keys",
-            "href": "api-reference/authentication-api/api-keys.html"
-          },
-          {
-            "name": "Get Google Service Account API",
-            "href": "api-reference/authentication-api/get-google-service-account-api.html"
-          }
-        ]
+        "href": "api-reference/authentication-api/authentication-api.html"
       },
       {
         "name": "Actian Data Observability IP List",
         "href": "api-reference/data-observe-ip-list.html"
       },
       {
-        "name": "Connections",
+        "name": "Connection API",
         "href": "api-reference/connections.html"
       },
       {
         "name": "Assets API",
-        "href": "api-reference/assets-api/asset-api.html",
-        "pages": [
-          {
-            "name": "Asset API",
-            "href": "api-reference/assets-api/asset-api.html"
-          },
-          {
-            "name": "Assets Group API",
-            "href": "api-reference/assets-api/assets-group-api.html"
-          },
-          {
-            "name": "Monitors API",
-            "href": "api-reference/assets-api/monitors-api.html"
-          }
-        ]
+        "href": "api-reference/assets-api/asset-api.html"
       },
       {
         "name": "Incidents API",
         "href": "api-reference/incidents-api.html"
       },
       {
-        "name": "Upload Data API",
+        "name": "Trigger Scan",
         "href": "api-reference/upload-data-api.html"
       },
       {
-        "name": "Track Job Status",
+        "name": "Track Scan Job",
         "href": "api-reference/track-job-status.html"
       },
       {
-        "name": "Check for Alerts",
+        "name": "Check for alerts",
         "href": "api-reference/check-for-alerts.html"
       },
       {
