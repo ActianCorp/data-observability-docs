@@ -31,9 +31,11 @@
 .cn-label {
   font-size: 14px;
   font-family: var(--md-text-font);
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0;
-  color: var(--md-default-fg-color) !important;
+  color: #1f2937 !important;
+  text-decoration: none;
+  flex-grow: 1;
   line-height: 1.3;
 }
 

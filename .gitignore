@@ -1,5 +1,6 @@
 # Build output
 site/
+site.zip
 
 # Python virtual environments
 .venv/
