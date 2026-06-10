@@ -1,0 +1,18 @@
+nav:
+    - data-connectors.md
+    - aws-athena.md
+    - aws-redshift.md
+    - aws-s3.md
+    - azure-blob.md
+    - azure-onelake.md
+    - databricks-delta.md
+    - google-cloud-storage.md
+    - google-bigquery.md
+    - iceberg.md
+    - iceberg-rest.md
+    - mysql.md
+    - sap-hana.md
+    - sql-server.md
+    - salesforce.md
+    - snowflake.md
+    - trino.md

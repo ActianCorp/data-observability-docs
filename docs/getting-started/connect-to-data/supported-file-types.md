@@ -14,6 +14,6 @@ When your connection is storage-based (e.g., cloud storage services), you can up
 * **Automatic File Type Detection**
     * This option attempts to determine the file type by inspecting the file extension.
     
-    !!! note
-        Reading PDF files requires enabling Gemini in your GCP workspace.
+!!! note
+    Reading PDF files requires enabling Gemini in your GCP workspace.
 

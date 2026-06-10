@@ -2,6 +2,7 @@ Actian Data Observability Platform APIs
 ========================================
 
 Data Observability offers APIs that allows users to:
+
 * Configure connections and assets
 * Trigger scan
 * Manage users
@@ -10,6 +11,7 @@ Data Observability offers APIs that allows users to:
 ### Authentication
 
 Authentication can be specified through:
+
 * User name & password
 * API Key
 * API token

@@ -1,25 +1,16 @@
-##### Snowflake
-
-###### Introduction
-
-Snowflake is a multi-cloud data warehouse optimized for analytics workloads, requiring minimal maintenance.
+# Snowflake
 
 Actian Data Observability integrates with Snowflake to monitor data, identifying anomalies such as outliers and drifts while processing data outside of your data warehouse (DW) architecture to reduce the monitoring load on your Snowflake DW.
 
 This guide outlines the steps for integrating Actian Data Observability with Snowflake.
 
-###### Authentication Options
+## Creating a Connection
 
-Snowflake offers following authentication options ([Snowflake Authentication](https://docs.snowflake.com/en/guides-overview-secure/))
+### **Authentication Options**
 
-1. Basic authentication using username and passcode
-2. Key pair authentication
-3. Multi-Factor Authentication (MFA)
-4. Federated Authentication and Single Sign-On (SSO)
+Actian Data Observability supports only **key pair-based connectivity** to Snowflake, offering enhanced security compared to basic authentication. Below are the detailed steps to integrate Snowflake with Actian Data Observability using this method.
 
-Actian Data Observability supports **key pair-based connectivity** to Snowflake, offering enhanced security compared to basic authentication. Below are the detailed steps to integrate Snowflake with Actian Data Observability using this method.
-
-###### Setting up Authentication
+###### Setting Up Authentication
 
 1. **Role and User Creation**: If you have an existing user with the necessary permissions to access the database, schema, table, or view, skip to Step 2. However, the best practice is to create a separate role and user specifically for Actian Data Observability.
     * **Role**: Actian Data Observability requires permissions for database connections, schema and table listings, metadata retrieval, and data selection in tables and views. These are managed through `SELECT`, `USAGE`, and `MONITOR` privileges in Snowflake.<br/>
@@ -34,7 +25,6 @@ Actian Data Observability supports **key pair-based connectivity** to Snowflake,
     * Snowflake Schema
     * Snowflake Username
     * Snowflake Private Key
-![](../../../assets/assets/Screenshot_2024-11-28_at_9.31.24_AM.png)
 
 **Snowflake Configuration Template Script** To simplify configuration, you can use an Actian Data Observability Template Script, enter your parameters, and execute in the Snowflake console.
 
@@ -110,3 +100,25 @@ Snowflake instances are open to every IP address by default, so no action is req
 * [User level](https://docs.snowflake.com/en/user-guide/network-policies#modify-a-user-level-network-policy/): Apply only to specific users and override account-level policies.
 
 Please refer to the Snowflake documentation for more information on modifying network policies.
+
+### Create a Connection
+
+Once connection prerequisites are completed, you can add the connection details to Actian Data Observability. You will need to provide:
+
+* Account identifier (`<org_name>-<account_name`)
+* Warehouse id
+* Credentials
+
+![](images/observability-snowflake-create-connection.png)
+
+## Connecting an asset
+
+Once a connection is defined, you can start using it to create assets. To create assets, you will need:
+
+* Database name
+  * Next step will show you available tables
+* Custom SQL Query
+
+Once defined, you will be able to see your data asset in Actian Data Observability.
+
+![](images/observability-snowflake-connect-asset.png)

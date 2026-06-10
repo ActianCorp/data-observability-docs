@@ -1,8 +1,10 @@
-##### AWS Athena
+# AWS Athena
+
+## Creating a Connection
 
 Before connecting to AWS Athena, ensure that the IAM user, whose credentials will be used, has the following permissions granted:
 
-###### Athena Permissions
+### Athena Permissions
 
 ```
 athena:StartQueryExecution
@@ -32,7 +34,7 @@ glue:GetTable
 glue:GetTables
 ```
 
-###### S3 Permissions
+### S3 Permissions
 
 ```
 s3:ListBucket
@@ -46,7 +48,7 @@ s3:ListMultipartUploadParts
 s3:AbortMultipartUpload
 ```
 
-###### Glue Permissions
+### Glue Permissions
 
 ```
 glue:GetDatabase,
@@ -56,3 +58,18 @@ glue:CreateTable
 glue:GetTable
 glue:GetTables
 ```
+Once permissions are defined, you can setup the connection by defining:
+
+* **AWS** **Key**
+* **AWS** **Secret**
+* **Database**
+* **Region**
+* **S3 Staging Directory**
+
+![](images/observability-aws-athena-create-connection.png)
+
+## Connecting an Asset
+
+Once a connection is defined, you can start using it to create assets. To create assets, you will need to select existing table or run a custom SQL query.
+
+![](images/observability-aws-athena-connect-asset.png)

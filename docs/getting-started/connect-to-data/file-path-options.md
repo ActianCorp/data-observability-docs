@@ -2,7 +2,7 @@
 
 For GCS and Amazon S3, users can specify either a single file name as input or provide a folder containing multiple files as input.
 
-#### Single file <a href="#single-file" id="single-file"></a>
+#### Single file
 
 If sending a single file, then specify the full path of a json/csv/parquet file inside the bucket.
 
@@ -22,7 +22,7 @@ path=’file.csv’
     * The JSON file should be in _Newline Delimited JSON_ format - with .json extension.
     * Column Headers in Parquet file should not contain any spaces.
 
-#### Folder <a href="#folder" id="folder"></a>
+#### Folder
 
 If a folder contains multiple files that are to be used as input, then specify the path of the folder inside the bucket, and ensure
 
@@ -40,11 +40,11 @@ path=”<folder1>/<folder2>”
 
 #### Wildcard Support
 
-You can use a `*` in your file path to match your file path. To enable wildcard you need to select checkbox for "**Resolve wildcards (\*) to folder names**"
+You can use a `*` in your file path to match your file path. To enable wildcard you need to select checkbox for "**Resolve wildcards (*) to folder names**"
 
 For example: `/<folder1>/log*.csv` will match paths like `/home/user/log_1.csv` or `/home/user/logs.csv`.
 
 !!! warning "Important"
     Currently only **one** `*` is supported in the path.
 
-<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+![](images/observability-file-path-options.png)
