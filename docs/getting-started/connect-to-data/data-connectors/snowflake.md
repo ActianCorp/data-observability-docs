@@ -10,7 +10,7 @@ This guide outlines the steps for integrating Actian Data Observability with Sno
 
 Actian Data Observability supports only **key pair-based connectivity** to Snowflake, offering enhanced security compared to basic authentication. Below are the detailed steps to integrate Snowflake with Actian Data Observability using this method.
 
-###### Setting Up Authentication
+#### Setting Up Authentication
 
 1. **Role and User Creation**: If you have an existing user with the necessary permissions to access the database, schema, table, or view, skip to Step 2. However, the best practice is to create a separate role and user specifically for Actian Data Observability.
     * **Role**: Actian Data Observability requires permissions for database connections, schema and table listings, metadata retrieval, and data selection in tables and views. These are managed through `SELECT`, `USAGE`, and `MONITOR` privileges in Snowflake.<br/>
@@ -88,7 +88,7 @@ grant SELECT on ALL TABLES in schema identifier($db_schema_name) to role identif
 **4** Run the updated script in your Snowflake console.
 
 
-###### Allow listing Actian Data Observability IP’s
+### Allow listing Actian Data Observability IP’s
 
 In some cases, Snowflake's security requires allow listing the IPs from which connection to the database is allowed. For this purpose, Actian Data Observability provides a list of static IPs from which connections can be made. Please refer to [Actian Data Observability IP list](../../../api-reference/data-observe-ip-list.md).
 
@@ -116,7 +116,7 @@ Once connection prerequisites are completed, you can add the connection details 
 Once a connection is defined, you can start using it to create assets. To create assets, you will need:
 
 * Database name
-  * Next step will show you available tables
+    * Next step will show you available tables
 * Custom SQL Query
 
 Once defined, you will be able to see your data asset in Actian Data Observability.

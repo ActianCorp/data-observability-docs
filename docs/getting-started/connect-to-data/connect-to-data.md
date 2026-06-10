@@ -20,6 +20,7 @@ To connect to your data source:
 
 !!! note
     Once you have selected the connection type, you will be asked to fill information specified to your connection
+    
     Connection can be reused to connect multiple datasets, tables, etc.
 
 ## Connect to a data asset
@@ -30,7 +31,7 @@ Once a connection is available, you can navigate to "Asset" page, and add your c
 2. Select target project, and click **+Add** button
 3. Select source type
 4. Select a created connection from the dropdown menu
-   * You can also create a connection by clicking **+New Connection** button
+    * You can also create a connection by clicking **+New Connection** button
 5. Fill the data asset details, and follow onscreen instructions
 
 ## List of connectors enabled by default

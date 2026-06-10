@@ -1,7 +1,6 @@
 # Data Connectors
 
-
-## List of connectors enabled by default
+## List of Connectors Available
 
 * [Google Big Query](google-bigquery.md)
 * [Google Cloud Storage](google-cloud-storage.md)

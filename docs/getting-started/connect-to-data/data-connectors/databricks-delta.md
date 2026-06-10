@@ -16,7 +16,7 @@ Capture the following details:
 * **Port**
 * **HTTP Path**
 
-For more information, refer to the : [![](https://docs.databricks.com/en/_static/favicon.ico)Databricks ODBC and JDBC Drivers](https://docs.databricks.com/integrations/bi/jdbc-odbc-bi.html)
+For more information, refer to the : [Databricks ODBC and JDBC Drivers](https://docs.databricks.com/integrations/bi/jdbc-odbc-bi.html)
 
 ### **Generate a Security Token**
 
@@ -25,7 +25,7 @@ A security token is required to connect to the cluster remotely. Create this tok
 * Go to the top right corner and click on your **User Name** -> **User Settings** -> **Access Token** -> **Generate New Token**.
 * Capture the token created.
 
-For detailed instructions, see the[![](https://docs.databricks.com/en/_static/favicon.ico)Authentication for Databricks tools and APIs](https://docs.databricks.com/dev-tools/api/latest/authentication.html#token-management)
+For detailed instructions, see the[Authentication for Databricks tools and APIs](https://docs.databricks.com/dev-tools/api/latest/authentication.html#token-management)
 
 ### Create a Connection in Actian Data Observability
 
