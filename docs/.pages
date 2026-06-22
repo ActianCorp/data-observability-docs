@@ -1,12 +1,6 @@
 nav:
   - Home: index.md
-  - Getting Started:
-    - Connect to Data: getting-started/connect-to-data
-    - Profiling Data: getting-started/profiling-data
-    - Monitoring Data: getting-started/monitoring-data
-    - Remediation: getting-started/remediation
-    - Integrations: getting-started/integrations
-    - Authentication and Access Control: getting-started/authentication-and-access-control
+  - Getting Started: getting-started
   - Deployment Models: deployment-models
   - API Reference: api-reference
   - Admin APIs: admin-apis

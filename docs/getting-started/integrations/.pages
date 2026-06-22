@@ -1,0 +1,8 @@
+nav:
+  - Integrations: integrations.md
+  - Jira Integration: jira-integration.md
+  - Slack Integration: slack.md
+  - Jobs Status Notification: jobs-status-notification.md
+  - Data Quality External Reporting: data-quality-external-reporting.md
+  - Data Observability MCP Server: mcp-server.md
+  - ...

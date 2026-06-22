@@ -1,0 +1,8 @@
+nav:
+  - Profiling Data: profiling-data.md
+  - Data Health Metrics: data-health-metrics.md
+  - Data Health Overview Page: data-health-overview-page.md
+  - Interactive Profiling Tool - Investigator: interactive-profiling-tool-investigator.md
+  - Data Diff: data-diff.md
+  - Compound Attributes: compound-attributes
+  - ...

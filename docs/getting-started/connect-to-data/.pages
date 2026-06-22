@@ -1,0 +1,10 @@
+nav:
+  - Connect to Data: connect-to-data.md
+  - Projects: projects.md
+  - Data Connectors: data-connectors
+  - Supported File Types: supported-file-types.md
+  - Connection Modes: connection-modes.md
+  - File Path Options: file-path-options.md
+  - Triggering Scans: triggering-scans.md
+  - Configuring a Data Source: configuring-a-data-source.md
+  - ...

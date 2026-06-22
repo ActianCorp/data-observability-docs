@@ -1,18 +1,19 @@
 nav:
-    - data-connectors.md
-    - aws-athena.md
-    - aws-redshift.md
-    - aws-s3.md
-    - azure-blob.md
-    - azure-onelake.md
-    - databricks-delta.md
-    - google-cloud-storage.md
-    - google-bigquery.md
-    - iceberg.md
-    - iceberg-rest.md
-    - mysql.md
-    - sap-hana.md
-    - sql-server.md
-    - salesforce.md
-    - snowflake.md
-    - trino.md
+  - Data Connectors: data-connectors.md
+  - Google BigQuery: google-bigquery.md
+  - Google Cloud Storage: google-cloud-storage.md
+  - Iceberg: iceberg.md
+  - Iceberg REST: iceberg-rest.md
+  - Snowflake: snowflake.md
+  - AWS S3: aws-s3.md
+  - AWS Athena: aws-athena.md
+  - AWS Redshift: aws-redshift.md
+  - Databricks Delta: databricks-delta.md
+  - Azure Blob: azure-blob.md
+  - Azure OneLake: azure-onelake.md
+  - Salesforce: salesforce.md
+  - SAP Hana: sap-hana.md
+  - SQL Server: sql-server.md
+  - MySQL: mysql.md
+  - Trino: trino.md
+  - ...

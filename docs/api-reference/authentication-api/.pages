@@ -1,4 +1,5 @@
 nav:
-    - authentication-api.md
-    - api-keys.md
-    - get-google-service-account-api.md
+  - Authentication API: authentication-api.md
+  - API Keys: api-keys.md
+  - Get Google Service Account API: get-google-service-account-api.md
+  - ...

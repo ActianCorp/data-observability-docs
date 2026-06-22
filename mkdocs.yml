@@ -8,110 +8,13 @@ docs_dir: docs
 site_dir: site
 
 # Navigation
-nav:
-  - Home: index.md
-  - Getting Started:
-    - Connect to Data:
-      - Connect to Data: getting-started/connect-to-data/connect-to-data.md
-      - Projects: getting-started/connect-to-data/projects.md
-      - Data Connectors:
-        - Data Connectors: getting-started/connect-to-data/data-connectors/data-connectors.md
-        - Google BigQuery: getting-started/connect-to-data/data-connectors/google-bigquery.md
-        - Google Cloud Storage: getting-started/connect-to-data/data-connectors/google-cloud-storage.md
-        - Iceberg: getting-started/connect-to-data/data-connectors/iceberg.md
-        - Snowflake: getting-started/connect-to-data/data-connectors/snowflake.md
-        - AWS S3: getting-started/connect-to-data/data-connectors/aws-s3.md
-        - AWS Athena: getting-started/connect-to-data/data-connectors/aws-athena.md
-        - AWS Redshift: getting-started/connect-to-data/data-connectors/aws-redshift.md
-        - Databricks Delta: getting-started/connect-to-data/data-connectors/databricks-delta.md
-        - Azure Blob: getting-started/connect-to-data/data-connectors/azure-blob.md
-        - Azure OneLake: getting-started/connect-to-data/data-connectors/azure-onelake.md
-        - Salesforce: getting-started/connect-to-data/data-connectors/salesforce.md
-        - SAP Hana: getting-started/connect-to-data/data-connectors/sap-hana.md
-        - SQL Server: getting-started/connect-to-data/data-connectors/sql-server.md
-        - Trino: getting-started/connect-to-data/data-connectors/trino.md
-      - Supported File Types: getting-started/connect-to-data/supported-file-types.md
-      - Connection Modes: getting-started/connect-to-data/connection-modes.md
-      - File Path Options: getting-started/connect-to-data/file-path-options.md
-      - Triggering Scans: getting-started/connect-to-data/triggering-scans.md
-      - Configuring a Data Source: getting-started/connect-to-data/configuring-a-data-source.md
-    - Profiling Data:
-      - Profiling Data: getting-started/profiling-data/profiling-data.md
-      - Data Health Metrics: getting-started/profiling-data/data-health-metrics.md
-      - Data Health Overview Page: getting-started/profiling-data/data-health-overview-page.md
-      - Interactive Profiling Tool - Investigator: getting-started/profiling-data/interactive-profiling-tool-investigator.md
-      - Data Diff: getting-started/profiling-data/data-diff.md
-      - Compound Attributes:
-        - Compound Attributes: getting-started/profiling-data/compound-attributes/compound-attributes.md
-        - List of Supported Functions: getting-started/profiling-data/compound-attributes/list-of-supported-functions.md
-    - Monitoring Data:
-      - Monitoring Data: getting-started/monitoring-data/monitoring-data.md
-      - Out-of-the-Box Monitors: getting-started/monitoring-data/out-of-box-monitors.md
-      - User-defined Monitors:
-        - User-defined Monitors: getting-started/monitoring-data/user-defined-monitors/user-defined-monitors.md
-        - Built-in Metrics: getting-started/monitoring-data/user-defined-monitors/built-in-metrics.md
-        - User-defined Metrics: getting-started/monitoring-data/user-defined-monitors/user-defined-metrics.md
-        - Record Validation Rules: getting-started/monitoring-data/user-defined-monitors/record-validation-rules.md
-        - Rules Expression Examples: getting-started/monitoring-data/user-defined-monitors/rules-expression-examples.md
-      - PII Data Detection Monitors: getting-started/monitoring-data/pii-data-detection-monitors.md
-      - Monitors Management:
-        - Monitors Management: getting-started/monitoring-data/monitors-management/monitors-management.md
-        - Creating a Monitor: getting-started/monitoring-data/monitors-management/creating-a-monitor.md
-        - Managing Existing Monitors: getting-started/monitoring-data/monitors-management/managing-existing-monitors.md
-        - Configuring Data-Binning: getting-started/monitoring-data/monitors-management/configuring-data-binning.md
-        - Configuring Notifications: getting-started/monitoring-data/monitors-management/configuring-notifications.md
-        - Monitors Troubleshooting: getting-started/monitoring-data/monitors-management/monitors-troubleshooting.md
-      - Incident Portal: getting-started/monitoring-data/incident-portal.md
-      - Data Trends and Alerts: getting-started/monitoring-data/data-trends-and-alerts.md
-      - Metrics Exclusions: getting-started/monitoring-data/metrics-exclusions.md
-      - Metrics Inspector: getting-started/monitoring-data/metrics-inspector.md
-      - Data Quality Score: getting-started/monitoring-data/data-quality-score.md
-    - Remediation:
-      - Remediation: getting-started/remediation/remediation.md
-      - Data Binning: getting-started/remediation/data-binning.md
-      - Circuit Breaker: getting-started/remediation/circuit-breaker.md
-    - Integrations:
-      - Integrations: getting-started/integrations/integrations.md
-      - Jira Integration: getting-started/integrations/jira-integration.md
-      - Slack Integration: getting-started/integrations/slack.md
-      - Jobs Status Notification: getting-started/integrations/jobs-status-notification.md
-      - Data Quality External Reporting: getting-started/integrations/data-quality-external-reporting.md
-      - Data Observability MCP Server: getting-started/integrations/mcp-server.md
-    - Authentication and Access Control:
-      - Authentication and Access Control: getting-started/authentication-and-access-control/auth-access-control.md
-      - SSO Configuration: getting-started/authentication-and-access-control/sso-configuration.md
-      - Microsoft Entra IDP Setup: getting-started/authentication-and-access-control/microsoft-entra-idp-setup.md
-      - Auth0 Setup: getting-started/authentication-and-access-control/auth0-setup.md
-      - Okta SSO Setup: getting-started/authentication-and-access-control/okta-sso-setup.md
-  - Deployment Models:
-    - Deployment Models: deployment-models/deployment-models.md
-    - Virtual Private Cloud (VPC) Deployment: deployment-models/virtual-private-cloud-vpc-deployment.md
-  - API Reference:
-    - Actian Data Observability Platform APIs: api-reference/data-observe-apis.md
-    - Authentication API:
-      - Authentication API: api-reference/authentication-api/authentication-api.md
-      - API Keys: api-reference/authentication-api/api-keys.md
-      - Get Google Service Account API: api-reference/authentication-api/get-google-service-account-api.md
-    - Actian Data Observability IP List: api-reference/data-observe-ip-list.md
-    - Connection API: api-reference/connections.md
-    - Assets API:
-      - Asset API: api-reference/assets-api/asset-api.md
-      - Assets Group API: api-reference/assets-api/assets-group-api.md
-      - Monitors API: api-reference/assets-api/monitors-api.md
-    - Incidents API: api-reference/incidents-api.md
-    - Trigger Scan: api-reference/upload-data-api.md
-    - Track Scan Job: api-reference/track-job-status.md
-    - Check for alerts: api-reference/check-for-alerts.md
-    - Ticket Integration API: api-reference/ticket-integration-api.md
-    - DQ Reporting APIs: api-reference/dq-reporting-apis.md
-    - DQ Score API: api-reference/dq-score-api.md
-  - Admin APIs:
-    - User Management: admin-apis/update-user.md
-    - Troubleshooting: admin-apis/troubleshooting.md
-  - Release Notes:
-    - Release Notes: telmai-releases/release-notes/release-notes.md
-    - Initial Release: telmai-releases/release-notes/initial_release.md
-
+#
+# The navigation is generated automatically by the awesome-pages plugin (see the
+# `plugins` section below) from the docs/ directory structure plus the `.pages`
+# files in each folder. Add a new .md file and it appears in the nav without
+# touching this file: the per-folder `.pages` files set the order/titles and end
+# with a `...` catch-all so new pages are picked up automatically. Folders that
+# should stay out of the nav use a `.pages` file with `hide: true`.
 
 # Theme Configuration
 theme:
@@ -213,6 +116,7 @@ repo_name: Support
 
 plugins:
   - search
+  - awesome-pages
   - tags
   - glightbox
 

@@ -1,11 +1,12 @@
 nav:
-    - Monitoring Data: monitoring-data.md
-    - Out-of-the-Box Monitors: out-of-box-monitors.md
-    - User-defined Monitors: user-defined-monitors
-    - PII Data Detection Monitors: pii-data-detection-monitors.md
-    - Monitors Management: monitors-management
-    - Incident Portal: incident-portal.md
-    - Data Trends and Alerts: data-trends-and-alerts.md
-    - Metrics Exclusions: metrics-exclusions.md
-    - Metrics Inspector: metrics-inspector.md
-    - Data Quality Score: data-quality-score.md
+  - Monitoring Data: monitoring-data.md
+  - Out-of-the-Box Monitors: out-of-box-monitors.md
+  - User-defined Monitors: user-defined-monitors
+  - PII Data Detection Monitors: pii-data-detection-monitors.md
+  - Monitors Management: monitors-management
+  - Incident Portal: incident-portal.md
+  - Data Trends and Alerts: data-trends-and-alerts.md
+  - Metrics Exclusions: metrics-exclusions.md
+  - Metrics Inspector: metrics-inspector.md
+  - Data Quality Score: data-quality-score.md
+  - ...

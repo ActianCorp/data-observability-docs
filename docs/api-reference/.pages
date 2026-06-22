@@ -1,13 +1,14 @@
 nav:
-    - Actian Data Observability Platform APIs: data-observe-apis.md
-    - Authentication API: authentication-api
-    - Actian Data Observability IP List: data-observe-ip-list.md
-    - Connection API: connections.md
-    - Assets API: assets-api
-    - Incidents API: incidents-api.md
-    - Trigger Scan: upload-data-api.md
-    - Track Scan Job: track-job-status.md
-    - Check for alerts: check-for-alerts.md
-    - Ticket Integration API: ticket-integration-api.md
-    - DQ Reporting APIs: dq-reporting-apis.md
-    - DQ Score API: dq-score-api.md
+  - Actian Data Observability Platform APIs: data-observe-apis.md
+  - Authentication API: authentication-api
+  - Actian Data Observability IP List: data-observe-ip-list.md
+  - Connection API: connections.md
+  - Assets API: assets-api
+  - Incidents API: incidents-api.md
+  - Trigger Scan: upload-data-api.md
+  - Track Scan Job: track-job-status.md
+  - Check for alerts: check-for-alerts.md
+  - Ticket Integration API: ticket-integration-api.md
+  - DQ Reporting APIs: dq-reporting-apis.md
+  - DQ Score API: dq-score-api.md
+  - ...

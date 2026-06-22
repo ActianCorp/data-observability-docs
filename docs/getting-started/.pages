@@ -1,0 +1,8 @@
+nav:
+  - Connect to Data: connect-to-data
+  - Profiling Data: profiling-data
+  - Monitoring Data: monitoring-data
+  - Remediation: remediation
+  - Integrations: integrations
+  - Authentication and Access Control: authentication-and-access-control
+  - ...

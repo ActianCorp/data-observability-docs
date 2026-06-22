@@ -44,6 +44,10 @@
                 "href": "getting-started/connect-to-data/data-connectors/iceberg.html"
               },
               {
+                "name": "Iceberg REST",
+                "href": "getting-started/connect-to-data/data-connectors/iceberg-rest.html"
+              },
+              {
                 "name": "Snowflake",
                 "href": "getting-started/connect-to-data/data-connectors/snowflake.html"
               },
@@ -82,6 +86,10 @@
               {
                 "name": "SQL Server",
                 "href": "getting-started/connect-to-data/data-connectors/sql-server.html"
+              },
+              {
+                "name": "MySQL",
+                "href": "getting-started/connect-to-data/data-connectors/mysql.html"
               },
               {
                 "name": "Trino",

@@ -2,66 +2,55 @@
 MkDocs hook: after each build, create index.html redirects for section
 directories that lack one, pointing to the section's first page.
 
-This ensures clicking a navigation tab (which links to a bare directory) opens
-the first content page rather than a browser directory listing.
+This ensures that visiting a navigation section's bare directory URL opens the
+first content page rather than a browser directory listing.
 
-Uses config['nav'] (the raw YAML nav structure) rather than the processed nav
-object, because MkDocs Material converts top-level Sections into Links when
-navigation.tabs is active.
+Runs on `on_nav` (after the awesome-pages plugin has finalized the navigation)
+and reads the *processed* Navigation object, so it works whether the nav is
+defined explicitly in mkdocs.yml or generated automatically from the docs/
+directory structure + `.pages` files.
 """
 import os
 import posixpath
 from collections import Counter
 
+from mkdocs.structure.nav import Section
+from mkdocs.structure.pages import Page
+
 _redirects = {}  # section_dir (relative to site) -> first_page_path (relative to site)
 
 
 def on_nav(nav, config, files):
-    """Collect section-root → first-page mappings from the raw nav config."""
+    """Collect section-root -> first-page mappings from the resolved nav."""
     _redirects.clear()
-    raw_nav = config.get("nav") or []
 
-    for item in raw_nav:
-        if not isinstance(item, dict):
+    for item in nav.items:
+        if not isinstance(item, Section):
+            continue  # Top-level page entries (e.g. Home) have no section dir.
+
+        dests = []
+        _collect_dests(item, dests)
+        if not dests:
             continue
-        for title, content in item.items():
-            if not isinstance(content, list):
-                continue  # Direct page entry (e.g. Home: index.md), skip.
 
-            # Find first .md source path in this section's subtree.
-            first_src = _find_first_file(content)
-            if not first_src:
-                continue
+        first_dest = dests[0]
+        page_dirs = [posixpath.dirname(d) for d in dests]
+        section_dir = _common_ancestor(page_dirs)
 
-            # Resolve to a File object to get the output dest_path.
-            file_obj = files.get_file_from_path(first_src)
-            if not file_obj:
-                continue
-            first_dest = file_obj.dest_path.replace("\\", "/")
-
-            # Collect all dest_paths for this section to find the common root.
-            all_srcs = []
-            _collect_files(content, all_srcs)
-            all_dests = []
-            for src in all_srcs:
-                fo = files.get_file_from_path(src)
-                if fo:
-                    all_dests.append(fo.dest_path.replace("\\", "/"))
-
-            page_dirs = [posixpath.dirname(d) for d in all_dests]
-            section_dir = _common_ancestor(page_dirs)
+        if not section_dir:
+            # Fallback for cross-directory sections: use the top-level directory
+            # that contains the most pages as the section root.
+            tops = [d.split("/")[0] for d in page_dirs if d]
+            if tops:
+                section_dir = Counter(tops).most_common(1)[0][0]
             if not section_dir:
-                # Fallback for cross-directory sections (e.g. AI Analysts which
-                # spans agent/ and ai-analysts/): use the top-level directory
-                # that contains the most pages as the section root.
-                tops = [d.split("/")[0] for d in page_dirs if d]
-                if tops:
-                    section_dir = Counter(tops).most_common(1)[0][0]
-                if not section_dir:
-                    section_dir = posixpath.dirname(first_dest)
+                section_dir = posixpath.dirname(first_dest)
 
-            if section_dir:
-                _redirects[section_dir] = first_dest
+        if section_dir:
+            _redirects[section_dir] = first_dest
+
+    # Returning None leaves the navigation unchanged for downstream handlers.
+    return None
 
 
 def on_post_build(config):
@@ -95,33 +84,14 @@ def on_post_build(config):
 # Helpers
 # ---------------------------------------------------------------------------
 
-def _find_first_file(content):
-    """Return the first .md source path found in a nav subtree."""
-    for item in content:
-        if isinstance(item, str) and item.endswith(".md"):
-            return item
-        if isinstance(item, dict):
-            for val in item.values():
-                if isinstance(val, str) and val.endswith(".md"):
-                    return val
-                if isinstance(val, list):
-                    result = _find_first_file(val)
-                    if result:
-                        return result
-    return None
-
-
-def _collect_files(content, result):
-    """Collect all .md source paths from a nav subtree."""
-    for item in content:
-        if isinstance(item, str) and item.endswith(".md"):
-            result.append(item)
-        elif isinstance(item, dict):
-            for val in item.values():
-                if isinstance(val, str) and val.endswith(".md"):
-                    result.append(val)
-                elif isinstance(val, list):
-                    _collect_files(val, result)
+def _collect_dests(section, result):
+    """Collect all page output dest_paths in a section subtree, in nav order."""
+    for child in section.children:
+        if isinstance(child, Page):
+            if child.file is not None:
+                result.append(child.file.dest_path.replace("\\", "/"))
+        elif isinstance(child, Section):
+            _collect_dests(child, result)
 
 
 def _common_ancestor(dirs):
@@ -131,17 +101,6 @@ def _common_ancestor(dirs):
     parts_list = [d.split("/") for d in dirs if d]
     if not parts_list:
         return ""
-    common = parts_list[0]
-    for parts in parts_list[1:]:
-        new_common = []
-        for a, b in zip(common, parts):
-            if a == b:
-                new_common.append(a)
-            else:
-                break
-        common = new_common
-    return "/".join(common)
-
     common = parts_list[0]
     for parts in parts_list[1:]:
         new_common = []
