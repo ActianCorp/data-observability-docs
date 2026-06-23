@@ -8,7 +8,7 @@ nav:
   - AWS S3: aws-s3.md
   - AWS Athena: aws-athena.md
   - AWS Redshift: aws-redshift.md
-  - Databricks Delta: databricks-delta.md
+  - Databricks: databricks-delta.md
   - Azure Blob: azure-blob.md
   - Azure OneLake: azure-onelake.md
   - Salesforce: salesforce.md
