@@ -1,18 +1,13 @@
 /* =============================================================
    Actian AI Analyst — Mintlify-style UI
-   Inter (body) · JetBrains Mono (code) · Light + dark mode
+   Light + dark mode
    ============================================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* ═══════════════════════════════════════════════
    LIGHT MODE tokens
    ═══════════════════════════════════════════════ */
 :root,
 [data-md-color-scheme="default"] {
-  --md-text-font: "Inter", system-ui, -apple-system, sans-serif;
-  --md-code-font: "JetBrains Mono", "Fira Code", monospace;
-
   --color-bg:          #ffffff;
   --color-surface:     #f9fafb;
   --color-border:      #e5e7eb;
