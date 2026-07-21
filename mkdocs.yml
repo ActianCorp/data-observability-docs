@@ -140,3 +140,4 @@ extra_javascript:
 hooks:
   - hooks/section_index.py
   - hooks/custom_lexers.py
+  - hooks/copy_md_sources.py
