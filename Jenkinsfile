@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// Jenkinsfile for wooby/ai-analyst-docs
+// Jenkinsfile for ActianCorp/data-observability-docs
 //------------------------------------------------------------------------------
 
 //----- functions, methods -----------------------------------------------------
@@ -36,10 +36,10 @@ pipeline {
     environment {
         DOC_VERSION=1.0
         DOCNAME="${JOB_NAME}"
-        DOC_NAME_VERSION="ai-analyst-${DOC_VERSION}.doc"
+        DOC_NAME_VERSION="data-observability-${DOC_VERSION}.doc"
 
         EMAIL_RECIPIENTS='jim.mccaskey@hcl-software.com, ' +
-            'bipinkumar.pandey@hcl-software.com, cody.kern@hcl-software.com, mike.zayour@hcl-software.com'
+            'bipinkumar.pandey@hcl-software.com, calvin.raj@hcl-software.com, cody.kern@hcl-software.com, mike.zayour@hcl-software.com'
     }
 
     stages {
@@ -56,15 +56,18 @@ pipeline {
                     } else {
                         env.DEVOPS_BUILD = false
                     }
-                    env.REPO_COMMIT_URL_ANCHOR = "[${GIT_COMMIT[0..6]}](https://github.com/wobby-ai/actian-ai-analyst-docs/commit/${GIT_COMMIT})"
+                    env.REPO_COMMIT_URL_ANCHOR = "[${GIT_COMMIT[0..6]}](https://github.com/ActianCorp/data-observability-docs/commit/${GIT_COMMIT})"
                     currentBuild.description = "**Commit**: ${REPO_COMMIT_URL_ANCHOR}"
 
+                    echo "JOB_BASE_NAME:             [" + JOB_BASE_NAME + "]"
+                    echo "JOB_NAME:                  [" + JOB_NAME + "]"
+                    echo "BUILD_NUMBER:              [" + BUILD_NUMBER + "]"
                     echo "BRANCH_NAME:              [" + BRANCH_NAME + "]"
                     echo "DEVOPS_BUILD:             [" + DEVOPS_BUILD + "]"
                     echo "GIT_COMMIT:               [" + GIT_COMMIT + "]"
                     echo "REPO_COMMIT_URL_ANCHOR:   [" + REPO_COMMIT_URL_ANCHOR + "]"
                 }
-                sh "set | sort > _${JOB_NAME}_init_env-${BUILD_NUMBER}.log"
+                sh "set | sort > _${JOB_BASE_NAME}_init_env-${BUILD_NUMBER}.log"
             }
             post {
                 always {
@@ -99,7 +102,7 @@ pipeline {
 
         stage('Publish to aws-docserver') {
             when {
-                branch "release/ai-analyst-${DOC_VERSION}.doc"
+                branch "release/data-observability-${DOC_VERSION}.doc"
             }
             agent { label 'aws-docserver' }
             // We don't need the source checked out to the web server
@@ -107,8 +110,8 @@ pipeline {
             steps {
                 unstash 'output.zip'
                 fileOperations([fileUnZipOperation(filePath: 'output.zip', targetLocation: '.')])
-                bat "move D:\\Sites\\ai-analyst D:\\backups\\ai-analyst-${DOC_VERSION}-${BUILD_NUMBER}"
-                bat "move ${WORKSPACE}\\site D:\\Sites\\ai-analyst"
+                bat "move D:\\Sites\\actian-data-observability D:\\backups\\actian-data-observability-${DOC_VERSION}-${BUILD_NUMBER}.backup"
+                bat "move ${WORKSPACE}\\site D:\\Sites\\actian-data-observability"
             }
         }
     }
@@ -122,7 +125,7 @@ pipeline {
         }
         success {
             echo '----- post/success -----'
-            //cleanWs() //TODO: need discussion/approval from documentation team before enabling. ~mbutterfield
+            cleanWs()
         }
         unsuccessful {
             // unstable, fail, or abort
