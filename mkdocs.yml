@@ -23,51 +23,40 @@ theme:
   favicon: assets/favicon.png
   language: en
   custom_dir: theme_overrides/
-  font: false
+  icon:
+    repo: material/lifebuoy
   palette:
     - scheme: default
-      primary: custom
+      primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-4
         name: Switch to dark mode
     - scheme: slate
-      primary: custom
+      primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to light mode
   features:
-    - navigation.tracking
-    - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.top
-    - navigation.instant
-    - navigation.expand
     - navigation.indexes
     - navigation.path
     - navigation.footer
     - navigation.sections
     - content.code.copy
     - content.code.annotate
-    - content.tabs.link
     - search.highlight
     - search.share
-    - search.focus
     - search.suggest
-    - toc.follow
 
 # Markdown Extensions
 markdown_extensions:
-  - abbr
   - admonition
   - attr_list
-  - def_list
-  - footnotes
   - md_in_html
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
+  - tables
+  - meta
   - pymdownx.details
   - pymdownx.emoji:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -76,11 +65,6 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -88,10 +72,6 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
-      combine_header_slug: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
   - toc:
       title: On this page
       permalink: true
@@ -109,6 +89,20 @@ extra:
       name: Contact Actian Support
   tags:
     default: default
+  analytics:
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/thumb-up-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback!
 
 # Support
 repo_url: https://www.actian.com/contact/
@@ -119,13 +113,17 @@ plugins:
   - awesome-pages
   - tags
   - glightbox
+  - git-revision-date-localized:
+      type: date
+      enable_creation_date: false
+      fallback_to_build_date: true
+  - meta-descriptions
 
 # Customization
 extra_css:
   - assets/stylesheets/style.css
   - stylesheets/dx_style.css
   - assets/stylesheets/actian-landing.css
-  - stylesheets/comprehensive-nav.css
   - stylesheets/extra.css
   - stylesheets/toast-override.css
 
@@ -135,8 +133,6 @@ extra_javascript:
   - javascripts/mermaid-init.js
   - javascripts/search_enhancement.js
   - javascripts/extra.js
-  - javascripts/comprehensive-nav-structure.js
-  - javascripts/comprehensive-nav-dataconnect.js
   - path: javascripts/current.js
     defer: true
   - javascripts/toast-fix.js
@@ -144,4 +140,4 @@ extra_javascript:
 hooks:
   - hooks/section_index.py
   - hooks/custom_lexers.py
-  - hooks/generate_nav.py
+  - hooks/copy_md_sources.py
