@@ -4,11 +4,6 @@
     font-weight: 600;
 }
 
-/* Font stack */
-:root {
-  --md-text-font: "Inter", "Helvetica Neue", Arial, sans-serif;
-}
-
 [data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
     background-color: #2e303e;
 }

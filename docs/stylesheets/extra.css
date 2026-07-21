@@ -1,18 +1,13 @@
 /* =============================================================
    Actian AI Analyst — Mintlify-style UI
-   Inter (body) · JetBrains Mono (code) · Light + dark mode
+   Light + dark mode
    ============================================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 /* ═══════════════════════════════════════════════
    LIGHT MODE tokens
    ═══════════════════════════════════════════════ */
 :root,
 [data-md-color-scheme="default"] {
-  --md-text-font: "Inter", system-ui, -apple-system, sans-serif;
-  --md-code-font: "JetBrains Mono", "Fira Code", monospace;
-
   --color-bg:          #ffffff;
   --color-surface:     #f9fafb;
   --color-border:      #e5e7eb;
@@ -68,9 +63,6 @@ html, body {
 body,
 .md-typeset {
   font-family: var(--md-text-font);
-  font-size: 16px;
-  line-height: 1.65;
-  font-weight: 400;
   color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -84,8 +76,7 @@ body,
   color: var(--color-text) !important;
   border-bottom: 1px solid var(--color-border) !important;
   box-shadow: none !important;
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
+  padding-bottom: 0.45rem !important;
 }
 
 /* Give the inner header row a consistent right gap so the
@@ -234,8 +225,32 @@ body,
 .md-sidebar__scrollwrap,
 .md-sidebar__inner {
   background-color: var(--color-bg) !important;
-  border-right: none !important;
-  border-left: none !important;
+}
+
+/* ---- Thin separators between the left nav, main content, and right TOC ----
+   The sidebars are only as tall as their own content, so borders on them stop
+   short. Instead put the dividers on the middle content column, which stretches
+   to the full height of the flex row — giving full-length lines regardless of
+   which column is tallest. ---- */
+@media screen and (min-width: 76.25em) {
+  .md-main__inner {
+    align-items: stretch;
+  }
+  /* Left divider (nav | content): full page height via the stretched content column */
+  .md-content {
+    border-left: 1px solid var(--color-border);
+  }
+  /* Right divider (content | TOC): border the TOC nav itself so it spans from
+     the top down to exactly the last "On this page" entry — no further. */
+  .md-sidebar--secondary .md-nav--secondary {
+    border-left: 1px solid var(--color-border);
+  }
+  .md-sidebar--secondary .md-nav--secondary .md-nav__title {
+    padding-left: 0.6rem;
+  }
+  .md-sidebar--secondary .md-nav--secondary > .md-nav__list {
+    padding-left: 0.6rem;
+  }
 }
 
 [data-md-color-scheme="slate"] .md-sidebar,
@@ -257,10 +272,6 @@ body,
 
 .md-nav__title {
   color: var(--color-text) !important;
-  font-weight: 600;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
   background-color: var(--color-bg) !important;
 }
 
@@ -272,17 +283,6 @@ body,
 .md-nav__link,
 .md-nav__link .md-ellipsis {
   color: var(--color-text) !important;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link,
-.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link .md-ellipsis,
-.md-nav__item--section > .md-nav__link,
-.md-nav__item--section > .md-nav__link .md-ellipsis {
-  font-weight: 700 !important;
-  font-size: 13px !important;
-  letter-spacing: 0.01em;
 }
 
 [data-md-color-scheme="slate"] .md-nav__link,
@@ -316,17 +316,6 @@ body,
   font-weight: 500;
 }
 
-.md-nav--secondary .md-nav__link {
-  font-size: 13px !important;
-  padding-top: 0.15em !important;
-  padding-bottom: 0.15em !important;
-  line-height: 1.4 !important;
-  padding-left: 1rem !important;
-}
-
-.md-nav--secondary .md-nav__item {
-  margin: 0 !important;
-}
 
 /* ═══════════════════════════════════════════════
    CONTENT AREA
@@ -346,16 +335,8 @@ body,
 .md-typeset h4,
 .md-typeset h5,
 .md-typeset h6 {
-  font-family: var(--md-text-font);
-  font-weight: 600;
   color: var(--color-text);
-  letter-spacing: -0.02em;
-  line-height: 1.3;
 }
-
-.md-typeset h1 { font-size: 2em;    margin-top: 0; margin-bottom: 0.5rem; }
-.md-typeset h2 { font-size: 1.5em;  }
-.md-typeset h3 { font-size: 1.25em; }
 
 /* ═══════════════════════════════════════════════
    INLINE CODE
@@ -531,8 +512,6 @@ pre code {
    TABLES
    ═══════════════════════════════════════════════ */
 .md-typeset table {
-  font-family: var(--md-text-font);
-  font-size: 15px;
   border: 1px solid var(--color-border);
   border-radius: 6px;
   overflow: hidden;
