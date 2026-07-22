@@ -3,7 +3,7 @@ MkDocs hook: after each build, copy every source .md file from docs/ into
 site/ at the same relative path.
 
 This makes raw Markdown available at predictable public URLs on the deployed
-site (e.g. https://wobby-ai.github.io/actian-ai-analyst-docs/quick-start/access-wobby.md),
+site (e.g. https://docs.actian.com/actian-data-observability/getting-started/connect-to-data/connect-to-data.md),
 so they can be used by:
   - in-app docs browsers that need Markdown endpoints
   - users who want to copy-paste page content into Claude / ChatGPT
