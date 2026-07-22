@@ -129,14 +129,15 @@ body,
   fill: #1f2937 !important;
 }
 
-/* Support link — compact filled pill, Actian blue */
+/* Support link — filled pill, Actian blue (matches AI Analyst) */
 .md-source,
 .md-header__button.md-source {
   color: #ffffff !important;
   background: #238ffb !important;
   border: none !important;
-  border-radius: 9999px !important;
-  padding: 0.2em 1em !important;
+  border-radius: 2rem !important;
+  padding: 0.35rem 1rem !important;
+  font-size: 0.7rem !important;
   width: fit-content !important;
   min-width: 0 !important;
   max-width: fit-content !important;
@@ -567,19 +568,21 @@ pre code {
 .md-raw-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.6em;
+  gap: 0.4em;
   float: right;
-  margin: 0 0 1rem 1.5rem;
-  padding: 0.55em 0.85em;
+  position: relative;
+  z-index: 100;
+  margin: 0.75rem 0 1rem 1rem;
+  padding: 0.3em 0.6em;
   font-family: var(--md-text-font);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   text-decoration: none !important;
   transition: border-color 0.15s, background 0.15s;
   white-space: nowrap;
   cursor: pointer;
-  max-width: 220px;
+  max-width: 180px;
 }
 
 .md-raw-link:hover {
@@ -594,12 +597,12 @@ pre code {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 1.6em;
-  height: 1.6em;
+  width: 1.3em;
+  height: 1.3em;
   background: var(--color-text);
   color: var(--color-bg);
   border-radius: 0.2rem;
-  font-size: 0.5rem;
+  font-size: 0.42rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1;
@@ -621,8 +624,8 @@ pre code {
 .md-raw-link__title {
   display: inline-flex;
   align-items: center;
-  gap: 0.25em;
-  font-size: 0.5rem;
+  gap: 0.2em;
+  font-size: 0.42rem;
   font-weight: 500;
   color: var(--color-text) !important;
   line-height: 1.3;
@@ -875,9 +878,9 @@ pre code {
 }
 
 .md-header__source .md-source__repository {
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
+  font-weight: 600;
   display: inline !important;
   white-space: nowrap;
+  max-width: none !important;
+  overflow: visible !important;
 }
