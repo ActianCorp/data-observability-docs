@@ -1,16 +1,17 @@
-# Actian AI Analyst — Documentation Portal
+# Actian Data Observability — Documentation Portal
 
-> Built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) · Light/dark theme · Hosted on GitHub Pages
+> Built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) · Light/dark theme · Deployed to GitHub Pages and production via Jenkins
 
-**Repository:** https://github.com/wobby-ai/actian-ai-analyst-docs  
-**Branch:** `main`  
-**Live site:** https://docs.actian.com/ai-analyst/
+**Repository:** https://github.com/ActianCorp/data-observability-docs
+**Branches:** `main` (GitHub Pages) · `release/data-observability-1.0.doc` (production)
+**GitHub Pages:** https://actiancorp.github.io/data-observability-docs/
+**Production site:** https://docs.actian.com/actian-data-observability/
 
 ---
 
 ## About This Repository
 
-This repository contains the MkDocs-based documentation portal for **Actian AI Analyst** — a natural language analytics tool that lets you ask questions about your data and get instant, accurate answers.
+This repository contains the MkDocs-based documentation portal for **Actian Data Observability** — a data quality analysis and monitoring platform that helps data teams proactively understand, detect, and resolve data quality issues without writing code, SQL, or rules.
 
 ---
 
@@ -18,52 +19,55 @@ This repository contains the MkDocs-based documentation portal for **Actian AI A
 
 | Feature | Description |
 |---|---|
-| **MkDocs Material 9.7+** | Modern Material Design theme with light/dark toggle |
-| **Navigation** | Tabs, sections, breadcrumbs, instant loading, custom sidebar |
-| **Search** | Enhanced search with highlighting, suggestions, and sharing |
+| **MkDocs Material 9.6+** | Material Design theme, default sidebar navigation, indigo palette |
+| **Auto-generated navigation** | `mkdocs-awesome-pages-plugin` builds the nav from the `docs/` folder structure and per-folder `.pages` files — new `.md` files appear automatically |
+| **Search** | Enhanced search with highlighting, sharing, and suggestions |
 | **Diagrams** | Mermaid diagram support |
-| **API docs** | Swagger UI tag plugin for OpenAPI specs |
-| **Versioning** | Multi-version support via `mike` |
-| **SEO** | Auto-generated meta descriptions, robots.txt, sitemap |
+| **Image lightbox** | `mkdocs-glightbox` for zoomable images |
+| **"Last updated" dates** | `mkdocs-git-revision-date-localized-plugin` |
+| **SEO** | Auto-generated meta descriptions (`mkdocs-meta-descriptions-plugin`) |
+| **Page feedback** | "Was this page helpful?" thumbs up/down widget on every page |
+| **View as Markdown** | Every page links to its own raw `.md` source (see [`hooks/copy_md_sources.py`](hooks/copy_md_sources.py)) |
 | **Code blocks** | Copy button, syntax highlighting, annotations |
 | **Custom 404** | Branded 404 page |
-| **Edit on GitHub** | Per-page edit button linking to the `main` branch on GitHub |
 
 ---
 
 ## Project Structure
 
 ```
-ai-analyst-docs/
+data-observability-docs/
 ├── mkdocs.yml                  # Main MkDocs configuration
 ├── requirements.txt            # Python dependencies
 ├── makefile                    # Shortcuts for common tasks
+├── Jenkinsfile                 # Production build/deploy pipeline (IIS via aws-docserver)
+├── .github/workflows/deploy.yml  # GitHub Pages build/deploy pipeline
 ├── docs/                       # All documentation content
-│   ├── index.md                # Homepage (landing page)
+│   ├── index.md                # Homepage
 │   ├── .pages                  # Top-level navigation order
-│   ├── robots.txt              # Search engine directives
-│   ├── assets/                 # Logos, homepage images, site-wide CSS
-│   ├── stylesheets/            # Component CSS (nav, DX styles, extra)
-│   ├── javascripts/            # Custom JS (nav, search, mermaid)
-│   ├── quick-start/            # Getting started guides
-│   ├── account/                # Account & 2FA settings
-│   ├── agent/                  # Creating and working with agents
-│   ├── ai-analysts/            # AI Analyst creation and monitoring
-│   ├── connections/            # Data source connections and catalog
-│   ├── semantic-layer/         # Semantic layer, metrics, SemQL
-│   ├── steward-ai-agent/       # Steward AI agent docs
-│   ├── settings/               # Billing, members, integrations, etc.
-│   ├── governance/             # Audit logs, data handling, security
-│   └── public-api/             # API reference and keys
+│   ├── web.config              # IIS MIME type for .md (needed for "View as Markdown" in prod)
+│   ├── assets/                 # Logos, images, site-wide CSS
+│   ├── stylesheets/             # Component CSS (nav, DX styles, extra, toast)
+│   ├── javascripts/             # Custom JS (search enhancements, mermaid init, misc)
+│   ├── getting-started/        # Connecting data, monitoring, alerts, onboarding
+│   ├── deployment-models/      # SaaS / VPC deployment docs
+│   ├── data-quality-rules/     # Rule authoring and expressions
+│   ├── upload-data/            # Upload API and data source guides
+│   ├── admin-apis/             # Admin API reference
+│   ├── source-apis/            # Source API reference
+│   ├── api-reference/          # Public API reference
+│   ├── api-misc/               # Misc API integrations
+│   └── telmai-releases/        # Release notes
 ├── theme_overrides/            # Custom theme templates
-│   ├── main.html               # Base template (header, scripts)
-│   ├── home.html               # Landing page template
-│   ├── home-blocks.html        # Landing page hero & content blocks
-│   ├── 404.html                # Custom 404 page
-│   ├── assets/stylesheets/     # Landing page & theme CSS
-│   └── partials/               # Partial templates
+│   ├── main.html                # Base template (header, "View as Markdown", prev/next nav)
+│   ├── home.html / home-blocks.html  # Landing page template (currently unused — index.md renders via main.html)
+│   ├── 404.html                 # Custom 404 page
+│   ├── api-reference.html       # Redoc-based API reference viewer template
+│   └── partials/                # Partial templates (footer, comments)
 ├── hooks/                      # MkDocs build hooks
-│   └── custom_lexers.py        # Custom syntax highlighters
+│   ├── section_index.py         # Generates redirect stubs for section index URLs
+│   ├── custom_lexers.py         # Custom syntax highlighters
+│   └── copy_md_sources.py       # Publishes raw .md next to each .html page
 └── site/                       # Built output (auto-generated, do not edit)
 ```
 
@@ -74,8 +78,8 @@ ai-analyst-docs/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/ActianCorp/ai-analyst-docs.git
-cd ai-analyst-docs
+git clone https://github.com/ActianCorp/data-observability-docs.git
+cd data-observability-docs
 ```
 
 ### 2. Install dependencies
@@ -89,18 +93,16 @@ This installs:
 | Package | Purpose |
 |---|---|
 | `mkdocs-material` | Material Design theme |
-| `mike` | Documentation versioning |
-| `mkdocs-awesome-pages-plugin` | Custom navigation ordering |
+| `mkdocs-awesome-pages-plugin` | Auto-generated navigation ordering |
+| `mkdocs-glightbox` | Image lightbox/zoom |
 | `mkdocs-git-revision-date-localized-plugin` | "Last updated" dates on pages |
-| `mkdocs-minify-plugin` | HTML minification for production |
-| `mkdocs-swagger-ui-tag` | Swagger/OpenAPI rendering |
 | `mkdocs-meta-descriptions-plugin` | Auto SEO meta descriptions |
+| `mike` | Documentation versioning (available, not currently wired into `mkdocs.yml` plugins) |
+| `mkdocs-minify-plugin`, `mkdocs-swagger-ui-tag`, `plantuml-markdown` | Available but not currently enabled in `mkdocs.yml` |
 
 ---
 
 ## Running Locally
-
-### Option A: mkdocs serve (recommended for authoring)
 
 ```bash
 mkdocs serve -a localhost:8000
@@ -108,16 +110,7 @@ mkdocs serve -a localhost:8000
 
 Opens a live-reload development server at **http://localhost:8000**. Changes to any file under `docs/` are reflected instantly.
 
-### Option B: Dirty reload (faster for large sites)
-
-```bash
-mkdocs serve --dirtyreload
-```
-
-Only rebuilds changed pages — faster during active writing.
-
 ---
-
 
 ## Building the Site
 
@@ -134,30 +127,6 @@ python -m http.server 8080 --directory site
 ```
 
 Then open **http://127.0.0.1:8080**.
----
-
-## Checking for Broken Links
-
-MkDocs does not provide a built-in `mkdocs check` command. To check for broken links, you can:
-
-- **Manual check:** Run `mkdocs serve` and click through your site in the browser.
-- **Automated check:** Use a plugin like [`mkdocs-link-check`](https://github.com/daGrevis/mkdocs-link-check) or an external tool such as [`lychee`](https://github.com/lycheeverse/lychee) to scan for broken links.
-
-**Example with mkdocs-link-check:**
-
-1. Install the plugin:
-   ```bash
-   pip install mkdocs-link-check
-   ```
-2. Add to your `mkdocs.yml` plugins section:
-   ```yaml
-   plugins:
-     - link-check
-   ```
-3. Run:
-   ```bash
-   mkdocs link-check
-   ```
 
 **Note:** The `site/` directory is auto-generated and should not be edited manually.
 
@@ -169,167 +138,99 @@ MkDocs does not provide a built-in `mkdocs check` command. To check for broken l
 
 ```
 docs/
-├── my_section/
-│   ├── index.md            # Section landing page
-│   ├── my-guide.md         # A guide page
-│   └── images/             # Section-specific images
+├── my-section/
+│   ├── my-section.md       # Section landing page
+│   └── my-guide.md         # A guide page
 ```
 
-### Step 2: Write your content
+### Step 2: Control navigation order
 
-Each page can include optional front matter:
-
-```markdown
----
-title: My Page Title
-description: A brief description for search engines.
----
-
-# My Page Title
-
-Content supports:
-- **Admonitions** — `!!! note`, `!!! warning`, `!!! tip`
-- **Code blocks** — syntax highlighting + copy button
-- **Mermaid diagrams** — inside ```mermaid``` fenced blocks
-- **Tabbed content** — `=== "Tab 1"` syntax
-```
-
-### Step 3: Control navigation order
-
-Create a `.pages` file in your section folder:
+Navigation is generated automatically from the folder structure. To control order/titles for a folder, add a `.pages` file:
 
 ```yaml
-# docs/my_section/.pages
+# docs/my-section/.pages
 nav:
-  - index.md
+  - my-section.md
   - my-guide.md
+  - ...
 ```
 
-### Step 4: Preview and commit
+The trailing `...` is a catch-all so new pages not explicitly listed still appear in the nav.
+
+### Step 3: Preview and commit
 
 ```bash
 mkdocs serve -a localhost:8000   # Preview at http://localhost:8000
 git add .
-git commit -m "docs: add my_section"
+git commit -m "docs: add my-section"
 git push origin main
 ```
 
 ---
 
+## Deployment
+
+This repo deploys to **two** places, from **two different branches**:
+
+| Target | Branch | Pipeline | Trigger |
+|---|---|---|---|
+| GitHub Pages | `main` | `.github/workflows/deploy.yml` | Push to `main` |
+| Production (`docs.actian.com`) | `release/data-observability-1.0.doc` | `Jenkinsfile` (builds, then deploys via the `aws-docserver` agent to IIS) | Jenkins job run (manual/webhook) |
+
+Changes destined for production must land on `release/data-observability-1.0.doc`, not just `main` — merge or PR your changes into that branch once verified on `main`/GitHub Pages.
+
+`docs/web.config` registers the `.md` MIME type with IIS so raw Markdown links (used by "View as Markdown") don't 404 in production — GitHub Pages doesn't need this, but IIS does.
+
+---
+
 ## Customizing the Theme
 
-### Colors and branding
+### Styles
 
 | File | What it controls |
 |---|---|
-| `theme_overrides/assets/stylesheets/actian-landing.css` | Landing page, CSS variables, dark mode |
 | `docs/assets/stylesheets/style.css` | Header, tabs, search bar, general overrides |
-| `docs/stylesheets/dx_style.css` | Search enhancements, syntax highlighting |
-| `docs/stylesheets/comprehensive-nav.css` | Custom sidebar navigation styles |
+| `docs/stylesheets/dx_style.css` | Table styling, footer prev/next nav |
+| `docs/stylesheets/extra.css` | Main theme: colors, header, sidebar/TOC, typography, code blocks, feedback, "View as Markdown", Support pill |
+| `docs/stylesheets/toast-override.css` | Copy-to-clipboard toast styling |
 
 ### Logos and images
 
 - **Site logo:** `docs/assets/images/actian-logo.svg`
 - **Favicon:** `docs/assets/favicon.png`
-- **Landing page images:** `docs/assets/homepage-images/`
-- **Content images:** `docs/assets/gitbook/`
 
 ### Templates
 
 | File | Purpose |
 |---|---|
-| `theme_overrides/main.html` | Header, scripts |
-| `theme_overrides/home.html` | Landing page layout |
-| `theme_overrides/home-blocks.html` | Hero banner and content blocks |
+| `theme_overrides/main.html` | Header, "View as Markdown" link, prev/next footer nav |
 | `theme_overrides/404.html` | Custom 404 error page |
+| `theme_overrides/api-reference.html` | Redoc-based API reference viewer (not currently wired to any page) |
 
 ### Configuration (`mkdocs.yml`)
 
 Key sections:
 
-- **`site_name`** — Documentation title
-- **`site_url`** — Production URL
-- **`repo_url`** — GitHub repo link (drives the repo icon in the header)
-- **`edit_uri`** — Path used to build the "Edit on GitHub" links
-- **`theme.palette`** — Light/dark mode configuration
-- **`theme.features`** — Navigation behaviour toggles
-- **`plugins`** — Search, versioning, minification, etc.
+- **`site_name`** / **`site_url`** — Documentation title and production URL
+- **`repo_url`** / **`repo_name`** — Drives the "Support" button in the header
+- **`theme.palette`** — Light/dark mode configuration (indigo)
+- **`theme.features`** — Navigation behavior toggles
+- **`plugins`** — Search, navigation, image lightbox, revision dates, meta descriptions
+- **`extra.analytics.feedback`** — Page feedback widget config
 - **`extra_css` / `extra_javascript`** — Custom stylesheets and scripts
-
----
-
-## Edit on GitHub
-
-Every page on the documentation site has a **pencil (✏️) edit icon** in the top-right corner. Clicking it takes you directly to the corresponding `.md` source file on GitHub, so you can propose corrections without cloning the repo.
-
-### How it works
-
-1. **Click the edit icon** on any documentation page.  
-   You are taken to the source `.md` file on GitHub (`main` branch).
-
-2. **Edit the file** in GitHub's web editor:
-   - Click the pencil icon in the file toolbar.
-   - Make your changes to the Markdown content.
-
-3. **Commit your changes:**
-   - Scroll down to **Commit changes**.
-   - Add a short description of your change.
-   - Select **"Create a new branch and open a pull request"** if you do not have write access to `main`.
-   - If you have write access, you can commit directly to `main`.
-
-4. **Open a Pull Request** (if on a feature branch):
-   - Target branch: `main`
-   - Describe your change and assign a reviewer.
-
-### Edit URL format
-
-The edit button points to:
-
-```
-https://github.com/ActianCorp/ai-analyst-docs/edit/main/docs/{page-path}
-```
-
----
-
-## Versioning with Mike
-
-```bash
-# Deploy current docs as version "1.0" aliased as "latest"
-mike deploy --push --update-aliases 1.0 latest
-
-# List all deployed versions
-mike list
-
-# Set the default version redirect
-mike set-default latest
-
-# Serve versioned docs locally
-mike serve
-```
-
----
-
-## Key Commands
-
-| Command | Description |
-|---|---|
-| `mkdocs serve -a localhost:8000` | Start live-reload dev server |
-| `mkdocs serve --dirtyreload` | Faster dev server (rebuilds only changed pages) |
-| `mkdocs build` | Build the static site to `site/` |
-| `mkdocs build --strict` | Build with strict mode (fail on warnings) |
-| `mike deploy <version>` | Deploy a versioned build to gh-pages |
-| `mike serve` | Serve versioned docs locally |
+- **`hooks`** — Build-time Python hooks (see Project Structure above)
 
 ---
 
 ## Contributing
 
-1. Fork or clone the repository
+1. Clone the repository
 2. Create a feature branch: `git checkout -b feature/my-update`
 3. Make your changes in the `docs/` directory
 4. Preview locally with `mkdocs serve -a localhost:8000`
 5. Commit and push to GitHub
 6. Open a Pull Request targeting `main`
+7. Once verified, open a follow-up PR from `main` into `release/data-observability-1.0.doc` to ship to production
 
 > **Note:** Only edit files in `docs/` unless you are intentionally modifying the theme, build config, or hooks.
 
@@ -341,5 +242,4 @@ mike serve
 - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 - [Material Reference](https://squidfunk.github.io/mkdocs-material/reference/)
 - [Awesome Pages Plugin](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin)
-- [mike — Versioning](https://github.com/jimporter/mike)
-- [Actian AI Analyst](https://docs.actian.com/ai-analyst/)
+- [Actian Data Observability](https://docs.actian.com/actian-data-observability/)
