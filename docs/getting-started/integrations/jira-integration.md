@@ -24,7 +24,7 @@ To create Jira tickets:
 4. Specify the **project** and **issue type**. Data Observability will auto-fill the **summary** and **description**, but you can edit them if needed.
 5. Click **Create** to generate the Jira ticket.
 
-## View & Manage Created Ticket
+## View and Manage Created Ticket
 
 After creating Jira tickets, you can view and manage them directly from Data Observability:
 
