@@ -1,6 +1,4 @@
-Trigger Scan
-==============
-
+# Trigger Scan
 
 The following APIs have been deprecated:
 

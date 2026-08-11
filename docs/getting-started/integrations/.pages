@@ -1,4 +1,5 @@
 nav:
+  - README.md
   - Jira Integration: jira-integration.md
   - Slack Integration: slack.md
   - Jobs Status Notification: jobs-status-notification.md

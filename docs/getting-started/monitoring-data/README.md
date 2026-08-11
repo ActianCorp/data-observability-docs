@@ -1,5 +1,4 @@
-Monitoring Data
-===============
+# Monitoring Data
 
 Monitors are policies that define the expected state or behaviour of your data. When data deviates from these policies, alerts are automatically triggered to notify your team. Monitors help you proactively manage data quality by continuously evaluating metrics, rules, and custom queries against your data assets.
 

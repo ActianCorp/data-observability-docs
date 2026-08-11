@@ -1,4 +1,5 @@
 nav:
+  - README.md
   - Out-of-the-Box Monitors: out-of-box-monitors.md
   - User-defined Monitors: user-defined-monitors
   - PII Data Detection Monitors: pii-data-detection-monitors.md

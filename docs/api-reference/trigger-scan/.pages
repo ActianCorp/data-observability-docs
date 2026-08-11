@@ -1,4 +1,5 @@
 nav:
+  - README.md
   - Track Scan Job: track-job-status.md
   - Check for Alerts: check-for-alerts.md
   - ...

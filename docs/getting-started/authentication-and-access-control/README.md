@@ -1,5 +1,4 @@
-Authentication and Access Control
-=====================================
+# Authentication and Access Control
 
 ## Sign in to Actian 
 

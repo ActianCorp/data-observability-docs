@@ -1,4 +1,5 @@
 nav:
+  - README.md
   - Built-in Metrics: built-in-metrics.md
   - User-defined Metrics: user-defined-metrics.md
   - Record Validation Rules: record-validation-rules.md
