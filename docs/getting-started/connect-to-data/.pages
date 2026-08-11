@@ -1,4 +1,5 @@
 nav:
+  - README.md
   - Projects: projects.md
   - Data Connectors: data-connectors
   - Supported File Types: supported-file-types.md
