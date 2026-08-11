@@ -1,5 +1,4 @@
 nav:
-  - Data Connectors: data-connectors.md
   - AWS Athena: aws-athena.md
   - AWS Redshift: aws-redshift.md
   - AWS S3: aws-s3.md
