@@ -1,5 +1,5 @@
 nav:
-  - Authentication API: authentication-api.md
+  - README.md
   - API Keys: api-keys.md
   - Get Google Service Account API: get-google-service-account-api.md
   - ...

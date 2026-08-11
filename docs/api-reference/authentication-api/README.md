@@ -1,5 +1,4 @@
-Authentication API
-==================
+# Authentication API
 
 ## Authenticate with Actian Data Observability
 

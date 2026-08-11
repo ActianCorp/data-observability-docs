@@ -1,5 +1,5 @@
 nav:
-  - Authentication and Access Control: auth-access-control.md
+  - README.md
   - SSO Configuration: sso-configuration.md
   - Microsoft Entra IDP Setup: microsoft-entra-idp-setup.md
   - Auth0 Setup: auth0-setup.md

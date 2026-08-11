@@ -1,5 +1,4 @@
-Assets API
-============
+# Assets API
 
 This document outlines the API endpoints and structures for managing assets within projects.
 

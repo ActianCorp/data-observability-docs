@@ -1,5 +1,4 @@
-Profiling Data
-==============
+# Profiling Data
 
 Before starting data profiling or monitoring, Actian Data Observability requires you to specify which attributes need to be monitored. When a data source is created, the schema is analyzed (excluding nested JSON attributes). By default, all attributes are disabled, so the first step is to enable the required ones:
 
