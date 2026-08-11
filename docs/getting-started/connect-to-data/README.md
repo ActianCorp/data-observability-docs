@@ -1,5 +1,4 @@
-Connect to Data
-================
+# Connect to Data
 
 This page and subpages describes how to connect your data to Actian Data Observability.
 
