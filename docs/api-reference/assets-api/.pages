@@ -1,5 +1,4 @@
 nav:
-  - Asset API: asset-api.md
   - Assets Group API: assets-group-api.md
   - Monitors API: monitors-api.md
   - ...
