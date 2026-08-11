@@ -1,5 +1,4 @@
 nav:
-  - Connect to Data: connect-to-data.md
   - Projects: projects.md
   - Data Connectors: data-connectors
   - Supported File Types: supported-file-types.md
