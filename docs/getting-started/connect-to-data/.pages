@@ -7,4 +7,5 @@ nav:
   - File Path Options: file-path-options.md
   - Triggering Scans: triggering-scans.md
   - Configuring a Data Source: configuring-a-data-source.md
+  - Managing Assets: managing-assets.md
   - ...

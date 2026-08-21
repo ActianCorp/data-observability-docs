@@ -28,9 +28,9 @@ Actian Data Observability supports only **key pair-based connectivity** to Snowf
 
 **Snowflake Configuration Template Script** To simplify configuration, you can use an Actian Data Observability Template Script, enter your parameters, and execute in the Snowflake console.
 
-**1** Generate key pair as described [here](https://docs.snowflake.com/en/user-guide/key-pair-auth/) 
+**1.** Generate key pair as described [here](https://docs.snowflake.com/en/user-guide/key-pair-auth/) 
 
-**2** Once the key is generated, format it to create a single-line Base64 string for usage. If your public key file is rsa\_key`.pem`, use the commands below to produce a single-line string.&#x20;
+**2.** Once the key is generated, format it to create a single-line Base64 string for usage. If your public key file is rsa\_key`.pem`, use the commands below to produce a single-line string.&#x20;
   ```bash
   // For mac OS
   grep -v "PUBLIC KEY" rsa_key.pub | tr -d '\n' > rsa_public_key_base64.txt
@@ -43,7 +43,7 @@ Actian Data Observability supports only **key pair-based connectivity** to Snowf
   (Get-Content rsa_key.p8 | Where-Object {$_ -notmatch 'PRIVATE KEY'}) -join '' |
       Set-Content -NoNewline rsa_private_key_base64.txt
   ```
-**3** Create role for Data Observability to read the data. 
+**3.** Create role for Data Observability to read the data. 
    The script below lists the commands to be run. Fill in the right values for the fields which are marked.
 
 ```sql
@@ -85,7 +85,7 @@ grant SELECT on ALL TABLES in schema identifier($db_schema_name) to role identif
 
 ```
 
-**4** Run the updated script in your Snowflake console.
+**4.** Run the updated script in your Snowflake console.
 
 
 ### Allow listing Actian Data Observability IP’s

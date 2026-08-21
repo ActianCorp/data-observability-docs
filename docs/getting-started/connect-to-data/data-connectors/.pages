@@ -13,6 +13,7 @@ nav:
   - MySQL: mysql.md
   - SAP Hana: sap-hana.md
   - SQL Server: sql-server.md
+  - sql-server-managed-identity.md
   - Salesforce: salesforce.md
   - Snowflake: snowflake.md
   - Trino: trino.md

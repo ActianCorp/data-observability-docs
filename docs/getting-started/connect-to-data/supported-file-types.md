@@ -12,7 +12,7 @@ When your connection is storage-based (e.g., cloud storage services), you can up
     * PDF (GCP Support Only)
     * XML
 * **Automatic File Type Detection**
-    * This option attempts to determine the file type by inspecting the file extension.
+    * There is also an Automatic file type option. When selected, Actian Data Observability attempts to determine the file type by inspecting the file extension.
     
 !!! note
     Reading PDF files requires enabling Gemini in your GCP workspace.

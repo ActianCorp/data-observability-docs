@@ -31,11 +31,10 @@ The **ID Attribute** is optional but provides additional insights, including:
 2. Displaying record IDs for every anomalous value.
 3. Splitting good records from bad ones using the Data Binning feature.
 
+ID may be derived from a single attribute or a multi-attribute set. When a multi-attribute configuration is utilised, the resulting ID is constructed through the concatenation of all selected attribute values.
+
 ### Timestamp Attribute
 
-The **Timestamp Attribute** is also optional but can be valuable for:
-
-* Determining record-level freshness (e.g., percentage of outdated records).
-* Identifying newly added records, enabling Delta-only scans.
+The **Timestamp Attribute** is also optional but can be valuable for identifying newly added records, enabling Delta-only scans.
 
 When the **Timestamp Attribute** is provided and the **Delta Only** checkbox is checked, Actian Data Observability will fetch and scan only new records. Note that for some sources, like files or Databricks Delta, Delta detection occurs natively and does not require this attribute.

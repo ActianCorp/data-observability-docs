@@ -13,7 +13,7 @@ To create a new project, you need to:
 
 You can modify the project description anytime by clicking the **Edit** button. Projects can only be deleted if they contain no sources, using the **Delete** button.
 
-Access Permissions can be set at any time for the project. Please refer to the [RBAC support section](https://docs.google.com/document/d/122HgJJN970V83f-i6rNIO0hhw9_obVw3-ZEE4RPo7xQ/edit#heading=h.oh32ign419hp).
+Access Permissions can be set at any time for the project. Please refer to the [RBAC support section](../authentication-and-access-control/README.md#role-based-access).
 
 ### Move Source Across Projects
 

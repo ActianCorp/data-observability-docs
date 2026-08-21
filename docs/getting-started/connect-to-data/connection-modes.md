@@ -37,7 +37,7 @@ Select **New Group**, name it, and click **Next**.
 Choose tables/views from the same schema/dataset/collection. You can rename the Actian Data Observability data source names if desired. Click **Create** to complete the setup.
 ![](../../assets/assets/image_62.png)
 
-Once the Group Source is created. You can now edit properties of the group or some or individual properties of each data source now:  
+Once the Group Source is created. You can now edit properties of the group or individual properties of each data source:  
 ![](../../assets/assets/image_64.png)
 
 ## Query Based Connection

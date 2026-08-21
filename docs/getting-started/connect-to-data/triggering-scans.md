@@ -3,7 +3,7 @@
 
 ## Trigger job using Actian Data Observability UI
 
-1. Navigate to configuration page
+1. Navigate to **Assets** page.
 2. Click the 3 dot options tab for the corresponding data source
 3. A window will be prompted, navigate to **Scan > Data**
 
@@ -12,7 +12,7 @@
 
 ## Trigger job using Actian Data Observability API
 
-Please refer to the documentation here: [Trigger Data Scan API](../../api-reference/upload-data-api.md)
+Please refer to the documentation here: [Trigger Data Scan API](../../api-reference/trigger-scan/README.md)
 
 ## Scheduling Scans
 
