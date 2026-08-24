@@ -1,5 +1,7 @@
 # Release Notes
 
+This page describes Actian Data Observability latest release notes.
+
 ## August 2026 Release
 
 ### Product Changes
