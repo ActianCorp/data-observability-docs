@@ -1,6 +1,7 @@
 nav:
   - README.md
   - Creating a Monitor: creating-a-monitor.md
+  - Monitor Recommendations: monitor-recommendations.md
   - Managing Existing Monitors: managing-existing-monitors.md
   - Configuring Data-Binning: configuring-data-binning.md
   - Configuring Notifications: configuring-notifications.md

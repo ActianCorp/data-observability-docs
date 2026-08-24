@@ -15,17 +15,19 @@ MCP is a standard that allows AI applications to securely connect to external se
 Before connecting to Data Observability's MCP server, ensure you have:
 
 * Access to Claude Desktop, Claude.ai, or a compatible MCP client (e.g., VSCode with Cline)
-* Valid Data Observability-Okta credentials
+* * Valid sign-in credentials for your tenant's identity provider — either your organization's SSO provider or Data Observability-managed Okta, depending on how your tenant is configured
 
-Specific MCP Server details:
+MCP Server Details:
 
-* OAuth client credentials (Client ID and Client Secret) for your application
-* MCP URL for your environment  
+* OAuth client ID for your application
+* MCP URL for your environment
  
-**Important**:
+!!! warning "Important"
+    1. You must be added to the associated application in your identity provider to complete OAuth authentication
 
-* You must be added to the associated application in Okta to complete OAuth authentication
-* MCP server URL and client credentials must be obtained from your Data Observability deployment owner
+    2. MCP server URL and client ID must be obtained from your Data Observability deployment owner
+    
+    3. A client secret is required only for clients that use bearer token authentication, such as VSCode Cline
 
 
 ### Connecting to Claude
@@ -48,9 +50,10 @@ Claude supports secure OAuth-based authentication, providing the most seamless i
     * **Name**: Enter a descriptive name (e.g., "Data Observability MCP")
     * **URL**: Enter your Data Observability MCP server URL (e.g., `https://mcp.yourdomain.Data Observability.dev/yourorg/mcp`)
 3. Click **Advanced Details** to expand additional options
-4. Enter your OAuth credentials:
-    * **Client ID**: Your Data Observability OAuth application client ID
-    * **Client Secret**: Your Data Observability OAuth application client secret
+4. Enter your **Client ID**: Your Data Observability OAuth application client ID
+                                                                                
+!!! note
+    As of the August 2026 Release, a client secret is no longer required for this flow.
 
 **Step 3: Initiate the OAuth Flow**
 
@@ -141,8 +144,8 @@ The command will output your bearer token. Copy this token for the next step.
   }
 }
 ```
-**
-Note:** Save the configuration file
+
+4. Save the configuration file
 
 #### Step 4: Start Using Data Observability in Cline
 
@@ -187,7 +190,7 @@ Once connected, your AI assistant has access to the following Data Observability
 * Uses industry-standard OAuth 2.0 protocol
 * Tokens are securely managed by Claude
 * Automatic token refresh
-* Immediate revocation through Okta admin console
+* Immediate revocation through your identity provider's admin console
 * Audit trail of access events
 
 #### Bearer Token Authentication
@@ -195,13 +198,13 @@ Once connected, your AI assistant has access to the following Data Observability
 * Tokens expire after a set period (typically 1 hour)
 * Tokens should be treated as passwords—never commit them to version control
 * Regenerate tokens regularly
-* Revoke compromised tokens immediately through Okta
+* Revoke compromised tokens immediately through your identity provider
 
 #### Best Practices
 
 1. **Never share your Client Secret or Bearer Tokens**
 2. **Use separate OAuth applications** for production and development environments
-3. **Regularly audit** connected applications in your Okta dashboard
+3. **Regularly audit** connected applications in your identity provider's dashboard
 4. **Revoke access** for applications you no longer use
 
 ***
@@ -214,7 +217,7 @@ Once connected, your AI assistant has access to the following Data Observability
 * **Solution**: Check your default browser settings and ensure pop-ups are allowed for Claude
 ---
 * **Problem**: "User not authorized" error
-* **Solution**: Verify that your user account has been added to the Data Observability application in Okta
+* **Solution**: Verify that your user account has been added to the Data Observability application in identity provider
 ---
 * **Problem**: Connection appears successful but tools don't work
 * **Solution**: Restart Claude and try reconnecting. Check that your OAuth client has the correct scopes configured

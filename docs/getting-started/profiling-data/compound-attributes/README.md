@@ -17,7 +17,7 @@ Actian Data Observability offers a **Compound Attributes** feature, which allows
 
 You can validate the expression output by entering values for each corresponding attribute. When clicking on the edit field, Actian Data Observability will offer a few samples taken from the actual data to help
 
-Once the attribute is created, you can add an expectation, as shown in the section above for the single attribute.
+Once the attribute is created, you can add an expectation to it the same way you would for a standard attribute — by navigating to the **Monitoring** page for the dataset and configuring a threshold on the compound attribute.
 
 ## Important Usage Notes
 

@@ -4,4 +4,6 @@ nav:
   - User-defined Metrics: user-defined-metrics.md
   - Record Validation Rules: record-validation-rules.md
   - Rules Expression Examples: rules-expression-examples.md
+  - SQL Based Rules: sql-based-rules.md
+  - Replay Scan: replay-scan.md
   - ...

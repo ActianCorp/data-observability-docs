@@ -5,7 +5,7 @@ Actian Data Observability allows you to compare the differences between your dat
 
 As part of scanning a dataset, Actian Data Observability checks for the differences between source and target tables (if configured). In the app, Actian Data Observability will provide summary stats on the number of new, missing and changed records. Outside the app, Actian Data Observability will store the changed or different records for further usage or analysis.
 
-Actian Data Observability’s Data Diff feature runs as part of tables’ regular scan. You will first need to connect the two datasets, you want to compare,  to Actian Data Observability using the steps defined [here](https://telmai.atlassian.net/wiki/spaces/TW/pages/773881857). Then,  you will need to update the configs for the table you want to compare (target table) using these steps:
+Actian Data Observability’s Data Diff feature runs as part of tables’ regular scan. You will first need to connect the two datasets, you want to compare,  to Actian Data Observability using the steps defined in [Connect to Data](../connect-to-data/README.md). Then,  you will need to update the configs for the table you want to compare (target table) using these steps:
 
 1. Define the ID Attribute
 2. From the 3 dot menu, click “Data Comparison” option
@@ -27,3 +27,6 @@ Clicking on the alert, will show more details on changed schema and records simi
 ![](../../assets/assets/image_33.png)
 
 Lastly, navigating to the output parquet files, you can see more details on changed records, such as individual changes per each record.
+
+!!! note
+    The Data Diff feature is not supported for assets belonging to a group.

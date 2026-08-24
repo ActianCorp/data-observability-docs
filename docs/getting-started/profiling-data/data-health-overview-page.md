@@ -4,7 +4,7 @@
 The **Dataset Health Overview** page provides insights into a dataset's status and attributes during a specific scan.
 ![](../../assets/assets/image_26.png)
 
-On this page, you can see the Health KPIs. You can also see attribute-level metrics:
+On this page, you can see the Health KPIs defined in [Calculated Health Metrics](data-health-metrics.md). You can also see attribute-level metrics:
 
 | **KPI**       | **Description**                                                                 |
 | ------------- | ------------------------------------------------------------------------------- |

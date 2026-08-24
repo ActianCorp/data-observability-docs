@@ -1,4 +1,4 @@
-##### Record Validation Rules
+# Record Validation Rules
 
 One of the key metrics tracked by Data Observability is the “**Correctness**” metric. It is defined as the percentage of records which are valid based on a corresponding rule or combination of rules. Correctness is - For example, for a table with 1M rows; if 50,000 records are invalid, correctness is then 95%.
 

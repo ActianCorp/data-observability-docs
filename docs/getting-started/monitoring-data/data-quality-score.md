@@ -124,16 +124,14 @@ Weights can be adjusted per dataset to reflect specific business requirements:
 
 ## Configuration
 
+!!! note
+    UI-based configuration for DQ Score is coming soon. Configuration is currently available via API only.
+
+Configuration is managed via the [DQ Score APIs](../../api-reference/dq-score-api.md). The following parameters can be set per dataset:
+
 ### Dimension Weights
 
-The system allows dynamic, per-dataset configuration of dimension weights:
-
-1. Navigate to your dataset settings
-2. Select **Data Quality Score Configuration**
-3. Adjust weights to match business priorities
-4. Document justification for non-default weights
-
-**Note**: All four weights must sum to 100.
+Weights can be configured dynamically per dataset. All four weights must sum to 100.
 
 ### Incident Threshold (I\_max)
 
