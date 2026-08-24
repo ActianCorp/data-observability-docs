@@ -6,6 +6,7 @@ nav:
   - Monitors Management: monitors-management
   - Incident Portal: incident-portal.md
   - Data Trends and Alerts: data-trends-and-alerts.md
+  - DQ Report Summary: dq-report-summary.md
   - Metrics Exclusions: metrics-exclusions.md
   - Metrics Inspector: metrics-inspector.md
   - Data Quality Score: data-quality-score.md

@@ -9,7 +9,7 @@ To create a connection to Trino server, please enter the required fields in the 
 * Port
 * Catalog
 * UseSSL (true/false)
-* AuthScheme (true/false)
+* AuthScheme (LDAP)
 * Authentication: User and password
 
 ![](images/observability-trino-create-connection.png)
