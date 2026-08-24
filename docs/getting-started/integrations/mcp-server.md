@@ -53,7 +53,7 @@ Claude supports secure OAuth-based authentication, providing the most seamless i
 4. Enter your **Client ID**: Your Data Observability OAuth application client ID
                                                                                 
 !!! note
-    As of the August 2026 Release, a client secret is no longer required for this flow.
+    From August 2026 release, a client secret is no longer required for this flow.
 
 **Step 3: Initiate the OAuth Flow**
 
@@ -129,22 +129,21 @@ The command will output your bearer token. Copy this token for the next step.
 2. Locate the server configuration you just added
 3. Add a `headers` section with your bearer token:
 
-```json
-{
-  "mcpServers": {
-    "Data Observability": {
-      "url": "https://mcp.yourexampledomain.com/commonstock/mcp",
-      "type": "streamableHttp",
-      "disabled": false,
-      "autoApprove": [],
-      "headers": {
-        "Authorization": "Bearer eyJraWQiOiJ..."
-      }
-    }
-  }
-}
-```
-
+     ```json
+     {
+       "mcpServers": {
+         "Data Observability": {
+           "url": "https://mcp.yourexampledomain.com/commonstock/mcp",
+           "type": "streamableHttp",
+           "disabled": false,
+           "autoApprove": [],
+           "headers": {
+             "Authorization": "Bearer eyJraWQiOiJ..."
+           }
+         }
+       }
+     }
+     ```
 4. Save the configuration file
 
 #### Step 4: Start Using Data Observability in Cline

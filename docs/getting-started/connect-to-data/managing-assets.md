@@ -5,7 +5,7 @@ The **Asset Manager** is the central place to view, filter, and manage all of yo
 !!! note
     Navigate to the **Asset Manager** page using the left-side menu.
 
-    As of v26.3.2, the Asset Manager is enabled by default and the legacy assets page is disabled.
+    From August 2026 release, the Asset Manager is enabled by default and the legacy assets page is disabled.
 
 ![](images/observability-asset-manager.png)
 _Open the Asset Manager from the left-side menu._

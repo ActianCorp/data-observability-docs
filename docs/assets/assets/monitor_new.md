@@ -10,7 +10,7 @@ Monitors are policies that define the expected state or behaviour of your data. 
 
 Think of it this way: a single data point violating a threshold generates an Alert. When multiple alerts occur that are related to the same problem, they can be grouped into a single Incident to provide a consolidated view of the issue.
 
-Once an asset is connected to Telmai, Telmai will start monitoring the asset's health with the [out-of-box monitors](../../getting-started/monitoring-data/out-of-box-monitors.md). At any time, users can build and [customize their own monitors](../../getting-started/monitoring-data/user-defined-monitors/user-defined-monitors.md).
+Once an asset is connected to Data Observability, Data Observability will start monitoring the asset's health with the [out-of-box monitors](../../getting-started/monitoring-data/out-of-box-monitors.md). At any time, users can build and [customize their own monitors](../../getting-started/monitoring-data/user-defined-monitors/user-defined-monitors.md).
 
 If alerts and incidents are generated, user can navigate to the [Incident Portal ](../../getting-started/monitoring-data/incident-portal.md)to learn more about the underlying issues.
 
