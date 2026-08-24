@@ -4,18 +4,18 @@
 
 ### Product Changes
 
-#### Major Changes
+**Major Changes**
 
 * [Asset Manager](../../getting-started/connect-to-data/managing-assets.md) page is now enabled by default, and the legacy assets page has been disabled
 * Simplified [Actian Data Observability MCP server](../../getting-started/integrations/mcp-server.md) deployment — an OAuth client secret is no longer required to connect a client such as Claude, and SSO is now supported
 
-#### General Improvements
+**General Improvements**
 
 * General UI look and feel updates across the application, including logged-in user details now visible in the UI
 * Metadata scan enabled by default for all SQL-type sources
 * [Managed identity support for Azure SQL Server](../../getting-started/connect-to-data/data-connectors/sql-server-managed-identity.md) — authenticate with a Microsoft Entra managed identity instead of a stored password (Azure deployments only)
 
-#### Bug Fixes
+**Bug Fixes**
 
 * General fixes and improvements
 
@@ -23,13 +23,13 @@
 
 ### Product Changes
 
-#### Major Changes
+**Major Changes**
 
 * [Monitor Recommendations](../../getting-started/monitoring-data/monitors-management/monitor-recommendations.md) — AI Agent-powered rule and metric suggestions for connected assets (requires the AI Agent to be installed)
 * [Actian Data Intelligence catalog integration](../../integrations/catalog-integration/zeenea.md)
 * [New assets page](../../getting-started/connect-to-data/managing-assets.md)
 
-#### General Improvements
+**General Improvements**
 
 * Improved connections page, adding a test button for supported connections
 * Metascan enabled by default for BigQuery assets
@@ -37,11 +37,11 @@
 * Patch1: Support CDC for Iceberg REST
 * Patch2: General performance improvement
 
-#### Bug Fixes
+**Bug Fixes**
 
 * General fixes and improvements
 
-#### Deprecations
+**Deprecations**
 
 * Group Source API has been deprecated. In the UI, users can no longer create groups of assets.
 
@@ -49,7 +49,7 @@
 
 ### Product Changes
 
-#### Major Changes
+**Major Changes**
 
 * [Hive Metastore connector](../../getting-started/connect-to-data/data-connectors/iceberg.md)
 * [MySQL connector](../../getting-started/connect-to-data/data-connectors/mysql.md)
@@ -57,11 +57,11 @@
 * Metadata scans for Trino connector
 * Support MSK as Kafka replacement in AWS
 
-#### General Improvements
+**General Improvements**
 
 * Investigator is now disabled by default
 
-#### Bug Fixes
+**Bug Fixes**
 
 * DQ report displaying #null
 * Overview page was not displaying renamed monitor name
@@ -103,7 +103,7 @@
 * Support reading from Hive metastore
 * AI agent improvements
 
-#### API Deprecation
+**API Deprecation**
 
 Below APIs have been deprecated:
 
@@ -131,7 +131,9 @@ Please use [Trigger Data Scan API](../../api-reference/trigger-scan/README.md#tr
 * Updated spark version
 * Disabled swagger-ui
 * Support tags for resources in Azure deployment
-* **Bug fixes:**
+
+**Bug fixes:**
+
   * Group sources: Failing for 25+ group size
   * Unable to access admin page on empty tenants
   * Unable to create connections in `Default` project
@@ -154,14 +156,17 @@ You can scan every record across your pipeline to gain a holistic understanding 
 Actain Data Observability featues:
 
 Connect to any data lake or lakehouse with 250+ connectors
+
   * [Data Connectors](../../getting-started/connect-to-data/data-connectors/README.md)
 
-Monitor and analyze data health across your data estate.
+Monitor and analyze data health across your data estate
+
   * [Profiling Data](../../getting-started/profiling-data/README.md)
   * [Data Health Metrics](../../getting-started/profiling-data/data-health-metrics.md)
   * [Data Health Overview Page](../../getting-started/profiling-data/data-health-overview-page.md)
 
 Anomaly detection
+
   * [Data Diff](../../getting-started/profiling-data/data-diff.md)
 
 
