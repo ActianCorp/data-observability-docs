@@ -1,5 +1,4 @@
-Ticket Integration API
-=======================
+# Ticket Integration API
 
 This section provides a guide to the API endpoints for managing and integrating ticket templates. These templates allow you to define the structure and content of tickets created in external systems, such as Jira.
 
@@ -11,7 +10,7 @@ This section provides a guide to the API endpoints for managing and integrating 
 
 Use this endpoint to create a new ticket template.
 
-`POST {{apiUrl}}/{{tenant}}/configuration/integrations/tickets/template`
+`POST` `https://{apiUrl}/{tenant}/configuration/integrations/tickets/template`
 
 Request Body Example:
 
@@ -47,7 +46,7 @@ Request Body Example:
 
 Use this endpoint to update an existing template. The template ID is included in the URL path.
 
-`PUT {{apiUrl}}/{{tenant}}/configuration/integrations/tickets/template/1`
+`PUT` `https://{apiUrl}/{tenant}/configuration/integrations/tickets/template/1`
 
 Request Body Example:
 
@@ -78,7 +77,7 @@ Request Body Example:
 
 Retrieve the details of a single template using its ID.
 
-`GET {{apiUrl}}/{{tenant}}/configuration/integrations/tickets/template/1`
+`GET` `https://{apiUrl}/{tenant}/configuration/integrations/tickets/template/1`
 
 Response Body Example:
 
@@ -102,7 +101,7 @@ Response Body Example:
 
 Retrieve a list of all available ticket templates.
 
-`GET {{apiUrl}}/{{tenant}}/configuration/integrations/tickets/template`
+`GET` `https://{apiUrl}/{tenant}/configuration/integrations/tickets/template`
 
 Response Body Example:
 

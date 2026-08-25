@@ -113,6 +113,14 @@ The response confirms the creation of the asset and provides its details, includ
 * `connection_id` (integer): The ID of the associated connection.
 * `db_type` (string): The database type, derived from the asset's connection.
 
+## Scan Schema
+
+Once an asset is created, you can load it's schema by using a `POST` request.
+
+### Endpoint
+
+`POST` `https://{actian_endpoint}/api/data/{tenant}/assets/{assetId}/schema`
+
 ## Update Asset
 
 You can update an existing asset using a `PUT` request.
@@ -198,12 +206,14 @@ You can retrieve a list of assets.
 
 ### Endpoints
 
-* **Retrieve All:**\
-  Please use this endpoint to retrieve all assets you have access to\
-  &#x20;`GET: https://{actian_endpoint}/api/backend/{tenant}/configuration/assets?with_attributes=true&with_schedules=true&with_lineage=true`
-* **Project-scoped:**\
-  Please use this endpoint to retrieve all assets you have access to in a given project\
-  &#x20;`GET: https://{actian_endpoint}/api/backend/{tenant}/configuration/projects/{projectId}/assets?with_attributes=true&with_schedules=true&with_lineage=true`
+* **Retrieve All:**
+  Please use this endpoint to retrieve all assets you have access to
+  
+  `GET: https://{actian_endpoint}/api/backend/{tenant}/configuration/assets?with_attributes=true&with_schedules=true&with_lineage=true`
+* **Project-scoped:**
+  Please use this endpoint to retrieve all assets you have access to in a given project
+  
+  `GET: https://{actian_endpoint}/api/backend/{tenant}/configuration/projects/{projectId}/assets?with_attributes=true&with_schedules=true&with_lineage=true`
 
 #### Query Parameters
 
@@ -369,8 +379,10 @@ The request body specifies the source project, the assets to move, and an option
 
 * `source_project_id` (integer): The ID of the project from which the assets will be moved.
 * `source_asset_ids` (array of strings): A list of asset IDs to move.
-* `target_connection_id` (integer, optional): The ID of a connection in the target project to associate with the moved assets. If connections used by sources are `GLOBAL`, this may not be defined, and existing global connections will be preserved.\
-  **Note:** Only connection of the same type can be used
+* `target_connection_id` (integer, optional): The ID of a connection in the target project to associate with the moved assets. If connections used by sources are `GLOBAL`, this may not be defined, and existing global connections will be preserved.
+
+!!! note 
+    Only connection of the same type can be used
 
 #### Response
 
@@ -383,7 +395,8 @@ The response confirms the successful movement of assets.
 
 ```
 
->**Note:** The user should be a `PROJECT_EDITOR` in both the source and destination projects to perform this operation.
+!!! note
+    The user should be a `PROJECT_EDITOR` in both the source and destination projects to perform this operation.
 
 ## Asset Payload Formats by Type
 

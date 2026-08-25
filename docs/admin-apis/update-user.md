@@ -17,7 +17,7 @@ APIs to manage users
 | Name          | Type   | Description                                     |
 | ------------- | ------ | ----------------------------------------------- |
 | Content-type    | string | application/json                                |
-| Authentication* | string | Bearer \<access\_token from authentication api> |
+| Authentication* | string | Bearer &lt;access_token from authentication api&gt; |
 
 **200 List of users**
 ```json
@@ -41,14 +41,14 @@ APIs to manage users
 | Name         | Type   | Description    |
 | ------------ | ------ | -------------- |
 | tenant*      | string | Name of Tenant |
-| user\_email* | String | User email     |
+| user_email* | String | User email     |
 
 ### Headers
 
 | Name            | Type   | Description                                     |
 | --------------- | ------ | ----------------------------------------------- |
 | Content-type    | string | application/json                                |
-| Authentication* | string | Bearer \<access\_token from authentication api> |
+| Authentication* | string | Bearer &lt;access_token from authentication api&gt; |
 
 **200 User details**
 ```json
@@ -76,8 +76,8 @@ APIs to manage users
 | Name             | Type   | Description      |
 | ---------------- | ------ | ---------------- |
 | password         | string | Optional. If not provided, user will received an email to activate account and set a password |
-| last\_name*      | string | Last name                                                                                     |
-| first\_name*     | string | First name                                                                                    |
+| last_name*      | string | Last name                                                                                     |
+| first_name*     | string | First name                                                                                    |
 | email*           | string | Email of the new user                                                                         |
 | role*            | string | "admin" / "user"                                                                              |
 
@@ -86,7 +86,7 @@ APIs to manage users
 | Name               | Type   | Description      |
 | ------------------ | ------ | ---------------- |
 | Content-type       | string | application/json |
-| Authentication*    | string | Bearer {token}   |
+| Authentication*    | string | Bearer \{token\}   |
 
 **200 Success message**
 ```json
@@ -105,23 +105,23 @@ This endpoint allows you to update user details
 
 | Name         | Type   | Description                                   |
 | ------------ | ------ | --------------------------------------------- |
-| user\_email* | string | Email of user whose details are to be updated |
+| user_email* | string | Email of user whose details are to be updated |
 | tenant*      | string | Name of tenant                                |
 
 ### Query Parameters
 
 | Name         | Type   | Description         |
 | ------------ | ------ | ------------------- |
-| last\_name*  | string | Updated last name                                                                                      |
+| last_name*  | string | Updated last name                                                                                      |
 | role*        | string | “admin” / “user” Currently mandatory. Even if there are no updates to this field, it must be provided. |
-| first\_name* | string | Updated first name                                                                                     |
+| first_name* | string | Updated first name                                                                                     |
 
 ### Headers
 
 | Name            | Type   | Description      |
 | --------------- | ------ | ---------------- |
 | Content-type    | string | application/json |
-| Authentication* | string | Bearer {token}   |
+| Authentication* | string | Bearer \{token\}   |
 
 **200 Success message**
 ```json
@@ -146,7 +146,7 @@ This endpoint allows you to update user details
 | Name            | Type   | Description      |
 | --------------- | ------ | ---------------- |
 | Content-type    | string | application/json |
-| Authentication* | string | Bearer {token}   |
+| Authentication* | string | Bearer \{token\}   |
 
 **200 Success message**
 ```json
@@ -164,14 +164,14 @@ This endpoint allows you to update user details
 | Name         | Type   | Description    |
 | ------------ | ------ | -------------- |
 | tenant*      | string | Name of Tenant |
-| user\_email* | String | User email     |
+| user_email* | String | User email     |
 
 ### Headers
 
 | Name            | Type   | Description                                     |
 | --------------- | ------ | ----------------------------------------------- |
 | Content-type    | string | application/json                                |
-| Authentication* | string | Bearer \<access\_token from authentication api> |
+| Authentication* | string | Bearer &lt;access_token from authentication api&gt; |
 
 ### Request Body
 
@@ -194,7 +194,7 @@ This endpoint allows you to update user details
 
 | Name         | Type   | Description                                      |
 | ------------ | ------ | ------------------------------------------------ |
-| user\_email* | string | Email of user whose password needs to be changed |
+| user_email* | string | Email of user whose password needs to be changed |
 | tenant*      | string | Name of tenant                                   |
 
 ### Query Parameters
@@ -209,7 +209,7 @@ This endpoint allows you to update user details
 | Name            | Type   | Description                                    |
 | --------------- | ------ | ---------------------------------------------- |
 | Content-type    | string | application/json                               |
-| Authentication* | string | Bearer \<access\_toke from Authentication API> |
+| Authentication* | string | Bearer &lt;access_toke from Authentication API&gt; |
 
 **200 Successful message**
 ```json
@@ -227,7 +227,7 @@ This api will trigger an email being sent to reset their password
 
 | Name         | Type   | Description                                    |
 | ------------ | ------ | ---------------------------------------------- |
-| user\_email* | string | Email of user whose password needs to be reset |
+| user_email* | string | Email of user whose password needs to be reset |
 | tenant*      | string | Name of tenant                                 |
 
 ### Headers
@@ -235,7 +235,7 @@ This api will trigger an email being sent to reset their password
 | Name            | Type   | Description                                    |
 | --------------- | ------ | ---------------------------------------------- |
 | Content-type    | string | application/json                               |
-| Authentication* | string | Bearer \<access\_toke from Authentication API> |
+| Authentication* | string | Bearer &lt;access_toke from Authentication API&gt; |
 
 **200 Successful message**
 ```json

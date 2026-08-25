@@ -29,7 +29,7 @@ The request body is a JSON object containing the high-level configuration for th
 
 The internal structure of the `monitor` field depends on the `type` defined in the root of the request:
 
-**Type: PREDEFINED\_METRIC**
+**Type: PREDEFINED_METRIC**
 
 Used for out-of-the-box metrics.
 
@@ -138,7 +138,7 @@ The `ticketing` object manages the automatic creation of tasks in external proje
 !!! warning
     **IMPORTANT**
 
-    Immutable Field: The monitor type cannot be changed after creation. The request body for an update is identical to the creation body but must omit the type field.the creation body but must omit the type field.
+    Immutable Field: The monitor type cannot be changed after creation. The request body for an update is identical to the creation body but must omit the type field.
 
 ***
 
@@ -226,3 +226,5 @@ The API uses standard HTTP status codes to indicate the success or failure of re
 | `401 Unauthorized` | Authentication failed.                       | Invalid or expired API token.                                                                             |
 | `403 Forbidden`    | Permissions error.                           | The user does not have access to the specified tenant or asset.                                           |
 | `404 Not Found`    | Resource not found.                          | The `assetId` or `monitorId` does not exist.                                                              |
+
+Also see: [Replay Monitor Scan API](./trigger-scan/replay-monitor-scan.md)

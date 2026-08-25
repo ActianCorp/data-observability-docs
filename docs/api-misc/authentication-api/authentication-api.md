@@ -13,8 +13,8 @@ This API authenticates user credentials and returns an access token
 | `clientId`      | string   | Client identifier for the application                             |
 | `grantType`     | string   | Type of authentication. Use `"password"` or `"refresh_token"`.    |
 | `username`      | string   | Username for the user                                             |
-| `password`      | string   | Password for the user. Required if grant\_type is "password"      |
-| `refreshToken`  | string   | Refresh token string. Required if grant\_type is "refresh\_token" |
+| `password`      | string   | Password for the user. Required if grant_type is "password"      |
+| `refreshToken`  | string   | Refresh token string. Required if grant_type is "refresh_token" |
 | `code`          | string   | Authorization code (used for `authorization_code` grant type)     |
 | `redirectUrl`   | string   | URL to redirect to after authorization                            |
 | `transactionId` | string   | Unique ID for tracking the request                                |

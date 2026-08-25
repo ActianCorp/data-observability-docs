@@ -52,7 +52,7 @@ The request body defines the properties of the new source group.
 
 The response confirms the creation of the source group and provides IDs for the group and newly created assets.
 
-```
+```json
 {
   "group_id": 1871,
   "assets": [

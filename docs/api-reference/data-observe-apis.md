@@ -1,5 +1,4 @@
-Actian Data Observability Platform APIs
-========================================
+# Actian Data Observability Platform APIs
 
 Data Observability offers APIs that allows users to:
 
@@ -16,7 +15,7 @@ Authentication can be specified through:
 * API Key
 * API token
 
-Please refer to [Authentication API](./authentication-api/authentication-api.md) for more details
+Please refer to [Authentication API](./authentication-api/README.md) for more details
 
 ### Available controllers
 
@@ -41,5 +40,5 @@ The following headers are always required when calling Data Observability APIs
 | Name                                             | Type   | Description                                                   |
 | ------------------------------------------------ | ------ | ------------------------------------------------------------- |
 | Content-type                                     | string | application/json                                              |
-| Authentication | string | Bearer \<access\_token>. Access token from Authentication API |
+| Authentication | string | Bearer &lt;access_token&gt;. Access token from Authentication API |
 

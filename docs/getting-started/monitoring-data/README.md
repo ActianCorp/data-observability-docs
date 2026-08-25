@@ -1,5 +1,8 @@
 # Monitoring Data
 
+![](images/trends-and-alerts.png)
+_Trends and Alerts view — monitor scan results with triggered alerts._
+
 Monitors are policies that define the expected state or behaviour of your data. When data deviates from these policies, alerts are automatically triggered to notify your team. Monitors help you proactively manage data quality by continuously evaluating metrics, rules, and custom queries against your data assets.
 
 ## Key Concepts
@@ -10,15 +13,15 @@ Monitors are policies that define the expected state or behaviour of your data. 
 
 Think of it this way: a single data point violating a threshold generates an Alert. When multiple alerts occur that are related to the same problem, they can be grouped into a single Incident to provide a consolidated view of the issue.
 
-Once an asset is connected to Data Observability Platform, the platform starts monitoring the asset's health with the [out-of-box monitors](out-of-box-monitors.md). At any time, users can build and [customize their own monitors](user-defined-monitors/user-defined-monitors.md).
+Once an asset is connected to Data Observability Platform, the platform starts monitoring the asset's health with the [out-of-box monitors]. At any time, users can build and [customize their own monitors](./user-defined-monitors/README.md).
 
 If alerts and incidents are generated, user can navigate to the [Incident Portal ](incident-portal.md)to learn more about the underlying issues.
 
 
 ## Related Features
 
-* [Out-of-box Monitors](out-of-box-monitors.md)
-* [User-defined Monitors](user-defined-monitors/user-defined-monitors.md)
-* [Monitors Management](monitors-management/monitors-management.md)
+* [Out-of-box Monitors][out-of-box monitors]
+* [User-defined Monitors](./user-defined-monitors/README.md)
+* [Monitors Management](./monitors-management/README.md)
 * [Incident Portal](incident-portal.md)
 * [Data Trends and Alerts](data-trends-and-alerts.md)

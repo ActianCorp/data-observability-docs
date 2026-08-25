@@ -1,4 +1,4 @@
-##### Configuring Notifications
+# Configuring Notifications
 
 Data Observability notifications are used to notify users about new or ongoing alerts. Data Observability supports different notification channel types.
 
@@ -21,13 +21,25 @@ To select the notification mode, tenant admins can select it from the "Administr
 
 ## Add or Modify Notification Channels
 
-Notification channels are the destinations that can be used for alerting. To create a notification channel, navigate to "Alerting Policies" page and follow below steps:
+![](images/alert-channels.png)
+_Alert Channels — manage email and Slack notification destinations._
 
-1. Click "Manage Alert Channels"
-2. Click "+Alert Channel"
-3. Select channel type, and specify channel name
-4. You will need to add one or more item for the selected type
-5. Test and Save accordingly
+Notification channels are the destinations that can be used for alerting. To create a notification channel, navigate to the **Alerting Monitors** page and follow these steps:
+
+1. Click **Manage Alert Channels**
+2. Click **+ Alert Channel**
+3. Select the channel type and enter a channel name
+4. Fill in the required details for the selected type (see below)
+5. Click **Validate** — Data Observability will send a test message to confirm the connection
+6. Click **Save**
+
+### Slack Channel Setup
+
+When adding a Slack channel, you will need:
+
+- **Channel Name** — a label used to identify this channel within Data Observability
+- **Bot User OAuth Access Token** — the token generated from your Slack app (see [Slack Integration](../../integrations/slack.md))
+- **Slack Channel(s)** — the Slack channel(s) where alerts will be posted (e.g. `#data-alerts`). Click **Add** to include multiple channels.
 
 ## Related Documentation
 

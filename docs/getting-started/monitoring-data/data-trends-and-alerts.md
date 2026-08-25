@@ -21,9 +21,16 @@ This page has the following sections:
     * List of alerts within the corresponding scan
     * If applicable, each alert will have a clickable component that visualizes the detection
 
-![](../../assets/assets/image_40.png)
-
-## Feedback Loop
+#### Feedback Loop
 
 Actian Data Observability offers both ways of managing thresholds for alerts: automatic, using ML, or manual. 
-In the case of automatic thresholds, it’s crucial to provide the system feedback when anomalous data was scanned and when it should not be used for model fine-tuning for future detections. This can be done by hovering over a particular scan and marking it to be ignored:
+In the case of automatic thresholds, it’s crucial to provide the system feedback when anomalous data was scanned and when it should not be used for model fine-tuning for future detections.
+
+This can be done by either
+
+![](images/feedback-loop-01.png)
+
+1. Hovering over a particular scan and marking it to be ignored - this will exclude the whole scan
+2. Excluding a particular metric from a specific row/alert (if applicable)
+
+![](images/feedback-loop-02.png)

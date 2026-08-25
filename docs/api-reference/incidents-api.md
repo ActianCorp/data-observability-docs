@@ -1,5 +1,4 @@
-Incidents API
-==============
+# Incidents API
 
 This documentation describes the API endpoints for retrieving and managing incident data.
 
@@ -7,9 +6,7 @@ This documentation describes the API endpoints for retrieving and managing incid
 
 This endpoint retrieves a list of incidents, which are aggregations of multiple alerts related to an asset.
 
-| Method | Path                                                       |
-| ------ | ---------------------------------------------------------- |
-| `GET`  | `https://{actian_endpoint}/api/backend/{tenant}/incidents` |
+`GET` `https://{actian_endpoint}/api/backend/{tenant}/incidents`
 
 **Query Parameters (Filters)**
 
@@ -64,9 +61,7 @@ Returns an array of incident objects.
 
 Retrieves the detailed information for a specific incident.
 
-| Method | Path                                                                    |
-| ------ | ----------------------------------------------------------------------- |
-| `GET`  | `https://{actian_endpoint}/api/backend/{tenant}/incidents/{incidentId}` |
+`GET` `https://{actian_endpoint}/api/backend/{tenant}/incidents/{incidentId}`
 
 **Path Parameter**
 
@@ -128,9 +123,7 @@ In addition to the fields in the list response, this endpoint returns detailed m
 
 This endpoint retrieves a day-by-day distribution of incident counts, categorized by severity and impact.
 
-| Method | Path                                                                    |
-| ------ | ----------------------------------------------------------------------- |
-| `GET`  | `https://{actian_endpoint}/api/backend/{tenant}/incidents/distribution` |
+`GET` `https://{actian_endpoint}/api/backend/{tenant}/incidents/distribution`
 
 Filters: This endpoint supports the same filter set as the Incidents List endpoint.
 
@@ -164,9 +157,7 @@ Filters: This endpoint supports the same filter set as the Incidents List endpoi
 
 Retrieves overall summary statistics for incidents.
 
-| Method | Path                                                         |
-| ------ | ------------------------------------------------------------ |
-| `GET`  | `https://{host:port}/api/backend/{tenant}/incidents/summary` |
+`GET` `https://{host:port}/api/backend/{tenant}/incidents/summary`
 
 **Response Body (JSON Object)**
 
@@ -207,9 +198,7 @@ An Incident is an aggregation over time and refers to multiple uploads and alert
 
 #### POST Retrieve Alerts by Filters
 
-| Method | Path                                                                       |
-| ------ | -------------------------------------------------------------------------- |
-| `POST` | `https://{host:port}/api/backend/{tenant}/configuration/alerts/by_filters` |
+`POST` `https://{host:port}/api/backend/{tenant}/configuration/alerts/by_filters`
 
 **Request Body (JSON Object)**
 

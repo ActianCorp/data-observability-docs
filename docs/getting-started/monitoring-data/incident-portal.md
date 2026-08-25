@@ -11,11 +11,10 @@ The main dashboard is organized into a few key sections:
 * **Incidents Table:** The table provides a detailed, sortable list of all incidents, both active and closed. You can review key information at a glance, including the incident's status, creation time, and any associated external tickets.
 * **Incident Details:** Clicking on any incident in the table will open a new view with more granular information. This view provides a full history of the incident, including a list of the alerts that triggered it. This helps you understand the specific events and data points that led to the incident's creation.
 
-<figure><img src="../assets/incident_portal.png" alt=""></figure>
+![](images/incident-portal.png)
 
 To learn more about how to setup your thresholds, please refer to the following pages:
 
-* [Data Quality Metrics](/broken/pages/sm3LpwkMBKpKsCSQaNDd)
-* [Alert Policies](monitors-management/configuring-notifications.md)
+* [Creating a Monitor](monitors-management/creating-a-monitor.md)
 * [Data Trends and Alerts](data-trends-and-alerts.md)
 * [Metrics Inspector](metrics-inspector.md)

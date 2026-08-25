@@ -56,12 +56,12 @@ When you select **Built-in Metric**, you'll see the predefined metric configurat
 
 Select from available predefined metrics:
 
-* **record\_count**: Total number of records
-* **null\_percentage**: Percentage of null values
+* **record_count**: Total number of records
+* **null_percentage**: Percentage of null values
 * **freshness**: Time since last data update
 * **completeness**: Data completeness score
 * **uniqueness**: Duplicate detection
-* **schema\_drifts**: Schema change detection
+* **schema_drifts**: Schema change detection
 * [And more...](../user-defined-monitors/built-in-metrics.md)
 
 #### Attributes (Optional)
@@ -121,7 +121,7 @@ Write validation expressions for row-level checks:
 validate CONDITION expect TELM_EXPECTATION
 ```
 
-See [record violation rules ](../user-defined-monitors/record-validation-rules/)for more examples.
+See [record violation rules ](../user-defined-monitors/record-validation-rules/) for more examples.
 
 ***
 
@@ -238,7 +238,10 @@ When enabled, Data Observability automatically creates a ticket in your ticketin
 After configuring your monitor:
 
 1. **Review** all settings
-2. Click **"Save"** to create the monitor or click **"Cancel"** to discard changes
+2. Click **"Save"** to create the monitor (green button, bottom-right)
+3. Or click **"Cancel"** to discard changes
+
+![](images/save-monitor.png)
 
 ### What Happens After Saving
 

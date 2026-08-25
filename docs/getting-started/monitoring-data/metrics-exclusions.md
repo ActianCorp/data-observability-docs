@@ -36,11 +36,13 @@ The exclusion feature works with all monitor types with exception to (Schema dri
 
 ## Usage
 
-To exclude a metric point,&#x20;
+To exclude a metric point,
 
 1. Navigate to **Trends Page**
 2. Select your target asset
 3. Select the associated monitor and and alert
-4. Click the checkmark to exclude the metric. You will be prompted to confirm exclusion. Only supported metrics will allow you to exclude the metric
+4. Click the checkmark to exclude the metric. You will be prompted to confirm exclusion. 
+   
+   Only supported metrics will allow you to exclude the metric.
 
-<figure><img src="../assets/metric_exclude.png" alt=""></figure>
+![](images/metric-exclude.png)

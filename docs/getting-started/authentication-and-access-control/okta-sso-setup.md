@@ -1,7 +1,7 @@
 # Okta SSO Setup
 
 
-There's currently no APIs exposed for enabling SSO. To setup SSO, you will need to do the followinng
+There's currently no APIs exposed for enabling SSO. To setup SSO, you will need to do the following.
 
 ## Create Okta Group
 
@@ -30,8 +30,9 @@ Setup your Okta application and retrieve the following details
 
 * Client ID
 * Client Secret
-* Open-Id configuration (`https://\<okta-tenant-id/domain>/.well-known/openid-configuration`)
+* Open-Id configuration (`https://<okta-tenant-id/domain>/.well-known/openid-configuration`)
 
 !!! note
     You will need to share details with Actian Data Observability team to retrieve IDP ID.
+    
     Actian Data Observability team will enable SSO accordingly.

@@ -29,7 +29,7 @@ Create a new source in the tenant
 | Name   | Type   | Description  |
 | ------ | ------ | ------------ |
 | Content-type  | string | application/json  |
-| Authentication* | string | Bearer \<access\_token>. Access token retrieved from Authentication API |
+| Authentication* | string | Bearer &lt;access_token&gt;. Access token retrieved from Authentication API |
 
 **200 Returns a json representation of the Source Object**
 ```

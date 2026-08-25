@@ -1,4 +1,4 @@
-##### Built-in Metrics
+# Built-in Metrics
 
 These metrics are calculated in Data Observability out-of-box.
 

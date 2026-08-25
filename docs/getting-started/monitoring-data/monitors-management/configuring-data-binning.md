@@ -4,7 +4,7 @@ Data binning enables you to automatically separate valid data from problematic d
 
 Data Observability's data binning feature monitors data correctness and categorizes records into two bins:
 
-* **Valid Data**: Records that meet all [defined data quality rules](../user-defined-monitors/record-validation-rules.md) and continue through your pipeline
+* **Valid Data**: Records that meet all [defined data quality rules](../user-defined-monitors/record-validation-rules/README.md) and continue through your pipeline
 * **Invalid Data**: Records that violate quality rules and are flagged for review
 
 This automated quality gate helps you maintain data integrity while reducing the cost of processing bad data through expensive transformation and analytics pipelines.
@@ -14,7 +14,7 @@ This automated quality gate helps you maintain data integrity while reducing the
 Before configuring data binning, ensure you have:
 
 1. A connected data source in Data Observability
-2. Defined [record validation rules](../user-defined-monitors/record-validation-rules.md) for your dataset
+2. Defined [record validation rules](../user-defined-monitors/record-validation-rules/README.md) for your dataset
 3. A cloud storage destination (AWS S3, GCP Cloud Storage, or Azure Blob Storage) with appropriate permissions
 
 ## Configuration Steps
@@ -31,19 +31,22 @@ Set the ID attribute for your data source to enable record-level tracking. This 
 
 ### Step 2: Define Data Quality Monitors
 
-Create one or more validation monitors that determine whether data is valid or invalid as defined in [Record Validation Monitors](../user-defined-monitors/record-validation-rules.md).
+Create one or more validation monitors that determine whether data is valid or invalid as defined in [Record Validation Monitors](../user-defined-monitors/record-validation-rules/README.md).
 
 ### Step 3: Enable Data Binning
+
+![](images/configure-data-binning.png)
+_Data Binning Settings — configure storage destination and paths for valid and invalid data_
 
 Now you're ready to configure and activate data binning.
 
 **To enable:**
 
-1. Click the **Configure Data Binning** button\
+1. Click the **Configure Data Binning** button
    ![](<../../../assets/assets/image (8).png>)
-2. Select Correctness Monitor:\
+2. Select Correctness Monitor:
    Choose one or more correctness monitors you created in Step 2. These are the monitors/rules that defines which records are considered valid vs. invalid.
-3. Choose Storage Destination:\
+3. Choose Storage Destination:
    Select your cloud storage type:
     * **AWS S3**
     * **GCP Cloud Storage**

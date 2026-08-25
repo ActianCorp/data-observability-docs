@@ -1,5 +1,7 @@
 # User-defined Monitors
 
+![](images/user-defined-monitors.png)
+_Alerting Monitors — the starting point for creating and managing user-defined monitors._
 
 User-defined monitors are policies that define the expected state or behavior of your data. When data deviates from these policies, alerts are automatically triggered to notify your team. Monitors help you proactively manage data quality by continuously evaluating metrics, rules, and custom queries against your data assets.
 
@@ -78,7 +80,28 @@ The monitor tracks the percentage of records that pass the validation rule, and 
 
 Click [here](record-validation-rules.md) to learn more about using and creating Data Quality rules.
 
-***
+### SQL Based Rule
+
+Define record validation checks and monitor the number of records passing these checks using a pushdown SQL query.
+
+**Use cases:**
+
+* Validate individual records against business rules that joins multiple datasets
+* Ensure data integrity at the row level
+* Monitor the percentage of valid records over time
+
+**Example query:**
+
+```sql
+SELECT 
+    CASE WHEN transaction_amount > 0 THEN 1 ELSE 0 END AS is_valid,
+    transaction_id AS record_id 
+FROM transactions
+```
+
+The monitor tracks the percentage of records that pass the validation rule, and alerts are triggered when this percentage falls outside acceptable thresholds.
+
+Click [here](sql-based-rules.md) to learn more about using and creating SQL based rules.
 
 ## Monitor Properties
 
@@ -88,7 +111,7 @@ Each monitor has the following properties:
 | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | -------------- |
 | **Monitor Name**            | Must be unique per asset (e.g., "Freshness Monitor" on `sales_data` is different from "Freshness Monitor" on `customer_data`) | Yes            |
 | **Monitor ID**              | System-generated unique identifier                                                                                            | Auto-generated |
-| **Monitor Type**            | Built-in Metric, User-Defined Metric, or Record Validation Rule (cannot be changed after creation)                            | Yes            |
+| **Monitor Type**            | Built-in Metric, User-Defined Metric, Record Validation Rule, or SQL-based rule (cannot be changed after creation)                            | Yes            |
 | **Description**             | Brief description for additional context                                                                                      | Optional       |
 | **Monitor Tags**            | Tags for organizing and categorizing monitors                                                                                 | Optional       |
 | **Impact**                  | Severity level of the monitor (Critical, High, Medium, Low)                                                                   | Optional       |
@@ -99,7 +122,8 @@ Each monitor has the following properties:
 | **Creation/Update Time**    | Timestamp of creation and last update                                                                                         | Auto-tracked   |
 | **History**                 | Version history of monitor changes                                                                                            | Auto-tracked   |
 
-**Note:** Monitor type can not be changed once set. To change the type, you must create a new monitor.
+!!! note
+    Monitor type can not be changed once set. To change the type, you must create a new monitor.
 
 
 ## Related Documentation
@@ -107,5 +131,7 @@ Each monitor has the following properties:
 * [Built-in Metrics](built-in-metrics.md)
 * [User-defined Metrics](user-defined-metrics.md)
 * [Record Validation Rules](record-validation-rules.md)
-* [Monitors Management](../monitors-management/monitors-management.md)
-* [Incident Management](../monitoring-data.md)
+* [SQL Based Rules](sql-based-rules.md)
+* [Monitors Management](../monitors-management/README.md)
+* [Incident Management](../../monitoring-data/incident-portal.md)
+* [Replay Scan](replay-scan.md)

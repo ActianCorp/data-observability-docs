@@ -1,5 +1,4 @@
-Connection API
-===============
+# Connection API
 
 This document outlines the API endpoints and structures for creating new connections, which can be either project-scoped or global-scoped.
 
