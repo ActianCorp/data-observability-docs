@@ -2,8 +2,7 @@ nav:
   - README.md
   - Built-in Metrics: built-in-metrics.md
   - User-defined Metrics: user-defined-metrics.md
-  - Record Validation Rules: record-validation-rules.md
-  - Rules Expression Examples: rules-expression-examples.md
+  - Record Validation Rules: record-validation-rules
   - SQL Based Rules: sql-based-rules.md
   - Replay Scan: replay-scan.md
   - ...

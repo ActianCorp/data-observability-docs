@@ -1,6 +1,8 @@
 # Authentication and Access Control
 
-## Sign in to Actian 
+Logging in to Actian Data Observability is a simple process. You can sign in using an email and password or through a Single Sign-On (SSO) provider if your organization has it configured.
+
+## Sign in to Actian Data Observability
 
 ### General Login Steps
 
@@ -19,7 +21,7 @@ Many organizations use SSO for a more secure and streamlined login experience. I
 5. Enter your Company Credentials: Use your standard company username and password to authenticate.
 6. Redirect to Actian: After successful authentication with your IdP, you'll be redirected back to the Actian account.
 
-Please click [SSO Configuration] (sso-configuration.md) to learn more about setting up your SSO configuration.
+Please click [SSO Configuration](sso-configuration.md) to learn more about setting up your SSO configuration.
 
 ### Sign in Issues
 

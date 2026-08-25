@@ -1,4 +1,4 @@
-##### Managing Existing Monitors
+# Managing Existing Monitors
 
 ## Enabling and Disabling Monitors
 
@@ -60,9 +60,9 @@ Download or upload monitors configuration directly from Alerting Monitors page f
 * Download button: Downloads monitors configuration in JSON format
 * Upload button: Uploads monitors configuration in JSON format.
 
-To learn more about the configuration file format, [please see our APIs reference](../../../api-reference/assets-api/monitors-api.md)
+To learn more about the configuration file format, [please see our APIs reference](../../../api-reference/monitors-api.md)
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+![](images/download-and-upload-monitors.png)
 
 ***
 

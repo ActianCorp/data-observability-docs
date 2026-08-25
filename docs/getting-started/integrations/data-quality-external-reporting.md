@@ -2,8 +2,6 @@
 
 This page explains the Centralized DQ Monitor Scan Reporting feature, which generates a comprehensive, standardized report for every Data Quality (DQ) Monitor scan and appends the results to a designated external table. This mechanism centralizes DQ metrics from various sources and monitors, providing a unified, historical view of data quality performance.
 
-***
-
 ## Report Structure (External Destination Table Schema)
 
 The external table is the central repository for all DQ scan results. It provides a standardized format that allows users to query and analyze DQ performance across all projects, data assets, and monitors.
@@ -19,14 +17,19 @@ The external table is the central repository for all DQ scan results. It provide
 | record\_id\_attribute\_name | `String`           | The name of the primary key/ID attribute used to uniquely identify records in the data asset.                        |
 | record\_id\_sample          | `Array of Strings` | A sample of up to 100 failed record IDs. This sample aids in immediate investigation and debugging.                  |
 
-***
-
 ### **User Actionability**
 
 * To check DQ status: Users should query the External Destination Table, filtering by `data_asset_id` and `scan_timestamp`.
 * To debug failures: Users can use the `record_id_sample` along with the `record_id_attribute_name` to look up the failing records directly in the source data asset for diagnosis.
 
-***
+
+## Supported Destinations
+
+DQ scan results can be written to the following external storage destinations:
+
+* **Amazon S3**
+* **Azure File Storage**
+* **Google Cloud Storage (GCS)**
 
 ## Configuring Reporting
 

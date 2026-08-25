@@ -3,7 +3,8 @@
 ## Authenticate with Actian Data Observability
 
 This API authenticates user credentials and returns an access token
-`POST` `/auth/token`
+
+`POST` `{auth_endpoint}/auth/token`
 
 ### Parameters
 
@@ -25,12 +26,11 @@ This API authenticates user credentials and returns an access token
 | ----------- | ------ | ---------------------- |
 | Content-type* | string | application/x-www-form-urlencoded |
 
-```
-curl -X 'POST'
-'https://dev.telm.ai/api/auth/auth/token?clientId=string&grantType=password&username=string&password=string&refreshToken=string&code=string&redirectUri=string&transactionId=string&tenant=string'
--H 'accept: */*'
--d ''
-```
+
+`curl -X 'POST'`\
+`'{auth_endpoint}/auth/token?clientId=string&grantType=password&username=string&password=string&refreshToken=string&code=string&redirectUri=string&transactionId=string&tenant=string'`\
+`-H 'accept: */*'`\
+`-d ''`
 
 **200**
 ```

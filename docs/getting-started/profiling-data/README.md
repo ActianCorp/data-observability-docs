@@ -29,7 +29,7 @@ For historical scans to work, the Timestamp Attribute (set under **Edit Connecti
 | Database   | Timezone Data Type       | Date Data Type |
 | ---------- | ------------------------ | -------------- |
 | BigQuery   | TIMESTAMP                | DATE           |
-| Snowflake  | TIMESTAMP\_TZ            | DATE           |
+| Snowflake  | TIMESTAMP_TZ            | DATE           |
 | Iceberg    | TIMESTAMP WITH TIME ZONE | DATE           |
 | Redshift   | TIMESTAMPTZ              | DATE           |
 | Athena     | timestamp with time zone | date           |

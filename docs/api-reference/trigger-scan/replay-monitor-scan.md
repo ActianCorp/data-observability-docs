@@ -2,7 +2,7 @@
 
 This endpoint allows you to programmatically initiate a replay for a specific SQL monitor.
 
-`POST` `https://{data observability_endpoint}/api/data/{tenant}/assets/{asset_id}/batch_data/replay`
+`POST` `https://{actian_endpoint}/api/data/{tenant}/assets/{asset_id}/batch_data/replay`
 
 #### Request Body
 

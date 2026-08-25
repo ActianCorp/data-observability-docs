@@ -1,5 +1,4 @@
-DQ Score API
-============
+# DQ Score API
 
 ## Get DQ Score Options
 
@@ -9,10 +8,10 @@ This endpoint retrieves the current Data Quality Score configuration for a speci
 
 ### Path Parameters
 
-| Name                                        | Type   | Description       |
-| ------------------------------------------- | ------ | ----------------- |
-| `tenant`<mark style="color:red;">\*</mark>  | string | Tenant identifier |
-| `assetId`<mark style="color:red;">\*</mark> | string | Asset identifier  |
+| Name       | Type   | Description       |
+| ---------- | ------ | ----------------- |
+| `tenant`*  | string | Tenant identifier |
+| `assetId`* | string | Asset identifier  |
 
 ### Response
 
@@ -27,10 +26,6 @@ This endpoint retrieves the current Data Quality Score configuration for a speci
       "accuracy": 0.25,
       "consistency": 0.25,
       "timeliness": 0.25
-    },
-    "thresholds": {
-      "critical": 60,
-      "warning": 80
     }
   }
 }
@@ -44,10 +39,10 @@ This endpoint updates the Data Quality Score configuration for a specific asset.
 
 ### Path Parameters
 
-| Name                                        | Type   | Description       |
-| ------------------------------------------- | ------ | ----------------- |
-| `tenant`<mark style="color:red;">\*</mark>  | string | Tenant identifier |
-| `assetId`<mark style="color:red;">\*</mark> | string | Asset identifier  |
+| Name       | Type   | Description       |
+| ---------- | ------ | ----------------- |
+| `tenant`*  | string | Tenant identifier |
+| `assetId`* | string | Asset identifier  |
 
 ### Request Body
 
@@ -59,10 +54,6 @@ This endpoint updates the Data Quality Score configuration for a specific asset.
     "accuracy": 0.3,
     "consistency": 0.2,
     "timeliness": 0.2
-  },
-  "thresholds": {
-    "critical": 65,
-    "warning": 85
   }
 }
 ```
@@ -80,10 +71,6 @@ This endpoint updates the Data Quality Score configuration for a specific asset.
       "accuracy": 0.3,
       "consistency": 0.2,
       "timeliness": 0.2
-    },
-    "thresholds": {
-      "critical": 65,
-      "warning": 85
     }
   }
 }
@@ -97,10 +84,10 @@ This endpoint deletes the DQ Score configuration for a specific asset, reverting
 
 ### Path Parameters
 
-| Name                                        | Type   | Description       |
-| ------------------------------------------- | ------ | ----------------- |
-| `tenant`<mark style="color:red;">\*</mark>  | string | Tenant identifier |
-| `assetId`<mark style="color:red;">\*</mark> | string | Asset identifier  |
+| Name       | Type   | Description       |
+| ---------- | ------ | ----------------- |
+| `tenant`*  | string | Tenant identifier |
+| `assetId`* | string | Asset identifier  |
 
 ### Response
 

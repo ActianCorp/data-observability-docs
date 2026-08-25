@@ -1,5 +1,4 @@
-API Keys
-========
+# API Keys
 
 An alternate way to access Actian Data Observability APIs using API Key.
 
@@ -11,13 +10,13 @@ X-TLM-Key:{API Key}
 
 Execute Authenticate API to retrieve access token for Authorization header used below
 
-Tenant Id can be retrieved from the UI as listed [here](../../api-misc/api-reference/tenant-configuration.md#get-tenants).
+Tenant Id can be retrieved from the URL.
 
 ## Retrieve all API Keys for specific tenant
 
 Retrieves the list of API Keys for the given tenant.
 
-`GET` `/auth/{tenant}/apiKeys`
+`GET` `{auth_endpoint}/auth/{tenant}/apiKeys`
 
 ### Query Parameters
 
@@ -27,8 +26,8 @@ Retrieves the list of API Keys for the given tenant.
 
 ```
 curl -X 'GET' \
-    '/auth/<tenant>/apiKeys'
-    -H 'accept: */*'
+'{auth_endpoint}/auth/<tenant>/apiKeys'
+-H 'accept: */*'
 ```
 
 ### Responses
@@ -64,7 +63,7 @@ Not Found
 
 Creates a new API key associated with the specified tenant.
 
-`POST` `/auth/{tenant}/apiKeys`
+`POST` `{auth_endpoint}/auth/{tenant}/apiKeys`
 
 ### Path Parameters
 
@@ -80,11 +79,11 @@ Creates a new API key associated with the specified tenant.
 
 ```
 curl -X 'POST' \
-    '/auth/<tenant>/apiKeys' \
-    -H 'accept: */*' \
-    -H 'Content-Type: application/json' \
-    -d '{
-    "name": "<name>"
+'{auth_endpoint}/auth/<tenant>/apiKeys' \
+-H 'accept: */*' \
+-H 'Content-Type: application/json' \
+-d '{
+"name": "<name>"
 }'
 ```
 
@@ -119,7 +118,7 @@ Not Found
 
 Fetches the API key information using a unique key ID for a specific tenant.
 
-`GET` `/auth/{tenant}/apiKeys/{keyId}`
+`GET` `{auth_endpoint}/auth/{tenant}/apiKeys/{keyId}`
 
 ### Path Parameters
 
@@ -172,8 +171,8 @@ Removes the API Key with the specified `keyId` for the given `tenant`.
 
 ```
 curl -X 'DELETE'
-    '/auth/<tenant>/apiKeys/<keyId>'
-    -H 'accept: */*'
+'{auth_endpoint}/auth/<tenant>/apiKeys/<keyId>'
+-H 'accept: */*'
 ```
 
 ### Responses

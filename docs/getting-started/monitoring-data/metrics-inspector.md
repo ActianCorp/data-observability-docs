@@ -33,8 +33,8 @@ This Document provides guidance on how to create and manage dashboards with mult
 4. Configure the data source and parameters:
     * **Name**: Provide a unique name for the chart.
     * **Source**: Select the data source for the chart.
-    * **Policy**: Select policy for the chart. Based on the policy choose Dimensions/Segment/Group-By and attributes as needed.
-        * Dimensions - Represent the value of \<Group-By> column name, while creating business metrics
+    * **Monitor**: Select the monitor for the chart. Based on the monitor, choose Dimensions/Segment/Group-By and attributes as needed.
+        * Dimensions - Represent the value of &lt;Group-By&gt; column name, while creating business metrics
     * **Description** (optional): Add a brief description of the chart.
     * Click **Save** to add the chart to the dashboard.
 
@@ -73,3 +73,5 @@ This Document provides guidance on how to create and manage dashboards with mult
 2. Locate the chart and click on the **Edit (Pencil Icon)** button to modify.
 3. To delete a chart, click the **Delete (Trash Icon)** button next to it.
 
+!!! note
+    If a monitor used by a chart is deleted, the chart is kept but its metric shows as **Unknown**.

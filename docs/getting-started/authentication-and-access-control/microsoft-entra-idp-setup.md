@@ -25,13 +25,27 @@ Here's how to register an application in Microsoft Entra ID for OpenID Connect (
     ```
     https://login.microsoftonline.com/<TENANT_ID>/v2.0/.well-known/openid-configuration
     ```
-6. **Assign API Permissions to the App:**
+6. **Open the open-id configuration URL in browser and retrieve the following from the open-id configuration**
+   
+    1. Issuer
+    2. authorization_endpoint
+    3. token_endpoint
+    4. jwks_uri
+    5. userinfo_endpoint
+
+7. **Assign API Permissions to the App:**
     * Under **API permissions**, click **+ Add a permission**.
     * Select **Microsoft Graph** > **Delegated permissions**.
     * Search for and add the following permissions:
         * `openid`
         * `profile`
         * `offline_access`
-    * Click **Add permissions**.
-    * Finally, click **Grant admin consent for your tenant**.
+   * Click **Add permissions**.
+   * Finally, click **Grant admin consent for your tenant**.
 
+8. **Change Assignment Settings**
+   
+    1. Open the registered application (From Step 3) from Enterprise applications and navigate to Manage->Properties.
+        
+        1. Under Assignment Required? - Selection "Yes" as the option
+        2. Save the settings

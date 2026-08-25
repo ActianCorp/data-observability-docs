@@ -70,6 +70,7 @@ Click **+ New Monitor** to build custom monitors tailored to your specific data 
 ## Related Documentation
 
 * [Creating a Monitor](creating-a-monitor.md)
+* [Monitor Recommendations](monitor-recommendations.md)
 * [Managing Existing Monitors](managing-existing-monitors.md)
 * [Configuring Data-Binning](configuring-data-binning.md)
 * [Configuring Notification](configuring-notifications.md)

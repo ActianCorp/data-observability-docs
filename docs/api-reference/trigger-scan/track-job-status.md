@@ -1,5 +1,6 @@
-Track Scan Job
-================
+# Track Scan Job
+
+APIs to track status of upload.
 
 When upload job is triggered via API, the response contains a section with the job id:
 
@@ -11,7 +12,7 @@ When upload job is triggered via API, the response contains a section with the j
 ```
 
 !!! note
-    Tenant Id can be retrieved from the UI as listed [here](../api-misc/api-reference/tenant-configuration.md)
+    Tenant Id can be retrieved from the URL.
 
 ## Get jobs for a specific tenant and source
 
@@ -21,24 +22,17 @@ When upload job is triggered via API, the response contains a section with the j
 
 | Name                                     | Type   | Description |
 | ---------------------------------------- | ------ | ----------- |
-| source | string | Source Id   |
-| tenant | string | Tenant Id   |
+| source* | string | Source Id   |
+| tenant* | string | Tenant Id   |
 
 #### Query Parameters
 
 | Name         | Type    | Description |
 | ------------ | ------- | ----------- |
-| most\_recent | Boolean | true/false  |
+| most_recent | Boolean | true/false  |
 
-#### Headers
+**200**
 
-| Name                                             | Type   | Description      |
-| ------------------------------------------------ | ------ | ---------------- |
-| Content-type                                     | string | application/json |
-| Authentication<mark style="color:red;">\*</mark> | string | Bearer {token}   |
-
-{% tabs %}
-{% tab title="200 " %}
 ```json
 [
   {

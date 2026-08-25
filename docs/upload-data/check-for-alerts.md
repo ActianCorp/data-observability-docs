@@ -13,7 +13,7 @@ This endpoint gets you the status of the job from Upload data APIs
 
 | Name     | Type   | Description                 |
 | -------- | ------ | --------------------------- |
-| job\_id* | string | Job Id from Upload data API |
+| job_id* | string | Job Id from Upload data API |
 | tenant*  | string | Name of Tenant              |
 
 ### Headers

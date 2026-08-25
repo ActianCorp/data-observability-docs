@@ -1,9 +1,11 @@
-Virtual Private Cloud (VPC) deployment
-======================================
+# Virtual Private Cloud (VPC) deployment
 
 The Actian Data Observability Platform’s Virtual Private Cloud (VPC) deployment ensures that all services are hosted securely within your own cloud environment. The architecture integrates seamlessly with your existing infrastructure, enabling data-in-place monitoring while maintaining compliance with your organization’s security, governance, and privacy policies.
 
  ![](../assets/assets/vpc.png)
+
+!!! note
+    To initiate a VPC deployment, contact your Data Observability account manager. They will provide the Helm and Terraform scripts, container registry access, and guide you through the deployment process.
 
 ## Key Architectural Components
 
@@ -54,7 +56,3 @@ Actian maintains strict, defined periods for the retention of data based on its 
 | Derived Data                                       | Stored for up to 30 days.                                                            | <p><br/>If no explicit retention policy is set by the customer, this data is stored for up to 30 days and then permanently deleted .</p> |
 | Data Metrics                                       | Stored for up to 360 days.                                                           | Used for long-term trend analysis.                                                                                                      |
 | Metadata and User Data (Sensitive & Non-Sensitive) | Stored indefinitely.                                                                 | This data is retained until explicitly requested for deletion.                                                                          |
-
-### SaaS vs VPC Deployments
-
-Functionally, VPC and SaaS deployments are identical. The data handling and retention policies for a VPC model apply to a SaaS model too. The only difference is the data processing boundary. VPC maintains data within the customer's environment, while SaaS processes data in Actian's managed account. PII handling is user driven in both cases. We provide UI-driven controls for you to explicitly select which attributes to monitor on each data asset. There's no automatic PII detection or exclusion, you must configure any attribute inclusion or exclusion.

@@ -1,57 +1,40 @@
-Check for alerts
-================
+# Check for alerts
 
-## Get alerts status for a specific Job Id
+APIs to check alert status of a given job.
 
-`POST` `https://{actian_endpoint}/api/backend/{tenant}/configuration/sources/{{sourceID}}alerts?job_id={job_id}`
+## Get Alerts for a Specific Job
 
-This endpoint gets you the alerts for the specified job ID.
+`POST` `https://{actian_endpoint}/api/backend/{tenant}/configuration/sources/{sourceID}/alerts?job_id={job_id}`
+
+Returns the alerts generated for the specified scan job. Use the `job_id` returned by the [Trigger Scan](./README.md) endpoint.
 
 #### Path Parameters
 
-| Name                                      | Type   | Description                 |
-| ----------------------------------------- | ------ | --------------------------- |
-| job\_id | string | Job Id from Upload data API |
-| tenant | string | Name of Tenant              |
+| Name                                          | Type   | Description       |
+| --------------------------------------------- | ------ | ----------------- |
+| `tenant`*    | string | Tenant identifier |
+| `sourceID`*  | string | Source (asset) ID |
 
-#### Headers
+#### Query Parameters
 
-| Name                                             | Type   | Description      |
-| ------------------------------------------------ | ------ | ---------------- |
-| Content-type   | string | application/json |
-| Authentication | string | Bearer {token}   |
+| Name                                         | Type   | Description                      |
+| -------------------------------------------- | ------ | -------------------------------- |
+| `job_id`*  | string | Job ID returned by Trigger Scan  |
 
-**200 An array of alerts**
+**200**
 
 ```json
 [
     {
         "type": "<alert_type>",
         "source": "<source_id>",
-        "description": { "<alert description>"
-        },
+        "description": "<alert_description>",
         "job_id": "<job_id>",
-        "create_time": "<upload time>,
+        "create_time": "<upload_time>",
         "save_time": "<save_time>",
-        "is_notification_enabled": <trye/false>,
+        "is_notification_enabled": true,
         "metric_time": "<metric_time>",
-        "metric_value": <metric_value>,
-        "policy_name": "<policy_name>",
-        "priority": "<priority_level>",
-        "source_name": "<source_name>",
-        "source_type": "<source_type>"
-    },
-    {
-        "type": "<alert_type>",
-        "source": "<source_id>",
-        "description": { "<alert description>"
-        },
-        "job_id": "<job_id>",
-        "create_time": "<upload time>,
-        "save_time": "<save_time>",
-        "is_notification_enabled": <trye/false>,
-        "metric_time": "<metric_time>",
-        "metric_value": <metric_value>,
+        "metric_value": "<metric_value>",
         "policy_name": "<policy_name>",
         "priority": "<priority_level>",
         "source_name": "<source_name>",

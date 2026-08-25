@@ -1,5 +1,8 @@
 # Out-of-the-Box Monitors
 
+![](images/alerting-monitors.png)
+_Alerting Monitors page — all prebuilt monitors available for a connected asset._
+
 Out-of-the-box monitors are automatically enabled when you connect a data source to Data Observability. These monitors provide immediate visibility into your data quality by tracking essential metrics across your tables and datasets. No additional setup is required. Data Observability begins collecting and analyzing these metrics as soon as your asset is connected.
 
 ## How Out-of-the-Box Monitors Work
@@ -108,7 +111,7 @@ This monitor is created to group Data Observability-job failures to alert you wh
 
 ## Related Documentation
 
-* [User-defined Monitors](user-defined-monitors/user-defined-monitors.md)
-* [Monitors Management](monitors-management/monitors-management.md)
-* [Incident Management](monitoring-data.md)
+* [User-defined Monitors](./user-defined-monitors/README.md)
+* [Monitors Management](./monitors-management/README.md)
+* [Incident Management](../monitoring-data/incident-portal.md)
 

@@ -1,4 +1,7 @@
-##### User-defined Metrics
+# User-defined Metrics
+
+![](images/user-defined-metric-monitor.png)
+_Creating a user-defined metric monitor — select the metric type, write an expression or SQL query, then configure thresholds._
 
 Users can define custom metrics to monitor specific data quality concerns and receive alerts when thresholds are violated. Each monitored metric is validated against its corresponding monitor, which defines thresholds, scope, notification settings, and alerting rules. When a metric violates the defined policy, an alert is automatically generated.
 

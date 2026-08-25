@@ -14,7 +14,7 @@ This document provides step-by-step instructions on how to configure Single Sign
 ## Step 2: Configure SSO Details
 
 1. Enter a unique **Login URL Suffix**
-    * For example, if company name is ACME corporation and the environment is stage project instance, then you can use a unique name like acme-stage. And hence the Login URL Suffix will be: **`acme-stage`**, resulting in a login URL similar to: `https://data-observability.actian.com/login/acme-stage`)
+    * This will be used to list IDPs available for the user
 2. Provide client credentials:
     * **Client ID**: Enter the ID provided by your IdP.
     * **Client Secret**: Enter the secret key provided by your IdP.

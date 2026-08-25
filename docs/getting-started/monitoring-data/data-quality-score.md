@@ -21,28 +21,28 @@ The DQ Score is calculated as a weighted average of four fundamental data qualit
 
 Measures the extent to which required data fields are populated.
 
-**Metric**: Percentage of required fields containing values\
+**Metric**: Percentage of required fields containing values
 **Score Range**: 0-100%
 
 ### Validity
 
 Measures compliance with defined business rules and data constraints.
 
-**Metric**: Percentage of records passing validation rules\
+**Metric**: Percentage of records passing validation rules
 **Score Range**: 0-100%
 
 ### Freshness (Timeliness)
 
 Measures whether data is up-to-date and meets timeliness requirements.
 
-**Metric**: Binary indicator of freshness incidents\
+**Metric**: Binary indicator of freshness incidents
 **Score Range**: 0 or 100
 
 ### Integrity (Incident Health)
 
 Measures operational stability through the volume of open data quality incidents.
 
-**Metric**: Count of open incidents relative to threshold\
+**Metric**: Count of open incidents relative to threshold
 **Score Range**: 0-100
 
 ## Score Calculation
@@ -51,7 +51,7 @@ Measures operational stability through the volume of open data quality incidents
 
 All source metrics are normalized to scores between 0 and 100 before being integrated into the final DQ Score calculation.
 
-**Completeness (S\_C)**
+**Completeness (S_C)**
 
 ```
 S_C = Completeness percentage
@@ -59,7 +59,7 @@ S_C = Completeness percentage
 
 Directly uses the percentage of populated required fields.
 
-**Validity (S\_V)**
+**Validity (S_V)**
 
 ```
 S_V = Validity percentage
@@ -67,14 +67,14 @@ S_V = Validity percentage
 
 Directly uses the percentage of records passing business rules.
 
-**Freshness (S\_F)**
+**Freshness (S_F)**
 
 ```
 If No Freshness Incidents: S_F = 100
 If Freshness Incidents Exist: S_F = 0 (or configured penalty score, e.g., 80)
 ```
 
-**Integrity/Incidents (S\_Inc)**
+**Integrity/Incidents (S_Inc)**
 
 ```
 S_Inc = MAX(0, 100 × (1 - (I_current / I_max)))
@@ -86,8 +86,8 @@ Where:
 
 **Constraints**:
 
-* If I\_current ≥ I\_max, then S\_Inc = 0
-* If I\_current = 0, then S\_Inc = 100
+* If I_current ≥ I_max, then S_Inc = 0
+* If I_current = 0, then S_Inc = 100
 
 ### Final DQ Score Formula
 
@@ -133,7 +133,7 @@ Configuration is managed via the [DQ Score APIs](../../api-reference/dq-score-ap
 
 Weights can be configured dynamically per dataset. All four weights must sum to 100.
 
-### Incident Threshold (I\_max)
+### Incident Threshold (I_max)
 
 Configure the maximum tolerable incident threshold per dataset:
 

@@ -20,8 +20,8 @@ Location specific request body parameters are defined below.
 
 | Name                                         | Type   | Description                    |
 | -------------------------------------------- | ------ | ------------------------------ |
-| tenant                                       | string | Tenant name                    |
-| assetId                                      | string | Asset name                     |
+| `tenant`                                       | string | Tenant identifier                   |
+| `assetId`                                      | string | Asset identifier                    |
 
 
 **200 Data upload started**
