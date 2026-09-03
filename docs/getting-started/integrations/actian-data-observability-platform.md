@@ -20,7 +20,7 @@ Data Observability currently supports datasets from the following data sources:
 
 * BigQuery
 * Databricks
-* OneLake
+* Microsoft Fabric (OneLake)
 * Snowflake
 
 ## Prerequisites
