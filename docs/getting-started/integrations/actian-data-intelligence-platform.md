@@ -1,6 +1,6 @@
 # Actian Data Intelligence Platform Integration
 
-Actian Data Observability integrates with [Actian Data Intelligence Platform](https://zeenea.com/) to connect data quality monitoring with your Actian Data Intelligence Platform data catalog. Actian Data Intelligence catalog metadata enriches Actian Data Intelligence Platform's monitoring configuration and AI-powered recommendations, helping your team discover, prioritize, and monitor critical datasets faster.
+Actian Data Observability integrates with [Actian Data Intelligence Platform](https://zeenea.com/) to connect data quality monitoring with your data catalog. Actian Data Intelligence catalog metadata enriches Actian Data Observability's monitoring configuration and AI-powered recommendations, helping your team discover, prioritize, and monitor critical datasets faster.
 
 
 ## Overview
