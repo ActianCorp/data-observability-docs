@@ -28,7 +28,7 @@ This page describes Actian Data Observability latest release notes.
 **Major Changes**
 
 * [Monitor Recommendations](../../getting-started/monitoring-data/monitors-management/monitor-recommendations.md) — AI Agent-powered rule and metric suggestions for connected assets (requires the AI Agent to be installed)
-* [Actian Data Intelligence catalog integration](../../integrations/catalog-integration/zeenea.md)
+* [Actian Data Intelligence catalog integration](../../getting-started/integrations/actian-data-intelligence-platform.md)
 * [New assets page](../../getting-started/connect-to-data/managing-assets.md)
 
 **General Improvements**
