@@ -4,6 +4,7 @@ Actian Data Observability integrates with external tools to help you route alert
 
 | Integration | Description |
 |---|---|
+| [Actian Data Intelligence Platform](actian-data-intelligence-platform.md) | Synchronize catalog metadata and data quality information between Data Observability and Actian Data Intelligence Platform. |
 | [Jira](jira-integration.md) | Automatically create Jira issues from Data Observability incidents and alerts |
 | [Slack](slack.md) | Send alert notifications to Slack channels |
 | [Data Quality External Reporting](data-quality-external-reporting.md) | Centralize DQ scan results into an external destination table for cross-asset reporting |
