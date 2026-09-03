@@ -145,11 +145,3 @@ The **Lineage** tab displays upstream and downstream data dependencies retrieved
 ## Business-Aware Rule Generation
 
 When suggesting monitoring rules, Data Observability uses the business definitions from the Actian Data Intelligence Platform glossary in addition to technical column names. This helps produce recommendations that are easier to evaluate and apply.
-
-## Limitations
-
-### Connector Matching
-
-When using Actian Data Intelligence Platform V1 connectors, dataset matching is performed on a best-effort basis and may produce ambiguous matches.
-
-For improved matching accuracy, use Actian Data Intelligence Platform V2 connectors, which match datasets by using data source and dataset identifiers.
