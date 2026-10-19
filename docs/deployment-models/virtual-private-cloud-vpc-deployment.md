@@ -2,24 +2,11 @@
 
 The Actian Data Observability Platform’s Virtual Private Cloud (VPC) deployment ensures that all services are hosted securely within your own cloud environment. The architecture integrates seamlessly with your existing infrastructure, enabling data-in-place monitoring while maintaining compliance with your organization’s security, governance, and privacy policies.
 
- ![](../assets/assets/vpc.png)
-
 !!! note
     To initiate a VPC deployment, contact your Data Observability account manager. They will provide the Helm and Terraform scripts, container registry access, and guide you through the deployment process.
 
-## Key Architectural Components
-
-A typical VPC deployment includes the following cloud-native components, which are selected for their scalability, reliability, and portability across major cloud providers.
-
-| Component                | Purpose and Function                                                                                                                    | Cloud Service Examples                                                                                  |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Kubernetes (K8s) Cluster | Hosts Data Observability Platform services. Allows for scaling based on usage, simplified operations (auto-recovery), and ease of upgrades with no downtime. | Azure Kubernetes Service (AKS), Google Kubernetes Engine (GKE), Amazon Elastic Kubernetes Service (EKS) |
-| Elastic Search (ES)      | Stores data profiling data. Enables fast data retrieval via API and UI.                                                                 | Managed or hosted ES on K8s                                                                             |
-| Spark Engine             | Handles the analysis of large datasets at scale with optimized cost and performance. Used to run Data Observability Platform data scan jobs.                 | Azure DataBricks, Databricks or Dataproc (GCP), Databricks or EMR (AWS)                                 |
-| Postgres                 | Stores results and configurations.                                                                                                      | Azure Database, Cloud SQL (GCP), AWS RDS                                                                |
-| Key Vault                | Used to store encryption keys.                                                                                                          | Azure Key Vault, Secret Manager (GCP/AWS)                                                               |
-| Container Repository     | Stores Data Observability Platform binaries. Used for deploying Data Observability Platform images.                                                                               | Azure Container, GCP Artifact Registry, AWS ECR                                                         |
-| Authentication Backend   | Manages authentication, often utilizing existing services, i.e Okta.                                                                    | Okta                                                                                                    |
+!!! note
+    If your requirement is to keep data processing in your environment rather than to host Data Observability's application tier, consider a [Hybrid deployment](hybrid-deployment.md) instead. It runs a single agent against your own Spark engine, with no Data Observability service tier, database, message broker, or search cluster to operate. See [Deployment Models](README.md) for a comparison.
 
 ## Deployment Workflow
 
@@ -30,6 +17,9 @@ Actian provides **Helm** and **Terraform** scripts to automate the whole deploym
 3. **Data Observability Platform Installation:** Deploy Docker images, configure services, and initialize the application.
 
 You can deploy the Data Observability Platform from the Actian registry or from a customer-controlled container repository, depending on your organization’s security policy.
+
+!!! note
+    **Connecting BigQuery with your own service account.** On GCP deployments, a connection can authenticate either with the tenant service account or with one you provide. If you provide your own for a BigQuery connection, it needs write access to the Data Observability tenant GCS bucket and permission to run BigQuery jobs, on top of read access to your data — see [Google BigQuery](../getting-started/connect-to-data/data-connectors/google-bigquery.md#additional-permissions-for-gcp-vpc-deployments).
 
 ## Data Handling and Retention
 

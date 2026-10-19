@@ -1,3 +1,5 @@
 nav:
+  - Overview: overview.md
+  - Hybrid Deployment (Control Plane & Data Plane): hybrid-deployment.md
   - Virtual Private Cloud (VPC) Deployment: virtual-private-cloud-vpc-deployment.md
   - ...
