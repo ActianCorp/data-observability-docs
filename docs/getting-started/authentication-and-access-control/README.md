@@ -2,7 +2,7 @@
 
 Logging in to Actian Data Observability is a simple process. You can sign in using an email and password or through a Single Sign-On (SSO) provider if your organization has it configured.
 
-## Sign in to Actian Data Observability
+## Sign In to Actian Data Observability
 
 ### General Login Steps
 
@@ -23,7 +23,7 @@ Many organizations use SSO for a more secure and streamlined login experience. I
 
 Please click [SSO Configuration](sso-configuration.md) to learn more about setting up your SSO configuration.
 
-### Sign in Issues
+### Sign In Issues
 
 Potential issues you may face when signing in:
 
@@ -38,7 +38,7 @@ Data Observability allows you to create, edit, and delete users via the Manage T
 ![](../../assets/assets/image_102.png)
 ![](../../assets/assets/image_101.png)
 
-### Role-based Access 
+### Role-Based Access 
 
 The Platform supports project-scoped permissions. Tenant admins are able to modify these permissions accordingly:
 

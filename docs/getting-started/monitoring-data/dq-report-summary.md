@@ -1,20 +1,20 @@
-# DQ Report Summary
+# DQ Rules Report Summary
 
 ![](images/dq-report-summary.png)
-_DQ Report Summary — cross-asset view of monitor scan results with pass rate indicators._
+_DQ Rules Report Summary — cross-asset view of monitor scan results with pass rate indicators._
 
-The DQ Report Summary page provides a cross-asset view of monitor scan results over a selected time period. It is accessible from the **Explore** section of the Data Observability navigation.
+The DQ Rules Report Summary page provides a cross-asset view of monitor scan results over a selected time period. It is accessible from the **Explore** section of the Data Observability navigation.
 
 Use this page to quickly identify which assets and monitors are producing failures, track overall data quality health, and drill into specific scan runs.
 
 !!! note
-    DQ Report Summary only shows results from [Record Validation Rules](./user-defined-monitors/record-validation-rules.md) and [SQL-based Rules](./user-defined-monitors/sql-based-rules.md)
+    DQ Rules Report Summary only shows results from [Record Validation Rules](./user-defined-monitors/record-validation-rules.md) and [SQL-based Rules](./user-defined-monitors/sql-based-rules.md)
 
 !!! note
-    This report can be published to external storage using the [DQ Reporting APIs](../../api-reference/dq-reporting-apis.md)
+    This report can be published to external storage using the [DQ Rules Report APIs](../../api-reference/dq-reporting-apis.md)
 
 !!! warning
-    If asset has metadata scans enabled & SQL-based rules, results will not show in DQ report — Future versions of Data Observability will show results
+    If asset has metadata scans enabled & SQL-based rules, results will not show in the DQ Rules Report — Future versions of Data Observability will show results
 
 ### Filters
 

@@ -14,7 +14,7 @@ When upload job is triggered via API, the response contains a section with the j
 !!! note
     Tenant Id can be retrieved from the URL.
 
-## Get jobs for a specific tenant and source
+## Get Jobs for a Specific Tenant and Source
 
 `GET` `https://{actian_endpoint}/api/backend/{tenant}/sources/{source}/jobs`
 

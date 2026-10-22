@@ -1,4 +1,4 @@
-# Check for alerts
+# Check for Alerts
 
 APIs to check alert status of a given job.
 

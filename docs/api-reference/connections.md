@@ -75,7 +75,7 @@ The response confirms the creation of the connection and provides its details, i
 * `payload` (object): The connection-specific configuration as provided in the request.
 * `db_type` (string): The database type, derived from the connection.
 
-#### Correspondence between Connection and Credential Types
+#### Correspondence Between Connection and Credential Types
 
 The `credential.type` you provide in the request body should correspond to the `type` of the connection you are creating:
 

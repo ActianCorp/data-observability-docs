@@ -1,4 +1,4 @@
-# User-defined Metrics
+# User-Defined Metrics
 
 ![](images/user-defined-metric-monitor.png)
 _Creating a user-defined metric monitor — select the metric type, write an expression or SQL query, then configure thresholds._

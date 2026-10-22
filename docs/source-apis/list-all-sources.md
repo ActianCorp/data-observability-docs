@@ -5,7 +5,7 @@ APIs to manage a Actian Data Observability source.
 
 Tenant Id can be retrieved from the UI as listed [here](../api-misc/api-reference/tenant-configuration.md#get-tenants).
 
-## Create a source
+## Create a Source
 
 `POST` `https://data-observability.actian.com/api/backend/{tenant}/configuration/sources`
 
@@ -42,7 +42,7 @@ Create a new source in the tenant
 }
 ```
 
-## List all sources for this tenant
+## List All Sources for This Tenant
 
 `GET` `https://data-observability.actian.com/api/backend/{tenant}/configuration/source`
 
@@ -90,7 +90,7 @@ Api to list all sources in a tenant
 ]
 ```
 
-## Update a source
+## Update a Source
 
 `PUT` `https://data-observability.actian.com/api/backend/{tenant}/configuration/sources`
 
@@ -127,7 +127,7 @@ Create a new source in the tenant
 }
 ```
 
-## Get details of a specific source
+## Get Details of a Specific Source
 
 `GET` `https://data-observability.actian.com/api/backend/{tenant}/configuration/sources/<source-id>`
 

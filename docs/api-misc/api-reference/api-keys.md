@@ -13,7 +13,7 @@ Execute Authenticate API to retrieve access token for Authorization header used 
 
 Tenant Id can be retrieved from the UI as listed [here](tenant-configuration.md#get-tenants).
 
-## Retrieve all API Keys for specific tenant
+## Retrieve All API Keys for Specific Tenant
 
 Retrieves the list of API Keys for the given tenant.
 
@@ -115,7 +115,7 @@ Forbiddden
 Not Found
 ```
 
-## Get details of specific API Key
+## Get Details of Specific API Key
 
 Fetches the API key information using a unique key ID for a specific tenant.
 

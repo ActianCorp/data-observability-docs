@@ -1,4 +1,4 @@
-# Trino Request data
+# Trino Request Data
 
 ## Request Body for Trino
 

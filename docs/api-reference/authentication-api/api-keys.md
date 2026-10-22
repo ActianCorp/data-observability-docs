@@ -2,38 +2,94 @@
 
 An alternate way to access Actian Data Observability APIs using API Key.
 
-All Actian Data Observability APIs can be executed either with OAuth access token or API keys. Use APIs listed below to create a key. Use this key in the header of the Actian Data Observability APIs instead of the Authorization bearer token like this:
+All Actian Data Observability APIs can be executed either with an OAuth access token or an API key. Use the APIs below to create a key, then send it in the header of any Actian Data Observability API instead of the `Authorization` bearer token:
 
-```
+```http
 X-TLM-Key:{API Key}
 ```
 
-Execute Authenticate API to retrieve access token for Authorization header used below
+Execute the Authenticate API to retrieve the access token used in the `Authorization` header for the calls below.
 
-Tenant Id can be retrieved from the URL.
+## Key Scope
 
-## Retrieve all API Keys for specific tenant
+API keys are **user-scoped**: a key belongs to the user who created it, and it carries that user's access. Any user can create a key for themselves — this is no longer restricted to tenant administrators.
 
-Retrieves the list of API Keys for the given tenant.
+The endpoints below take no tenant path parameter. The key's owner and tenant are resolved from the credentials used to call them.
 
-`GET` `{auth_endpoint}/auth/{tenant}/apiKeys`
+!!! note
+    Keys issued before the September 2026 release continue to work unchanged.
 
-### Query Parameters
+!!! warning
+    When a user is deactivated, any API key belonging to that user is disabled.
 
-| Name     | Type   | Description              |
-| -------- | ------ | ------------------------ |
-| tenant* | string | Unique Tenant identifier |
+API keys are managed through the API only — there is no UI for creating or revoking them.
 
-```
-curl -X 'GET' \
-'{auth_endpoint}/auth/<tenant>/apiKeys'
--H 'accept: */*'
+## Create an API Key
+
+Creates an API key for the current user. The key value is returned **only** in this response — store it securely, as it cannot be retrieved again.
+
+`POST` `{auth_endpoint}/auth/api_keys`
+
+### Request Body
+
+| Name    | Type   | Description         |
+| ------- | ------ | ------------------- |
+| `name`* | string | Name of the API Key |
+
+```bash
+curl -X 'POST' \
+  '{auth_endpoint}/auth/api_keys' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "<name>"
+}'
 ```
 
 ### Responses
 
 **200**
+
+```json
+{
+  "id": "string",
+  "name": "string",
+  "key": "string"
+}
 ```
+
+**401**
+```
+Unauthorized
+```
+
+**403**
+```
+Forbidden
+```
+
+**404**
+```
+Not Found
+```
+
+## Retrieve All API Keys
+
+Returns the API keys belonging to the current user. Key values are not included.
+
+`GET` `{auth_endpoint}/auth/api_keys`
+
+```bash
+curl -X 'GET' \
+  '{auth_endpoint}/auth/api_keys' \
+  -H 'accept: */*'
+```
+
+### Responses
+
+**200**
+
+```json
 {
   "keys": [
     {
@@ -59,43 +115,32 @@ Forbidden
 Not Found
 ```
 
-## Create an API Key
+## Get Details of a Specific API Key
 
-Creates a new API key associated with the specified tenant.
+Fetches one of the current user's API keys by its unique key ID.
 
-`POST` `{auth_endpoint}/auth/{tenant}/apiKeys`
+`GET` `{auth_endpoint}/auth/api_keys/{keyId}`
 
 ### Path Parameters
 
-| Name    | Type   | Description                   |
-| ------- | ------ | ----------------------------- |
-| tenant* | string | Unique identifier for the tenant. |
+| Name     | Type   | Description       |
+| -------- | ------ | ----------------- |
+| `keyId`* | string | Unique API Key ID |
 
-### Request Body
-
-| Name    | Type   | Description         |
-| ------- | ------ | ------------------- |
-| name*   | String | Name of the API Key |
-
-```
-curl -X 'POST' \
-'{auth_endpoint}/auth/<tenant>/apiKeys' \
--H 'accept: */*' \
--H 'Content-Type: application/json' \
--d '{
-"name": "<name>"
-}'
+```bash
+curl -X 'GET' \
+  '{auth_endpoint}/auth/api_keys/<keyId>' \
+  -H 'accept: */*'
 ```
 
 ### Responses
 
 **200**
 
-```
+```json
 {
-   "id": "string",
-   "name": "string",
-   "key": "string"
+  "id": "string",
+  "name": "string"
 }
 ```
 
@@ -106,51 +151,7 @@ Unauthorized
 
 **403**
 ```
-Forbiddden
-```
-
-**404**
-```
-Not Found
-```
-
-## Get details of specific API Key
-
-Fetches the API key information using a unique key ID for a specific tenant.
-
-`GET` `{auth_endpoint}/auth/{tenant}/apiKeys/{keyId}`
-
-### Path Parameters
-
-| Name   | Type   | Required | Description       |
-| ------ | ------ | -------- | ----------------- |
-| tenant | string | Yes      | Tenant identifier |
-| keyId  | string | Yes      | Unique API Key ID |
-
-```
-curl -X 'GET'
-    '/auth/<tenant>/apiKeys/<keyId>'
-    -H 'accept: */*'
-```
-
-### Responses
-
-**200**
-```
-{
-   "id": "string",
-   "name": "string",
-}
-```
-
-**401**
-```
-Unauthorized
-```
-
-**403**
-```
-Forbiddden
+Forbidden
 ```
 
 **404**
@@ -160,27 +161,29 @@ Not Found
 
 ## Delete an API Key
 
-Removes the API Key with the specified `keyId` for the given `tenant`.
+Removes one of the current user's API keys.
 
-### Parameters:
+`DELETE` `{auth_endpoint}/auth/api_keys/{keyId}`
 
-| Name    | Type     | Description                                     |
-| ------- | -------- | ----------------------------------------------- |
-| tenant* | `string` | The identifier of the tenant.                   |
-| keyId*  | `string` | The unique identifier of the API Key to delete. |
+### Path Parameters
 
-```
-curl -X 'DELETE'
-'{auth_endpoint}/auth/<tenant>/apiKeys/<keyId>'
--H 'accept: */*'
+| Name     | Type   | Description                                     |
+| -------- | ------ | ----------------------------------------------- |
+| `keyId`* | string | The unique identifier of the API Key to delete. |
+
+```bash
+curl -X 'DELETE' \
+  '{auth_endpoint}/auth/api_keys/<keyId>' \
+  -H 'accept: */*'
 ```
 
 ### Responses
 
 **200**
-```
+
+```json
 {
-   "message": "string"
+  "message": "API key was deleted successfully"
 }
 ```
 
@@ -191,11 +194,27 @@ Unauthorized
 
 **403**
 ```
-Forbiddden
+Forbidden
 ```
 
 **404**
 ```
 Not Found
 ```
+
+## Tenant-Scoped Endpoints (Deprecated)
+
+!!! warning
+    The tenant-scoped endpoints below are **deprecated and scheduled for removal**. Use the user-scoped endpoints above instead.
+
+These endpoints remain available to tenant administrators, and are how an administrator lists or revokes keys across an entire tenant rather than only their own.
+
+| Operation            | Endpoint                                                 |
+| -------------------- | -------------------------------------------------------- |
+| Create a key         | `POST` `{auth_endpoint}/auth/{tenant}/apiKeys`           |
+| List all tenant keys | `GET` `{auth_endpoint}/auth/{tenant}/apiKeys`            |
+| Get one key          | `GET` `{auth_endpoint}/auth/{tenant}/apiKeys/{keyId}`    |
+| Delete a key         | `DELETE` `{auth_endpoint}/auth/{tenant}/apiKeys/{keyId}` |
+
+Request bodies and response shapes are identical to the user-scoped endpoints. `tenant` is the tenant identifier, which can be retrieved from the URL.
 

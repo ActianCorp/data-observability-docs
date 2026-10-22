@@ -1,4 +1,4 @@
-# GBQ Request data
+# GBQ Request Data
 
 ## Request Body for Google BigQuery
 

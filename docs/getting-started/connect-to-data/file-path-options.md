@@ -2,7 +2,7 @@
 
 For GCS and Amazon S3, users can specify either a single file name as input or provide a folder containing multiple files as input.
 
-#### Single file
+#### Single File
 
 If sending a single file, then specify the full path of a json/csv/parquet file inside the bucket.
 

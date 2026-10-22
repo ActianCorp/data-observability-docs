@@ -3,7 +3,7 @@ Check for alerts
 
 APIs to check alert status of a given job
 
-## Get alerts status for a specific Job Id
+## Get Alerts Status for a Specific Job Id
 
 `GET` `https://data-observability.actian.com/api/backend/{tenant}/configuration/alerts?job_id={job_id}`
 

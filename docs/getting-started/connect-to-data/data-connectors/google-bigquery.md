@@ -25,6 +25,25 @@ This service account must have the right permissions to access and query the dat
 
 The used service account must also be granted `BigQuery Job User` in the GCP project where the query is expected to run.
 
+## Additional Permissions for GCP VPC Deployments
+
+!!! warning
+    **This applies only if you use your own service account.** When you select **Use tenant service account**, it already holds this access and there is nothing extra to grant.
+
+On a [GCP VPC deployment](../../../deployment-models/virtual-private-cloud-vpc-deployment.md), Data Observability's Spark job runs as the service account on the connection. If that is your own service account rather than the tenant service account, it also needs the permissions Data Observability's own service account would have had — reading your data is not enough, because the job has to write its results as well.
+
+Grant the following in addition to the read permissions above:
+
+| What it needs to do           | Where to grant it                                | Role                                                  |
+| ----------------------------- | ------------------------------------------------ | ----------------------------------------------------- |
+| Write scan output and metrics | The Data Observability tenant GCS bucket for your deployment        | `Storage Object Admin` (`roles/storage.objectAdmin`)  |
+| Run scan jobs                 | The GCP project where Data Observability runs the scan             | `BigQuery Job User` (`roles/bigquery.jobUser`)        |
+
+!!! warning
+    Missing these produces a confusing failure: the connection test passes and the scan still fails, because the test only checks that Data Observability can read your data. The write happens later in the scan.
+
+Ask your Data Observability deployment owner for the tenant GCS bucket name and the project the scan runs in.
+
 ## Creating the Connection in Actian Data Observability
 
 BigQuery connections can be used to connect multiple data assets in Actian Data Observability using the same connection parameters. To add a BigQuery connection:

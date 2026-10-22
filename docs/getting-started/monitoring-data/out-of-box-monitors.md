@@ -33,6 +33,25 @@ Tracks changes in data freshness patterns by monitoring the time elapsed since t
 
 **Use Case**: Detect when upstream data pipelines experience delays, ensuring your data remains current for analytics and reporting.
 
+How the last-update time is determined depends on the data source type:
+
+| Data source                | Freshness derived from                                                   | Timestamp attribute required? |
+| -------------------------- | ------------------------------------------------------------------------ | ----------------------------- |
+| Snowflake                  | Table metadata (last altered time)                                       | No                            |
+| BigQuery                   | Partition metadata (last modified time)                                  | No                            |
+| Databricks / Delta Lake    | Latest commit in the table history                                      | No                            |
+| Hive / Iceberg             | Hive metastore last-update time                                          | No                            |
+| Firebolt, Redshift, Oracle | Latest value of the configured timestamp attribute across the entire table | Yes                           |
+
+!!! note
+	**Not applicable:** Table freshness is not computed for generic JDBC sources (e.g., Trino, MySQL, Microsoft SQL Server, Athena) even when a timestamp attribute is configured, or for file-based cloud storage assets (S3, GCS, Azure Blob, OneLake). For these sources, the Freshness Drifts monitor does not produce values or alerts.
+
+Behavior notes:
+
+* Freshness is reported as the number of whole hours since the last table update, rounded up, with a minimum of 1 hour.
+* Freshness always reflects the latest update of the entire table; on delta scans it is not limited to the delta window.
+* The Table Freshness monitor is fed by scheduled scans only. A manual "Scan now" run still reports the time-since-last-update metric, but it does not add a point to this monitor.
+
 ### **Completeness Drifts**
 
 Detects unexpected changes in the percentage of complete (non-null, non-empty) values across your data attributes. This monitor alerts you when data completeness patterns deviate from established baselines.

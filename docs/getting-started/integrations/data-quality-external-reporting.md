@@ -33,5 +33,5 @@ DQ scan results can be written to the following external storage destinations:
 
 ## Configuring Reporting
 
-Reporting can only be configured via APIs. Please refer to [DQ Reporting APIs.](../../api-reference/dq-reporting-apis.md)
+Reporting can only be configured via APIs. Please refer to [DQ Rules Report APIs.](../../api-reference/dq-reporting-apis.md)
 

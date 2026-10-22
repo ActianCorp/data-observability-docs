@@ -17,7 +17,7 @@ Authentication can be specified through:
 
 Please refer to [Authentication API](./authentication-api/README.md) for more details
 
-### Available controllers
+### Available Controllers
 
 Actian provides the following controllers for APIs:
 

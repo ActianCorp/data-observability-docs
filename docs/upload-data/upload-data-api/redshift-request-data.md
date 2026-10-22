@@ -1,4 +1,4 @@
-# RedShift Request data
+# RedShift Request Data
 
 ## Request Body for Red Shift
 
