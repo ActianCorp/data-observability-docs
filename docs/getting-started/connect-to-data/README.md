@@ -22,7 +22,7 @@ To connect to your data source:
     
     Connection can be reused to connect multiple datasets, tables, etc.
 
-## Connect to a data asset
+## Connect to a Data Asset
 
 Once a connection is available, you can navigate to "Asset" page, and add your connection. Data assets must belong to a project.
 
@@ -33,7 +33,7 @@ Once a connection is available, you can navigate to "Asset" page, and add your c
     * You can also create a connection by clicking **+New Connection** button
 5. Fill the data asset details, and follow onscreen instructions
 
-## List of connectors enabled by default
+## List of Connectors Enabled by Default
 
 * Google Big Query
 * Google Cloud Storage

@@ -1,4 +1,4 @@
-# Virtual Private Cloud (VPC) deployment
+# Virtual Private Cloud (VPC) Deployment
 
 The Actian Data Observability Platform’s Virtual Private Cloud (VPC) deployment ensures that all services are hosted securely within your own cloud environment. The architecture integrates seamlessly with your existing infrastructure, enabling data-in-place monitoring while maintaining compliance with your organization’s security, governance, and privacy policies.
 

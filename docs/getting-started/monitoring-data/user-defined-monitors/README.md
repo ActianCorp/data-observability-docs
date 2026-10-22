@@ -1,4 +1,4 @@
-# User-defined Monitors
+# User-Defined Monitors
 
 ![](images/user-defined-monitors.png)
 _Alerting Monitors — the starting point for creating and managing user-defined monitors._

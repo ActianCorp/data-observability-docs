@@ -2,7 +2,7 @@
 
 APIs to manage users
 
-## Get all users assigned to this tenant
+## Get All Users Assigned to This Tenant
 
 `GET` `https://data-observability.actian.com/api/auth/auth/{tenant}/users`
 
@@ -32,7 +32,7 @@ APIs to manage users
 ]
 ```
 
-## Get a user's details
+## Get a User's Details
 
 `GET` `https://data-observability.actian.com/api/auth/auth/{tenant}/users/{user_email}`
 
@@ -95,7 +95,7 @@ APIs to manage users
 }
 ```
 
-## Update User details
+## Update User Details
 
 `PUT` `https://data-observability.actian.com/api/auth/auth/<tenant>/user/<user_email>`
 
@@ -130,7 +130,7 @@ This endpoint allows you to update user details
 }
 ```
 
-## Delete user
+## Delete User
 
 `DELETE` `https://data-observability.actian.com/api/auth/auth/{tenant}/users/{user_email}`
 
@@ -155,7 +155,7 @@ This endpoint allows you to update user details
 }
 ```
 
-## Assign user to tenant
+## Assign User to Tenant
 
 `PUT` `https://data-observability.actian.com/api/auth/auth/{tenant}/users/{user_email}/assign`
 
@@ -186,7 +186,7 @@ This endpoint allows you to update user details
 }
 ```
 
-## Change Password for a specific user email
+## Change Password for a Specific User Email
 
 `PUT` `https://data-observability.actian.com/api/auth/auth/<tenant>/user/<user_email>/password`
 

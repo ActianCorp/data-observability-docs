@@ -1,4 +1,4 @@
-# Azure Request data
+# Azure Request Data
 
 ## Request Body  for Azure
 

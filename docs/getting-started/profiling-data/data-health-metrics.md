@@ -18,7 +18,7 @@ These metrics can be found in different places across the application, depending
 
 Actian Data Observability allows you to scan only a table’s metadata instead of scanning the whole table. This helps you monitor high level information about your table’s health, and still allow you to alert for quality issues.
 
-#### When to use?
+#### When to Use?
 
 This configuration tells Actian Data Observability to only check the table metadata rather than scanning the whole dataset. If the asset is SQL based and user have defined SQL-based metric, these queries will also be run and validated against corresponding policies.
 

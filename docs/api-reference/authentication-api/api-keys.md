@@ -73,7 +73,7 @@ Forbidden
 Not Found
 ```
 
-## Retrieve all API Keys
+## Retrieve All API Keys
 
 Returns the API keys belonging to the current user. Key values are not included.
 
@@ -115,7 +115,7 @@ Forbidden
 Not Found
 ```
 
-## Get details of a specific API Key
+## Get Details of a Specific API Key
 
 Fetches one of the current user's API keys by its unique key ID.
 
@@ -202,7 +202,7 @@ Forbidden
 Not Found
 ```
 
-## Tenant-scoped endpoints (deprecated)
+## Tenant-Scoped Endpoints (Deprecated)
 
 !!! warning
     The tenant-scoped endpoints below are **deprecated and scheduled for removal**. Use the user-scoped endpoints above instead.

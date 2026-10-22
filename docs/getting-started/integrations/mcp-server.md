@@ -4,7 +4,7 @@
 
 The Data Observability's Model Context Protocol (MCP) server enables seamless integration with AI assistants like Claude, allowing you to interact with your data quality platform directly through conversational interfaces. This integration provides access to Data Observability's comprehensive set of tools for monitoring, alerting, and data quality management.
 
-### What is MCP?
+### What Is MCP?
 
 MCP is a standard that allows AI applications to securely connect to external services and data sources. Data Observability's MCP server exposes your data quality platform's capabilities as tools that can be invoked conversationally through compatible AI assistants.
 

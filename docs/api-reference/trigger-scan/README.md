@@ -10,7 +10,7 @@ The following APIs have been deprecated:
 
 `/api/data/v2/{tenant}/batch_data`
 
-## Trigger data scan
+## Trigger Data Scan
 
 `POST` `https://{actian_endpoint}/api/data/{tenant}/assets/{assetId}/batch_data`
 
