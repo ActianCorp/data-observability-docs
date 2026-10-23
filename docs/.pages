@@ -2,6 +2,7 @@ nav:
   - Home: index.md
   - Getting Started: getting-started
   - Deployment Models: deployment-models
+  - Security and Compliance: security-and-compliance
   - API Reference: api-reference
   - Admin APIs: admin-apis
   - Release Notes: telmai-releases
