@@ -42,15 +42,20 @@ Now you're ready to configure and activate data binning.
 
 **To enable:**
 
-1. Click the **Configure Data Binning** button
-   ![](<../../../assets/assets/image (8).png>)
+1. Click the **Configure Data Binning** button.
 2. Select Correctness Monitor:
-   Choose one or more correctness monitors you created in Step 2. These are the monitors/rules that defines which records are considered valid vs. invalid.
+   
+     Choose one or more correctness monitors you created in Step 2. These are the monitors/rules that defines which records are considered valid vs. invalid.
+
 3. Choose Storage Destination:
-   Select your cloud storage type:
-    * **AWS S3**
-    * **GCP Cloud Storage**
-    * **Azure Blob Storage**
+
+    Select your cloud storage type:
+
+     * **AWS S3**
+     * **GCP Cloud Storage**
+     * **Azure Blob Storage**
+     * **Databricks**
+
 4. Enter Storage Credentials: Provide the authentication credentials for your chosen storage destination. See [Storage Permissions](configuring-data-binning.md#storage-permissions) below for required access levels.
 5. Define Storage Paths
     1. **Valid Data Path**: The destination path for records that pass all quality rules (e.g., `s3://my-bucket/valid-data/`)
@@ -96,8 +101,15 @@ Your SAS token or service principal must have:
 * **Group Assets**: Data binning is not currently supported for assets belonging to a group. Configure binning at the individual asset level.
 * **Data Diff Compatibility**: The Data Diff feature is not available for assets with data binning enabled.
 * **Scan Frequency**: Binning operates during scheduled scans. Ensure your scan frequency aligns with your data freshness requirements.
+* **Nested Data**: Assets with nested columns (for example, nested JSON or nested XML files) cannot be binned to the following destinations:
 
+    * **CSV** output format, because CSV cannot hold nested values.
+    * **Databricks** table destinations.
 
+    For these assets, use a cloud storage destination (Amazon S3, Google Cloud Storage, or Azure Blob Storage) with **JSON** or **Parquet** output.
+
+!!! warning
+    Saving these combinations is currently accepted, but the next scan of the asset fails and no data is loaded for that scan. Choose a cloud storage destination with JSON or Parquet output before enabling data binning on an asset with nested columns.
 
 ## Related Documentation
 

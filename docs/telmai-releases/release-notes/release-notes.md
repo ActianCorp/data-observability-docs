@@ -2,6 +2,20 @@
 
 This page describes Actian Data Observability latest release notes.
 
+## October 2026 Release
+
+### Product Changes
+
+**Major Changes**
+
+* Folder structure support for assets — organize assets into folders
+* [Data binning to Databricks](../../getting-started/monitoring-data/monitors-management/configuring-data-binning.md#step-3-enable-data-binning) — write binned valid and invalid records to Databricks tables
+
+**Bug Fixes**
+
+* General fixes and improvements
+* Issue with BigQuery cross region scans
+
 ## September 2026 Release
 
 ### Product Changes
