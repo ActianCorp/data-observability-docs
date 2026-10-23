@@ -14,7 +14,7 @@ When upload job is triggered via API, the response contains a section with the j
 
 Note, Tenant Id can be retrieved from the UI as listed [here](../api-misc/api-reference/tenant-configuration.md#get-tenants)
 
-## Get job status for a specific Job Id
+## Get Job Status for a Specific Job Id
 
 `GET` `https://data-observability.actian.com/api/backend/<tenant>/jobs/<job_id>`
 
@@ -43,7 +43,7 @@ This endpoint gets you the status of the job from Upload data APIs
 }
 ```
 
-## Get jobs for a specific tenant and source
+## Get Jobs for a Specific Tenant and Source
 
 `GET` `https://data-observability.actian.com/api/backend/{tenant}/sources/{source}/jobs`
 

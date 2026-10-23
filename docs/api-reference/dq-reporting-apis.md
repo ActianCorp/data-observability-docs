@@ -1,4 +1,4 @@
-# DQ Reporting APIs
+# DQ Rules Report APIs
 
 This section details the API endpoints used to configure and enable the Centralized DQ Monitor Scan Reporting feature. This configuration dictates where the reports are written.
 
@@ -35,10 +35,10 @@ The request body specifies the connection and path for the external destination 
 
 `GET` `https://{config_endpoint}/{tenant_id}/configuration/dq_reporting`
 
-Returns the current DQ reporting configuration for a tenant.
+Returns the current DQ Rules Report configuration for a tenant.
 
 ## Delete Configuration
 
 `DELETE` `https://{config_endpoint}/{tenant_id}/configuration/dq_reporting`
 
-Removes the DQ reporting configuration from the tenant.
+Removes the DQ Rules Report configuration from the tenant.

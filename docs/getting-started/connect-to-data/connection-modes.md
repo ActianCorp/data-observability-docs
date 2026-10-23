@@ -6,7 +6,7 @@ In the "Connect to Data" dialog, Actian Data Observability offers several connec
 
 It can either connect to an existing table/view or allow you to define an SQL query and analyze the output.
 
-## Connect to existing Table/View
+## Connect to Existing Table/View
 
 Select the **“Existing Table“** radio button, and pick an option in the “Create“ dropdown:
 

@@ -88,7 +88,7 @@ grant SELECT on ALL TABLES in schema identifier($db_schema_name) to role identif
 **4.** Run the updated script in your Snowflake console.
 
 
-### Allow listing Actian Data Observability IP’s
+### Allow Listing Actian Data Observability IP’s
 
 In some cases, Snowflake's security requires allow listing the IPs from which connection to the database is allowed. For this purpose, Actian Data Observability provides a list of static IPs from which connections can be made. Please refer to [Actian Data Observability IP list](../../../api-reference/data-observe-ip-list.md).
 
@@ -111,7 +111,7 @@ Once connection prerequisites are completed, you can add the connection details 
 
 ![](images/observability-snowflake-create-connection.png)
 
-## Connecting an asset
+## Connecting an Asset
 
 Once a connection is defined, you can start using it to create assets. To create assets, you will need:
 

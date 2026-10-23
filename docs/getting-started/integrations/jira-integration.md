@@ -63,7 +63,7 @@ To setup dynamic ticket creation:
 
 Users can also create tickets manually on existing alerts, or incidents.
 
-#### Incident scoped tickets
+#### Incident Scoped Tickets
 
 To create a ticket associated to a given incident:
 
@@ -75,7 +75,7 @@ To create a ticket associated to a given incident:
 
     Tickets can only be created for open incidents.
 
-#### Alert scoped tickets
+#### Alert Scoped Tickets
 
 To create a ticket associated to a given alert:
 

@@ -9,6 +9,6 @@ nav:
   - Trigger Scan: trigger-scan
   - Spark Job Config: spark-job-config-api.md
   - Ticket Integration: ticket-integration-api.md
-  - DQ Reporting: dq-reporting-apis.md
+  - DQ Rules Report: dq-reporting-apis.md
   - DQ Score: dq-score-api.md
   - ...

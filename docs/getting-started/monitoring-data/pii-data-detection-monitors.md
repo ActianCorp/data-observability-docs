@@ -12,7 +12,7 @@ To enable PII data detections, in **Alerting Monitors** page:
 
 [Learn more about Managing Monitors](monitors-management/)<br>
 
-### What happens when PII data is detected
+### What Happens When PII Data Is Detected
 
 If Data Observability detected the presence of PII data, you will see created alerts and incidents similar to below image:
 

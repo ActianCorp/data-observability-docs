@@ -1,4 +1,4 @@
-# GCS Request data
+# GCS Request Data
 
 ## Request Body for Google Cloud Storage
 

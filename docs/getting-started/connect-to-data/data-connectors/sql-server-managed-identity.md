@@ -11,7 +11,7 @@ For username and password (SQL Authentication) setup, see [SQL Server](sql-serve
 !!! warning
     **Azure deployments only.** Managed identity authentication requires Actian Data Observability to be deployed on Azure. It is not available on AWS or GCP deployments — on those, use SQL Authentication or Microsoft Entra Password instead. This is a property of where **Actian Data Observability** runs, not of where your database runs.
 
-## How it works
+## How It Works
 
 Actian Data Observability's pods run under an Azure Kubernetes workload identity. That workload identity only **obtains tokens** — it is never itself used to read your data. For each managed identity you register, you allow Actian Data Observability's pods to obtain that identity's token; each connection then authenticates as the identity you selected for it. When a scan runs, Actian Data Observability requests a short-lived Microsoft Entra token for that identity and connects with it.
 
@@ -23,7 +23,7 @@ There is **no shared or default identity** for data access — every connection 
        * **Client ID** → used when the identity is **registered in Actian Data Observability** (Step 4).
        * **Object ID** (also shown as _Principal ID_ / _Object (principal) ID_) → used in the **SQL grant** (Step 2).
 
-## Before you begin
+## Before You Begin
 
 * Your Actian Data Observability instance is deployed on Azure (see the warning above).
 * The Azure administrator can create identities and federated credentials (the `az` CLI examples below, or the Azure portal).
@@ -33,7 +33,7 @@ There is **no shared or default identity** for data access — every connection 
 !!! warning
     **Same Entra tenant required.** The managed identity and the target SQL Database must be in the **same Microsoft Entra tenant (directory)**. Subscription and resource group do not matter — only the directory. Reaching a SQL server in a different directory is not supported with a managed identity.
 
-### Who does what
+### Who Does What
 
 This setup spans up to three roles, which may be different people in your organization:
 
@@ -46,7 +46,7 @@ This setup spans up to three roles, which may be different people in your organi
 | 5 | Create the connection and select the identity | Actian Data Observability user |
 | 6 | Verify the connection | Actian Data Observability user |
 
-## Step 1: Create the managed identity
+## Step 1: Create the Managed Identity
 
 The Azure administrator creates a user-assigned managed identity (UAMI). Do this in the **Managed Identities** blade of the portal, or with the CLI:
 
@@ -67,7 +67,7 @@ az identity show --resource-group <resource-group> --name <identity-name> \
     * **Client ID** — used in Actian Data Observability in Step 4.
     * **Object ID** (the CLI calls it `principalId`) — used in the SQL grant in Step 2.
 
-## Step 2: Grant access on the SQL Database
+## Step 2: Grant Access on the SQL Database
 
 The Database administrator creates a database user mapped to the managed identity and grants it read access, in the **target database**. Run this via a SQL client (SSMS, Azure Data Studio, or the portal Query editor), connected with **Microsoft Entra authentication** as the server's **Entra admin** (or a `db_owner`).
 
@@ -85,7 +85,7 @@ ALTER ROLE db_datareader ADD MEMBER [<identity-name>];
 !!! warning
     If the statement returns _"Principal … could not be resolved"_, the identity is not visible in this server's directory — confirm the identity and the SQL server are in the **same Entra tenant** (see [Before you begin](#before-you-begin)).
 
-## Step 3: Allow Actian Data Observability's pods to use the identity (federation)
+## Step 3: Allow Actian Data Observability's Pods to Use the Identity (Federation)
 
 The Azure administrator adds a **federated credential** on the identity that trusts Actian Data Observability's Kubernetes ServiceAccount. Actian Data Observability provides the ServiceAccount name, namespace, and OIDC issuer URL.
 
@@ -101,7 +101,7 @@ az identity federated-credential create \
 !!! note
     The federated-credential **name** (`federated-<identity-name>` above) is only a label — any name works. What establishes trust is the combination of **issuer**, **subject**, and **audience**. No ServiceAccount setting is changed; each identity simply adds its own federated credential trusting the same ServiceAccount.
 
-## Step 4: Register the identity in Actian Data Observability
+## Step 4: Register the Identity in Actian Data Observability
 
 The Actian Data Observability administrator adds the identity so it can be selected on connections.
 
@@ -116,7 +116,7 @@ _Administration → Managed Identities. Use the **Client ID** here, not the Obje
 !!! note
     At least one identity must be registered before a managed-identity connection can be created. Registered identities appear as **Active**; you can **Revoke** an identity to stop it being used (reversible) or **Remove** it entirely.
 
-## Step 5: Create the connection
+## Step 5: Create the Connection
 
 The Actian Data Observability user creates (or edits) an **MS SQL Server** connection and chooses the registered managed identity.
 

@@ -2,6 +2,42 @@
 
 This page describes Actian Data Observability latest release notes.
 
+## October 2026 Release
+
+### Product Changes
+
+**Major Changes**
+
+* Folder structure support for assets — organize assets into folders
+* [Data binning to Databricks](../../getting-started/monitoring-data/monitors-management/configuring-data-binning.md#step-3-enable-data-binning) — write binned valid and invalid records to Databricks tables
+
+**Bug Fixes**
+
+* General fixes and improvements
+* Issue with BigQuery cross region scans
+
+## September 2026 Release
+
+### Product Changes
+
+**Major Changes**
+
+* [Hybrid deployment model](../../deployment-models/hybrid-deployment.md) — Actian Data Observability hosts the control plane while scans run on your own Spark engine in your own environment, so raw data never leaves your network. Supported on GCP Dataproc, Azure Databricks, and AWS Databricks, with additional engines planned.
+* [Microsoft Fabric connector](../../getting-started/connect-to-data/data-connectors/microsoft-fabric.md) — connect to Fabric Warehouse and Lakehouse SQL analytics endpoints, including support for SQL queries.
+* [Write-back to Actian Data Intelligence Platform](../../getting-started/integrations/actian-data-intelligence-platform.md#writing-results-back-to-actian-data-intelligence-platform) — publish data quality scores and incident details into the catalog's native data quality section on scan completion.
+
+**General Improvements**
+
+* [API keys are now supported at user scope](../../api-reference/authentication-api/api-keys.md#key-scope) — any user can create a key for themselves through the new `auth/api_keys` endpoints, which take no tenant parameter. Key creation was previously restricted to tenant administrators, and the tenant-scoped `auth/{tenant}/apiKeys` endpoints are now deprecated. Existing keys continue to work.
+
+**Bug Fixes**
+
+* General fixes and improvements
+
+**Deprecations**
+
+* The Statistics page has reached end of life. Use the [Asset Manager](../../getting-started/connect-to-data/managing-assets.md) page instead.
+
 ## August 2026 Release
 
 ### Product Changes
@@ -65,7 +101,7 @@ This page describes Actian Data Observability latest release notes.
 
 **Bug Fixes**
 
-* DQ report displaying #null
+* DQ Rules Report displaying #null
 * Overview page was not displaying renamed monitor name
 
 ## April 2026 Release
@@ -74,7 +110,7 @@ This page describes Actian Data Observability latest release notes.
 
 * [New API for setting spark params and node type](../../api-reference/spark-job-config-api.md)
 * [Jira template UI](../../getting-started/integrations/jira-integration.md)
-* [DQ Report Summary](../../getting-started/monitoring-data/dq-report-summary.md)
+* [DQ Rules Report Summary](../../getting-started/monitoring-data/dq-report-summary.md)
 * [SQL Based Rules](../../getting-started/monitoring-data/user-defined-monitors/sql-based-rules.md)
 * [Iceberg REST support](../../getting-started/connect-to-data/data-connectors/iceberg-rest.md)
 * Deprecations:

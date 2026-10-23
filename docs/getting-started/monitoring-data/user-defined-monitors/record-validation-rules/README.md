@@ -60,11 +60,11 @@ A correctness rule consists of three parts:
 | <p><strong><code>EXPECT</code></strong></p><p><strong><code>&#x3C;expectation></code></strong></p>            | <p><strong>Expected results</strong></p><p>Expectation for the expression above. After the “EXPECT” keyword, the validation begins.</p><p>Example:</p><p><strong><code>EXPECT</code></strong><code> is_true</code></p><p>this means the value of validated expression is expected to be true, and anything else is a violation)</p>       |
 
 
-### How to get alerted for rule violation?
+### How to Get Alerted for Rule Violation?
 
 Once a rule is created, users can configure a threshold on the monitor to trigger alerts when the Correctness score falls below the defined level.
 
-## Variables transformation
+## Variables Transformation
 
 This step allows defining variables from combining existing attributes to be used at a later step of validation. This can simplify writing the evaluated expression specially in case when multiple checks are applied.
 
@@ -74,11 +74,11 @@ To define a transformation, you can follow the following syntax:
 
 Data Observability uses standard Spark SQL syntax for those transformations.
 
-## Evaluated expression
+## Evaluated Expression
 
 This is a Spark SQL expression. It allows users to define what will be evaluated, and exposes a wide range of SQL functions to allow for conditional checks.
 
-### Scenario 1: Validate attribute value as is, without transformations
+### Scenario 1: Validate Attribute Value as Is, Without Transformations
 
 ```
 VALIDATE my_column
@@ -86,7 +86,7 @@ VALIDATE my_column
 
 This validates “`my_column`” without any transformation
 
-### Scenario 2: Apply standard functions to attribute value
+### Scenario 2: Apply Standard Functions to Attribute Value
 
 ```sql
 VALIDATE foo(my_column)
@@ -110,7 +110,7 @@ Expectation is defined through the context and the expected value.
 EXPECT <context> [<operator>] <expected_value>
 ```
 
-### Expectation context
+### Expectation Context
 
 The expectation context (`<context>`) is how the value gets evaluated. It can be any of the following:
 
@@ -126,7 +126,7 @@ The expectation context (`<context>`) is how the value gets evaluated. It can be
 | `SPEC_CHAR_COUNT`    | Count of special characters in the expression value                                                                                                                                                                        |
 | `VALUE`              | String representation of the expression value                                                                                                                                                                              |
 
-### Expectation operator
+### Expectation Operator
 
 The expectation operator (`<operator>`) is an optional field. It’s the condition operator for the context and the expected value. It can be from the following list:
 
@@ -138,7 +138,7 @@ The expectation operator (`<operator>`) is an optional field. It’s the conditi
 | `NOT_IN`       | <p>Value is not in the list</p><p>Expected value must not be in the list.</p>       |
 | `OUT_OF_RANGE` | <p>Value out of range</p><p>Expected value must be outside of the range.</p>        |
 
-### Expected value
+### Expected Value
 
 Expected value (\<expected\_value>) can be set using a static value or the boolean-functions belo
 

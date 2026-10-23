@@ -1,4 +1,4 @@
-# Snowflake Request data
+# Snowflake Request Data
 
 ## Request Body for Snowflake
 

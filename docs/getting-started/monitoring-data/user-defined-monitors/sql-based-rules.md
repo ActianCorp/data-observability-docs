@@ -38,7 +38,7 @@ Your SQL query must return columns in the following exact order:
 
 ### Example Queries
 
-#### Minimal — validation result only
+#### Minimal — Validation Result Only
 
 ```sql
 SELECT
@@ -46,7 +46,7 @@ SELECT
 FROM my_asset.transactions
 ```
 
-#### With record identifier
+#### With Record Identifier
 
 ```sql
 SELECT
@@ -55,7 +55,7 @@ SELECT
 FROM my_asset.transactions
 ```
 
-#### Full output — with metadata label
+#### Full Output — With Metadata Label
 
 ```sql
 SELECT
@@ -65,7 +65,7 @@ SELECT
 FROM my_asset.transactions
 ```
 
-#### Cross-table join validation
+#### Cross-Table Join Validation
 
 ```sql
 SELECT
@@ -76,7 +76,7 @@ FROM orders o
 LEFT JOIN payments p ON o.order_id = p.order_id
 ```
 
-#### Conditional logic with warehouse functions
+#### Conditional Logic with Warehouse Functions
 
 ```sql
 SELECT

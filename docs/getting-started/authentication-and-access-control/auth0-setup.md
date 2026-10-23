@@ -5,7 +5,7 @@ This guide outlines the steps to register an application in Auth0 for use as an 
 
 ## Register an OIDC App in Auth0
 
-### 1. Log in to Auth0 Dashboard
+### 1. Log In to Auth0 Dashboard
 
 Go to [https://manage.auth0.com](https://manage.auth0.com/) and sign in to your Auth0 tenant.
 

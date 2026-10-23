@@ -9,6 +9,7 @@
 * [AWS Redshift](aws-redshift.md)
 * [AWS Athena](aws-athena.md)
 * [Azure Blob](azure-blob.md)
+* [Microsoft Fabric](microsoft-fabric.md)
 * [Databricks Delta](databricks.md)
 * [MySQL](mysql.md)
 * [Snowflake](snowflake.md)

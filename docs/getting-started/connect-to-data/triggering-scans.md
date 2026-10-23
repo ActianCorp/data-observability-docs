@@ -1,7 +1,7 @@
 # Triggering Scans
 
 
-## Trigger job using Actian Data Observability UI
+## Trigger Job Using Actian Data Observability UI
 
 1. Navigate to **Assets** page.
 2. Click the 3 dot options tab for the corresponding data source
@@ -10,7 +10,7 @@
     ![](../../assets/assets/image_110.png)
     ![](../../assets/assets/Screenshot_2024-11-28_at_9.42.44_AM.png)
 
-## Trigger job using Actian Data Observability API
+## Trigger Job Using Actian Data Observability API
 
 Please refer to the documentation here: [Trigger Data Scan API](../../api-reference/trigger-scan/README.md)
 

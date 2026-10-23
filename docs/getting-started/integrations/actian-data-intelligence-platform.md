@@ -2,6 +2,8 @@
 
 Actian Data Observability integrates with [Actian Data Intelligence Platform](https://zeenea.com/) to connect data quality monitoring with your data catalog. Actian Data Intelligence catalog metadata enriches Actian Data Observability's monitoring configuration and AI-powered recommendations, helping your team discover, prioritize, and monitor critical datasets faster.
 
+The integration runs in both directions: Data Observability reads catalog metadata to enrich its monitoring, and writes data quality results back into the catalog so governance and quality live in one place.
+
 
 ## Overview
 
@@ -47,7 +49,7 @@ To configure the integration:
      * **Catalog Type**: ADI Catalog (preconfigured for Actian Data Intelligence Platform)
      * **API Endpoint**: Enter the URL of your Actian Data Intelligence Platform instance (for example, `https://your-org.zeenea.app/`).
      * **API Key / Token**: Enter the API key created previously. Leave this field blank when updating other settings to keep the existing credentials.
-     * **Enable DQ Push**: Select this option to push data quality results from each scan to Actian Data Intelligence Platform. 
+     * **Enable DQ Push**: Select this option to push data quality results from each scan to Actian Data Intelligence Platform. See [Writing Results Back to Actian Data Intelligence Platform](#writing-results-back-to-actian-data-intelligence-platform).
      * **Sync Interval (hours)**: Specify how frequently metadata is synchronized between Actian Data Intelligence Platform and Data Observability. Enter a value between 1 and 168 hours.
 
 3. Select **Save changes**. 
@@ -141,6 +143,33 @@ The **Columns** tab displays schema information for the selected dataset, includ
 The **Lineage** tab displays upstream and downstream data dependencies retrieved from the Actian Data Intelligence Platform. This information helps you understand how data quality issues can propagate through your data pipelines.
 
 ![](images/data-intelligence-integration-catalog-details-lineage.png)
+
+## Writing Results Back to Actian Data Intelligence Platform
+
+Data Observability can publish its data quality results into Actian Data Intelligence Platform, so that catalog users see current quality alongside the rest of a dataset's governance context without leaving the catalog.
+
+### What Data Observability Writes
+
+| Result             | Description                                                                                             |
+| ------------------ | --------------------------------------------------------------------------------------------------------- |
+| Data quality score | The asset's current [Data Quality Score](../monitoring-data/data-quality-score.md)                          |
+| Incident details   | Open [incidents](../monitoring-data/incident-portal.md) raised against the asset, with their details        |
+
+Results are written into the **native data quality section** of the corresponding dataset in Actian Data Intelligence Platform.
+
+### Enabling Write-Back
+
+Write-back is enabled on the catalog configuration page. In **Administration > Catalog**, select the **Enable DQ Push** checkbox and save the connection.
+
+!!! note
+    No additional API key permission is required. The permission created in [Create an API Key](#create-an-api-key) is sufficient for both reading metadata and writing results back.
+
+### When Results Are Published
+
+Data Observability publishes results **on scan completion** — each time a monitor scan finishes for a linked asset, its score and incident details are pushed to the catalog. This is independent of the metadata **Sync Interval**, which controls only how often Data Observability reads from the catalog.
+
+!!! note
+    Only assets linked to a catalog dataset in the [Catalog Browser](#catalog-browser) are written back. Connect the asset first, or there is no catalog dataset for Data Observability to publish to.
 
 ## Business-Aware Rule Generation
 
