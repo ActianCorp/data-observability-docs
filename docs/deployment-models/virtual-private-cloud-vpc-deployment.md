@@ -6,7 +6,7 @@ The Actian Data Observability Platform’s Virtual Private Cloud (VPC) deploymen
     To initiate a VPC deployment, contact your Data Observability account manager. They will provide the Helm and Terraform scripts, container registry access, and guide you through the deployment process.
 
 !!! note
-    If your requirement is to keep data processing in your environment rather than to host Data Observability's application tier, consider a [Hybrid deployment](hybrid-deployment.md) instead. It runs a single agent against your own Spark engine, with no Data Observability service tier, database, message broker, or search cluster to operate. See [Deployment Models](README.md) for a comparison.
+    If your requirement is to keep data processing in your environment rather than to host Data Observability's application tier, consider a [Hybrid deployment](hybrid-deployment.md) instead. It runs a single agent against your own Spark engine, with no Data Observability service tier, database, message broker, or search cluster to operate. See [Deployment Models](overview.md) for a comparison.
 
 ## Deployment Workflow
 

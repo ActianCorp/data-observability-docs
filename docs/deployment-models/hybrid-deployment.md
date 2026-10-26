@@ -133,6 +133,6 @@ Requirements vary by cloud and are covered in full by the installer documentatio
 
 ## Related Pages
 
-* [Deployment Models overview](README.md)
+* [Deployment Models overview](overview.md)
 * [Virtual Private Cloud (VPC) deployment](virtual-private-cloud-vpc-deployment.md)
 * [Actian Data Observability IP list](../api-reference/data-observe-ip-list.md)
