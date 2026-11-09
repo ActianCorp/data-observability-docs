@@ -27,22 +27,35 @@ Data Observability currently supports datasets from the following data sources:
 
 ## Prerequisites
 
-### Create an API Key
+### In Actian Data Intelligence
 
-Data Observability authenticates with Actian Data Intelligence Platform by using an API key.
+#### Create an API Key
 
-Create an API key with one of the following permissions in Actian Data Intelligence Platform:
+Data Observability authenticates with Actian Data Intelligence Platform using an API key.
 
-* Manage Documentation
-* Admin
+Create an API key with the **Data Observability** permission in Actian Data Intelligence.
 
-For instructions, see [Managing API Keys](https://docs.actian.com/data-intelligence-platform/features-applications/administration/zeenea-managing-api-keys.html#create-an-api-key).
+For instructions, see [Managing API Keys](https://docs.actian.com/data-intelligence-platform/features-applications/administration/managing-api-keys.html#create-an-api-key).
 
-### Connect to Actian Data Intelligence Platform
+#### Enable the Data Observability Integration
 
-To configure the integration:
+To enable the integration in Actian Data Intelligence:
 
-1. In Data Observability, go to **Administration > Catalog**.
+1. Navigate to **Administration > Integrations**.
+2. In the **Actian Data Observability** section:
+    * Configure the **Data Observability URL**.
+    * Turn on the **Enable Data Observability** toggle.
+
+![](images/data-intelligence-integration-enable-integration.png)
+
+!!! note
+    Both API key creation with **Data Observability** permission and enabling the integration in **Administration** are controlled by a tenant-level option.
+
+### In Actian Data Observability
+
+To configure the integration in Actian Data Observability:
+
+1. Navigate to **Administration > Catalog**.
 
 2. Provide the following information:
    
