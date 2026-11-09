@@ -10,7 +10,7 @@
 * [AWS Athena](aws-athena.md)
 * [Azure Blob](azure-blob.md)
 * [Microsoft Fabric](microsoft-fabric.md)
-* [Databricks Delta](databricks.md)
+* [Databricks Delta](databricks-delta.md)
 * [MySQL](mysql.md)
 * [Snowflake](snowflake.md)
 * [Salesforce](salesforce.md)

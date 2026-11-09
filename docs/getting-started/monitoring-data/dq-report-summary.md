@@ -8,7 +8,7 @@ The DQ Rules Report Summary page provides a cross-asset view of monitor scan res
 Use this page to quickly identify which assets and monitors are producing failures, track overall data quality health, and drill into specific scan runs.
 
 !!! note
-    DQ Rules Report Summary only shows results from [Record Validation Rules](./user-defined-monitors/record-validation-rules.md) and [SQL-based Rules](./user-defined-monitors/sql-based-rules.md)
+    DQ Rules Report Summary only shows results from [Record Validation Rules](./user-defined-monitors/record-validation-rules/README.md) and [SQL-based Rules](./user-defined-monitors/sql-based-rules.md)
 
 !!! note
     This report can be published to external storage using the [DQ Rules Report APIs](../../api-reference/dq-reporting-apis.md)

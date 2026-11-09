@@ -3,7 +3,7 @@
 ![](images/sql-based-rule-monitor.png)
 _Creating an SQL-based rule monitor — write a pushdown SQL query to define record-level validation logic._
 
-SQL-Based Validation Rules give you full SQL pushdown for record-level data quality checks. Instead of [Data Observability's rule expression builder,](record-validation-rules.md) you write a standard SQL query directly against your data source. Data Observability executes it natively on the compute engine (Snowflake, BigQuery, Databricks, etc.) and ingests the results.
+SQL-Based Validation Rules give you full SQL pushdown for record-level data quality checks. Instead of [Data Observability's rule expression builder,](record-validation-rules/README.md) you write a standard SQL query directly against your data source. Data Observability executes it natively on the compute engine (Snowflake, BigQuery, Databricks, etc.) and ingests the results.
 
 This is ideal when:
 
@@ -12,7 +12,7 @@ This is ideal when:
 * You want to reuse existing SQL-based data quality checks without rewriting them in DSL
 
 !!! note
-    SQL-Based Validation Rules follow the same **Correctness** metric model as [Record Validation Rules](record-validation-rules.md). The key difference is execution: Expression rules run inside Data Observability's Spark engine, while SQL-Based rules are pushed down and executed natively on your connected data source
+    SQL-Based Validation Rules follow the same **Correctness** metric model as [Record Validation Rules](record-validation-rules/README.md). The key difference is execution: Expression rules run inside Data Observability's Spark engine, while SQL-Based rules are pushed down and executed natively on your connected data source
 
 
 ### How It Works

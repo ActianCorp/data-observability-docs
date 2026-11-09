@@ -78,7 +78,7 @@ validate part_date expect is_date
 
 The monitor tracks the percentage of records that pass the validation rule, and alerts are triggered when this percentage falls outside acceptable thresholds.
 
-Click [here](record-validation-rules.md) to learn more about using and creating Data Quality rules.
+Click [here](record-validation-rules/README.md) to learn more about using and creating Data Quality rules.
 
 ### SQL Based Rule
 
@@ -130,7 +130,7 @@ Each monitor has the following properties:
 
 * [Built-in Metrics](built-in-metrics.md)
 * [User-defined Metrics](user-defined-metrics.md)
-* [Record Validation Rules](record-validation-rules.md)
+* [Record Validation Rules](record-validation-rules/README.md)
 * [SQL Based Rules](sql-based-rules.md)
 * [Monitors Management](../monitors-management/README.md)
 * [Incident Management](../../monitoring-data/incident-portal.md)
