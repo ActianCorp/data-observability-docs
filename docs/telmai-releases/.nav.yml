@@ -1,0 +1,3 @@
+# telmai-releases only wraps the release-notes/ folder; flatten it so the
+# section appears as a single "Release Notes" entry (matching the old nav).
+flatten_single_child_sections: true

@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history so "last updated" dates are accurate
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -34,11 +36,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs-material mkdocs-glightbox mkdocs-awesome-pages-plugin mkdocs-git-revision-date-localized-plugin mkdocs-meta-descriptions-plugin
+          pip install -r requirements.txt
 
       - name: Build documentation
         run: |
-          mkdocs build --clean
+          zensical build --clean
+          python3 utils/post_build.py
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -24,8 +24,10 @@
 {% block content %}
   {# Raw Markdown link — shown on every doc page (relative URL so it
      works regardless of deploy host). Skipped on pages with `hide`. #}
-  {% if page and page.file and not (page.meta and page.meta.hide) %}
-    {%- set raw_md_url = page.file.src_uri.split('/')[-1] -%}
+  {# Zensical's page object has no `file`, so derive the name from the output URL.
+     (README.md pages are published as index.md by utils/post_build.py.) #}
+  {% if page and page.url and not (page.meta and page.meta.hide) %}
+    {%- set raw_md_url = page.url | split('/') | last | replace('.html', '.md') -%}
     <a href="{{ raw_md_url }}" class="md-raw-link" target="_blank" rel="noopener" title="View this page as plain text Markdown">
       <span class="md-raw-link__icon">M&#x2193;</span>
       <span class="md-raw-link__body">

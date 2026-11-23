@@ -9,16 +9,18 @@ site_dir: site
 
 # Navigation
 #
-# The navigation is generated automatically by the awesome-pages plugin (see the
-# `plugins` section below) from the docs/ directory structure plus the `.pages`
+# The navigation is generated automatically by the awesome-nav plugin (see the
+# `plugins` section below) from the docs/ directory structure plus the `.nav.yml`
 # files in each folder. Add a new .md file and it appears in the nav without
-# touching this file: the per-folder `.pages` files set the order/titles and end
+# touching this file: the per-folder `.nav.yml` files set the order/titles and end
 # with a `...` catch-all so new pages are picked up automatically. Folders that
-# should stay out of the nav use a `.pages` file with `hide: true`.
+# should stay out of the nav use a `.nav.yml` file with `hide: true`.
 
 # Theme Configuration
 theme:
   name: material
+  # Zensical: keep the classic Material for MkDocs look and feel.
+  variant: classic
   logo: assets/images/actian-logo.svg
   favicon: assets/favicon.png
   language: en
@@ -110,7 +112,7 @@ repo_name: Support
 
 plugins:
   - search
-  - awesome-pages
+  - awesome-nav
   - tags
   - glightbox
   - git-revision-date-localized:
@@ -118,6 +120,22 @@ plugins:
       enable_creation_date: false
       fallback_to_build_date: true
   - meta-descriptions
+  - minify:
+      minify_html: true
+  - llmstxt:
+      full_output: llms-full.txt
+      sections:
+        Getting started:
+          - index.md
+          - getting-started/**/*.md
+        Deployment models:
+          - deployment-models/*.md
+        API reference:
+          - api-reference/**/*.md
+        Admin APIs:
+          - admin-apis/*.md
+        Release notes:
+          - telmai-releases/**/*.md
 
 # Customization
 extra_css:
@@ -137,7 +155,9 @@ extra_javascript:
     defer: true
   - javascripts/toast-fix.js
 
+# Zensical does not run MkDocs hooks yet ("hooks" is an unsupported setting), so this
+# entry is ignored. The former section_index and copy_md_sources hooks are replaced by
+# utils/post_build.py. custom_lexers.py is kept for when hooks/modules are supported;
+# no page currently uses the ingres-sql or openroad-4gl code fences.
 hooks:
-  - hooks/section_index.py
   - hooks/custom_lexers.py
-  - hooks/copy_md_sources.py

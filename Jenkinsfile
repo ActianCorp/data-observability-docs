@@ -86,9 +86,14 @@ pipeline {
             }
         }
 
-        stage('Build MkDocs site') {
+        stage('Build Zensical site') {
             steps {
-                sh 'mkdocs build --clean'
+                // Zensical does not run MkDocs hooks; utils/post_build.py copies the
+                // .md sources into site/ and writes section index redirects.
+                sh '''
+                    zensical build --clean
+                    python3 utils/post_build.py
+                '''
             }
         }
 

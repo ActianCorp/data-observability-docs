@@ -1,3 +1,0 @@
-# telmai-releases only wraps the release-notes/ folder; collapse it so the
-# section appears as a single "Release Notes" entry (matching the old nav).
-collapse: true

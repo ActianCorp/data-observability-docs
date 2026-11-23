@@ -177,6 +177,36 @@ body,
   border-color: var(--color-accent) !important;
 }
 
+/* Zensical renders search as a single button that opens a dialog (instead of the
+   Material form + input styled above). Match the same light pill look. */
+.md-search__button {
+  background-color: var(--color-surface) !important;
+  color: var(--color-text-muted) !important;
+  border: 1px solid var(--color-border);
+  border-radius: 9999px !important;
+  height: 2rem !important;
+  width: 11rem !important;
+  line-height: 1.9rem;
+  font-size: 0.8rem !important;
+}
+.md-search__button:before {
+  background-color: var(--color-text) !important;
+  top: 0.45rem !important;
+}
+.md-search__button:after {
+  top: 0.45rem !important;
+  line-height: 1.1;
+  background: var(--color-code-bg) !important;
+  color: var(--color-text-muted);
+  border-radius: 0.25rem !important;
+}
+.md-search__button:hover,
+.md-search__button:focus {
+  background-color: var(--color-surface) !important;
+  border-color: var(--color-accent);
+  color: var(--color-text) !important;
+}
+
 /* ═══════════════════════════════════════════════
    NAVIGATION TABS
    ═══════════════════════════════════════════════ */

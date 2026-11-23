@@ -1,6 +1,6 @@
 # Actian Data Observability — Documentation Portal
 
-> Built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) · Light/dark theme · Deployed to GitHub Pages and production via Jenkins
+> Built with [Zensical](https://zensical.org/) (Material for MkDocs look and feel, `mkdocs.yml` configuration) · Light/dark theme · Deployed to GitHub Pages and production via Jenkins
 
 **Repository:** https://github.com/ActianCorp/data-observability-docs
 **Branches:** `main` (GitHub Pages) · `release/data-observability-1.0.doc` (production)
@@ -19,17 +19,19 @@ This repository contains the MkDocs-based documentation portal for **Actian Data
 
 | Feature | Description |
 |---|---|
-| **MkDocs Material 9.6+** | Material Design theme, default sidebar navigation, indigo palette |
-| **Auto-generated navigation** | `mkdocs-awesome-pages-plugin` builds the nav from the `docs/` folder structure and per-folder `.pages` files — new `.md` files appear automatically |
+| **Zensical** | Static site generator that reads `mkdocs.yml`; classic Material theme variant, default sidebar navigation, indigo palette |
+| **Auto-generated navigation** | The `awesome-nav` plugin builds the nav from the `docs/` folder structure and per-folder `.nav.yml` files — new `.md` files appear automatically |
 | **Search** | Enhanced search with highlighting, sharing, and suggestions |
 | **Diagrams** | Mermaid diagram support |
-| **Image lightbox** | `mkdocs-glightbox` for zoomable images |
-| **"Last updated" dates** | `mkdocs-git-revision-date-localized-plugin` |
-| **SEO** | Auto-generated meta descriptions (`mkdocs-meta-descriptions-plugin`) |
+| **Image lightbox** | `glightbox` plugin for zoomable images |
+| **"Last updated" dates** | `git-revision-date-localized` plugin |
+| **SEO** | Auto-generated meta descriptions (`meta-descriptions` plugin) |
 | **Page feedback** | "Was this page helpful?" thumbs up/down widget on every page |
-| **View as Markdown** | Every page links to its own raw `.md` source (see [`hooks/copy_md_sources.py`](hooks/copy_md_sources.py)) |
+| **View as Markdown** | Every page links to its own raw `.md` source (copied into `site/` by [`utils/post_build.py`](utils/post_build.py)) |
 | **Code blocks** | Copy button, syntax highlighting, annotations |
 | **Custom 404** | Branded 404 page |
+| **LLM-friendly output** | `llms.txt` and `llms-full.txt` are generated at the site root by the `llmstxt` plugin |
+| **Minified HTML** | `minify` plugin |
 
 ---
 
@@ -44,7 +46,7 @@ data-observability-docs/
 ├── .github/workflows/deploy.yml  # GitHub Pages build/deploy pipeline
 ├── docs/                       # All documentation content
 │   ├── index.md                # Homepage
-│   ├── .pages                  # Top-level navigation order
+│   ├── .nav.yml                # Top-level navigation order
 │   ├── web.config              # IIS MIME type for .md (needed for "View as Markdown" in prod)
 │   ├── assets/                 # Logos, images, site-wide CSS
 │   ├── stylesheets/             # Component CSS (nav, DX styles, extra, toast)
@@ -64,10 +66,8 @@ data-observability-docs/
 │   ├── 404.html                 # Custom 404 page
 │   ├── api-reference.html       # Redoc-based API reference viewer template
 │   └── partials/                # Partial templates (footer, comments)
-├── hooks/                      # MkDocs build hooks
-│   ├── section_index.py         # Generates redirect stubs for section index URLs
-│   ├── custom_lexers.py         # Custom syntax highlighters
-│   └── copy_md_sources.py       # Publishes raw .md next to each .html page
+├── hooks/                      # MkDocs build hooks (not run by Zensical)
+│   └── custom_lexers.py         # Custom syntax highlighters (inactive until Zensical supports hooks)
 └── site/                       # Built output (auto-generated, do not edit)
 ```
 
@@ -88,24 +88,21 @@ cd data-observability-docs
 pip install -r requirements.txt
 ```
 
-This installs:
+This requires **Python 3.11 or newer** and installs:
 
 | Package | Purpose |
 |---|---|
-| `mkdocs-material` | Material Design theme |
-| `mkdocs-awesome-pages-plugin` | Auto-generated navigation ordering |
-| `mkdocs-glightbox` | Image lightbox/zoom |
-| `mkdocs-git-revision-date-localized-plugin` | "Last updated" dates on pages |
-| `mkdocs-meta-descriptions-plugin` | Auto SEO meta descriptions |
-| `mike` | Documentation versioning (available, not currently wired into `mkdocs.yml` plugins) |
-| `mkdocs-minify-plugin`, `mkdocs-swagger-ui-tag`, `plantuml-markdown` | Available but not currently enabled in `mkdocs.yml` |
+| `zensical` | Static site generator. Search, awesome-nav, tags, glightbox, git-revision-date-localized, meta-descriptions, minify and llmstxt are built in. |
+| `mkdocs-material` | Only supplies the emoji helpers referenced in `mkdocs.yml` |
+
+Zensical does not run MkDocs plugins or hooks. `mike`, `mkdocs-swagger-ui-tag` and `plantuml-markdown` were dropped because nothing in `docs/` uses them.
 
 ---
 
 ## Running Locally
 
 ```bash
-mkdocs serve -a localhost:8000
+zensical serve -a localhost:8000
 ```
 
 Opens a live-reload development server at **http://localhost:8000**. Changes to any file under `docs/` are reflected instantly.
@@ -115,10 +112,11 @@ Opens a live-reload development server at **http://localhost:8000**. Changes to 
 ## Building the Site
 
 ```bash
-mkdocs build --clean
+zensical build --clean
+python3 utils/post_build.py
 ```
 
-This ensures a clean build by removing any old files from the `site/` directory before generating the static site.
+`--clean` clears Zensical's cache. `utils/post_build.py` copies the raw `.md` sources into `site/` and writes redirect `index.html` files for navigation sections (the work the old MkDocs hooks did); run it after every build.
 
 To preview the built output locally:
 
@@ -145,10 +143,10 @@ docs/
 
 ### Step 2: Control navigation order
 
-Navigation is generated automatically from the folder structure. To control order/titles for a folder, add a `.pages` file:
+Navigation is generated automatically from the folder structure. To control order/titles for a folder, add a `.nav.yml` file:
 
 ```yaml
-# docs/my-section/.pages
+# docs/my-section/.nav.yml
 nav:
   - my-section.md
   - my-guide.md
@@ -160,7 +158,7 @@ The trailing `...` is a catch-all so new pages not explicitly listed still appea
 ### Step 3: Preview and commit
 
 ```bash
-mkdocs serve -a localhost:8000   # Preview at http://localhost:8000
+zensical serve -a localhost:8000   # Preview at http://localhost:8000
 git add .
 git commit -m "docs: add my-section"
 git push origin main
@@ -218,7 +216,7 @@ Key sections:
 - **`plugins`** — Search, navigation, image lightbox, revision dates, meta descriptions
 - **`extra.analytics.feedback`** — Page feedback widget config
 - **`extra_css` / `extra_javascript`** — Custom stylesheets and scripts
-- **`hooks`** — Build-time Python hooks (see Project Structure above)
+- **`hooks`** — MkDocs hooks; ignored by Zensical (see `utils/post_build.py`)
 
 ---
 
@@ -227,7 +225,7 @@ Key sections:
 1. Clone the repository
 2. Create a feature branch: `git checkout -b feature/my-update`
 3. Make your changes in the `docs/` directory
-4. Preview locally with `mkdocs serve -a localhost:8000`
+4. Preview locally with `zensical serve -a localhost:8000`
 5. Commit and push to GitHub
 6. Open a Pull Request targeting `main`
 7. Once verified, open a follow-up PR from `main` into `release/data-observability-1.0.doc` to ship to production
@@ -238,8 +236,8 @@ Key sections:
 
 ## Useful Resources
 
-- [MkDocs Documentation](https://www.mkdocs.org/)
+- [Zensical Documentation](https://zensical.org/)
 - [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 - [Material Reference](https://squidfunk.github.io/mkdocs-material/reference/)
-- [Awesome Pages Plugin](https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin)
+- [Awesome Nav Plugin](https://lukasgeiter.github.io/mkdocs-awesome-nav/)
 - [Actian Data Observability](https://docs.actian.com/actian-data-observability/)
